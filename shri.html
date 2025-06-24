@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ignito Corporation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    @media only screen and (max-width: 768px) {
+  section {
+    padding: 2rem 1rem !important;
+  }
+
+  #roadmap div,
+  #team div {
+    width: 90% !important;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.5rem 0.7rem !important;
+    font-size: 1rem !important;
+  }
+
+  .logo {
+    width: 70px !important;
+  }
+
+  h1, h2 {
+    font-size: 1.8rem !important;
+  }
+
+  h3 {
+    font-size: 1.4rem !important;
+  }
+
+  h4 {
+    font-size: 1.1rem !important;
+  }
+
+  p {
+    font-size: 1rem !important;
+    line-height: 1.6;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: 300px !important;
+  }
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      
+      background: linear-gradient(120deg, #1e1e2f, #522e91, #ff6e7f);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header {
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo {
+      width: 80px;
+      margin-right: 15px;
+      border-radius: 50%;
+      transition: transform 0.4s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .logo:hover {
+      transform: scale(1.2);
+    }
+    .title-block {
+      flex-grow: 1;
+      text-align: center;
+    }
+    .title {
+      font-size: 3.2rem;
+      font-weight: bold;
+    }
+    .tagline {
+      font-style: italic;
+      font-size: 1rem;
+      color: #ffe;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .tagline span {
+      display: inline-block;
+      animation: marquee 12s linear infinite;
+    }
+    @keyframes marquee {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 0.8rem 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 20px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #ffcc00;
+      color: #1e1e2f;
+    }
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    section p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+    .contact-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: #fff;
+      transition: transform 0.3s, color 0.3s;
+    }
+    .contact-icons a:hover {
+      transform: scale(1.2);
+      color: #ffcc00;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      margin-top: 2rem;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.2; /* You can increase or decrease visibility */
+    pointer-events: none; /* Prevents interaction */
+  }
+  /* Blinking Stars */
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: blink 2s infinite ease-in-out;
+  opacity: 0.5;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 1; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars-container"></div>
+
+  <video autoplay muted loop playsinline id="bg-video">
+  <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+
+  <header>
+    <img src="ignito.png" alt="Ignito Logo" class="logo" />
+    <div class="title-block">
+      <div class="title">Ignito Corporation</div>
+      <div class="tagline"><span>Empowering Business with Digital Solutions</span></div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">Home</a>
+    <a href="#roadmap">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">About Ignito Corporation</h2>
+    <p>Ignito Corporation was established in <strong>2025</strong> as a <strong>sole proprietorship</strong> and is officially registered under the Indian MSME scheme with registration number <strong>UDYAM-MP-37-0051379</strong>.</p>
+    <p>Our first project — the <strong>Smart LPG Distribution App</strong> — is designed to simplify and automate the LPG delivery process by enabling digital record-keeping, tracking, and workforce management for distributors.</p>
+    <p>As a startup, our focus is on bringing digital solutions to real-world problems through smart automation and accessible platforms.</p>
+    <p>Ignito Corporation is committed to building tools that help local businesses grow and operate more efficiently while contributing to the broader goal of India's digital future.</p>
+  </section>
+
+<!-- Start of Tawk.to Script -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/684d3d0e4aea20190b6351b0/1itmrd0ik';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!-- End of Tawk.to Script -->
+
+<section id="roadmap" style="padding: 4rem 2rem; text-align: center;">
+  <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Project Roadmap</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
+    <div style="background-color: rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 1rem; width: 250px; animation: fadeInUp 1s ease forwards;">
+      <h3>Phase 1</h3>
+      <p>Ideation and Research - Understanding the LPG distribution system and identifying gaps.</p>
+    </div>
+    <div style="background-color: rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 1rem; width: 250px; animation: fadeInUp 1.5s ease forwards;">
+      <h3>Phase 2</h3>
+      <p>App Design & Development - Creating the Smart LPG Distribution App with roles.</p>
+    </div>
+    <div style="background-color: rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 1rem; width: 250px; animation: fadeInUp 2s ease forwards;">
+      <h3>Phase 3</h3>
+      <p>Testing and Internal Team Trials - Ensuring tracking accuracy and efficiency.</p>
+    </div>
+    <div style="background-color: rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 1rem; width: 250px; animation: fadeInUp 2.5s ease forwards;">
+      <h3>Phase 4</h3>
+      <p>Subscription Integration & Deployment - Monetization via Razorpay.</p>
+    </div>
+    <div style="background-color: rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 1rem; width: 250px; animation: fadeInUp 3s ease forwards;">
+      <h3>Phase 5</h3>
+      <p>Team Expansion & Market Testing - Enhancing with feedback and scaling features.</p>
+    </div>
+  </div>
+</section>
+<section id="team" style="padding: 4rem 2rem; text-align: center;">
+  <p style="max-width: 700px; margin: auto; padding-bottom: 2rem; color: #fff;">
+    The Smart LPG Distribution App is Ignito Corporation’s flagship project. It is designed to streamline LPG delivery,
+    tracking, stock management, and worker-distributor coordination. Built entirely in remote mode within just one month,
+    the project showcases the strength of digital teamwork and passion-driven innovation. Our 8-member team worked
+    collaboratively under expert mentorship to deliver a functional, scalable, and modern solution tailored for the LPG
+    industry. With robust role-based access and automation, the app empowers distributors, managers, and field workers
+    across India.
+  </p>
+  <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Project & Team</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem;">
+    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
+      <h4>Mrugen Fichadia</h4>
+      <p>Project Lead</p>
+    </div>
+    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
+      <h4>Krishna Jaiswal</h4>
+      <p>Team Leader & Backend Lead</p>
+    </div>
+    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
+      <h4>Irfan Khan</h4>
+      <p>Frontend Developer</p>
+    </div>
+    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
+      <h4>Varun T P</h4>
+      <p>Backend Developer</p>
+    </div>
+    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
+      <h4>Arya Pal</h4>
+      <p>Developer</p>
+    </div>
+    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
+      <h4>Shlok Shetiya</h4>
+      <p>Developer</p>
+    </div>
+    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
+      <h4>Kaushi Chauhan</h4>
+      <p>Intern</p>
+    </div>
+    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
+      <h4>Dipak Singh</h4>
+      <p>Intern</p>
+    </div>
+  </div>
+</section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-icons">
+      <a href="https://wa.me/916232480899" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:support@ignitocorporation.in" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://x.com/Ignito485001" title="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>Our Office at Bhagirathpura, Indore</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7359.055946004716!2d75.85446499183443!3d22.745779567474788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396302826b4d4fb9%3A0xd77fbc01a65120d3!2sBhagirathpura%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1749893351999!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <p>© 2025 Ignito Corporation. All rights reserved.</p>
+  </footer>
+</body>
+</html><script>
+  const container = document.getElementById('stars-container');
+  for (let i = 0; i < 80; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.top = Math.random() * 100 + 'vh';
+    star.style.left = Math.random() * 100 + 'vw';
+    star.style.animationDelay = Math.random() * 3 + 's';
+    container.appendChild(star);
+  }
+</script>
