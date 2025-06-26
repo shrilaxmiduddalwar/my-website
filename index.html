@@ -188,6 +188,69 @@
       0%, 100% { opacity: 0.1; }
       50% { opacity: 1; }
     }
+    .member-card {
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px transparent;
+}
+.member-card:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px #ffcc00;
+  transform: scale(1.05);
+}
+.contact-icons {
+  margin-top: 1rem;
+}
+.contact-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: transform 0.3s, color 0.3s;
+}
+.contact-icons a:hover {
+  transform: scale(1.2);
+  color: #ffcc00;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+.service-card {
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.1);
+}
+.service-card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+}
+.service-card i {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: #ffcc00;
+}
+.service-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
   </style>
 </head>
 <body>
@@ -207,11 +270,40 @@
     </div>
   </header>
 
-  <nav>
-    <a href="#about">Home</a>
-    <a href="#roadmap">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#about">Home</a>
+  <a href="#services">Services</a>
+  <a href="#roadmap">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+<section id="about">
+  <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">About Ignito Corporation</h2>
+  <p style="max-width: 900px; margin: auto; line-height: 1.8; padding-bottom: 1rem;">
+    <strong>Ignito Corporation</strong> is a digitally driven startup founded in <strong>2025</strong> with a mission to bring smart, scalable, and affordable tech solutions to local businesses across India. Officially registered as a <strong>Sole Proprietorship</strong> under the MSME initiative of the Government of India, Ignito Corporation bears the MSME Registration Number: <strong>UDYAM-MP-37-0051379</strong>.
+  </p>
+
+  <p style="max-width: 900px; margin: auto; line-height: 1.8; padding-bottom: 1rem;">
+    Our flagship project — the <strong>Smart LPG Distribution App</strong> — revolutionizes how gas distributors operate by enabling digital tracking, automated delivery records, analytics, reporting, workforce management, and real-time performance dashboards. Built in just one month by an 8-member team in remote collaboration, the app stands as a testament to our execution capabilities and innovation-first approach.
+  </p>
+
+  <p style="max-width: 900px; margin: auto; line-height: 1.8; padding-bottom: 1rem;">
+    From startups to enterprises, we offer <strong>end-to-end services</strong> including Website Development, Mobile App Development, UI/UX Design, Backend/API setup, Hosting, SEO, Deployment & Maintenance — all under one digital roof. Our solutions are <strong>cost-effective</strong>, <strong>responsive</strong>, and <strong>tailored to client needs</strong>.
+  </p>
+
+  <p style="max-width: 900px; margin: auto; line-height: 1.8; padding-bottom: 1rem;">
+    Ignito Corporation prioritizes <strong>data security</strong>, <strong>user confidentiality</strong>, and <strong>fair digital practices</strong>. We operate under strict privacy and copyright policies, and maintain legal documentation including:
+    <ul style="text-align: left; max-width: 800px; margin: auto; line-height: 1.6;">
+      <li> <strong>Privacy Policy</strong>: Transparent handling of user data. No GPS or Aadhaar tracking.</li>
+      <li><strong>Terms & Conditions</strong>: Clear terms of usage for apps and services.</li>
+      <li> <strong>Copyright & Piracy Policy</strong>: Intellectual property safeguarded. Reproduction or redistribution is strictly prohibited.</li>
+    </ul>
+  </p>
+
+  <p style="max-width: 900px; margin: auto; line-height: 1.8;">
+    As we continue to scale, Ignito remains committed to solving real-world problems with smart technology — empowering the next generation of businesses through innovation, collaboration, and digital transformation.
+  </p>
+</section>
+
 
   <section id="about">
     <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">About Ignito Corporation</h2>
@@ -234,8 +326,59 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!-- End of Tawk.to Script -->
+<section id="services">
+  <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Services</h2>
+  <p style="max-width: 800px; margin: auto; padding-bottom: 2rem;">
+    Ignito Corporation is committed to delivering complete end-to-end digital solutions for startups, enterprises, and innovators. From brainstorming to deployment, we handle everything. Here's what we offer:
+  </p>
+  <div class="services-grid">
+    <div class="service-card">
+      <i class="fas fa-laptop-code"></i>
+      <h3>Web Development</h3>
+      <p>Responsive and modern websites built with HTML, CSS, JavaScript, and React.js. Static and dynamic sites, company portfolios, and e-commerce.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>App Development</h3>
+      <p>Cross-platform mobile apps using Flutter and React Native. Full-stack integration with Firebase, APIs, and real-time features.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-paint-brush"></i>
+      <h3>UI/UX Design</h3>
+      <p>Beautiful, functional, and user-friendly designs crafted in Figma and Adobe XD for mobile and web interfaces.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-database"></i>
+      <h3>Backend & API</h3>
+      <p>Robust backend systems using Node.js, Express.js, MongoDB, Firebase – secure, fast, and scalable infrastructure.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-cloud-upload-alt"></i>
+      <h3>Deployment & Hosting</h3>
+      <p>Live deployment on GitHub Pages, Netlify, Firebase, and custom domains. End-to-end support in launch process.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-wrench"></i>
+      <h3>Maintenance & Support</h3>
+      <p>We provide ongoing updates, SEO optimization, performance monitoring, and technical support post-deployment.</p>
+    </div>
+  </div>
+</section>
 
 <section id="roadmap" style="padding: 4rem 2rem; text-align: center;">
+  <section id="team" style="padding: 4rem 2rem; text-align: center;">
+     <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Project </h2>
+  <p style="max-width: 700px; margin: auto; padding-bottom: 2rem; color: #fff;">
+    The Smart LPG Distribution App is Ignito Corporation’s flagship project. It is designed to streamline LPG delivery,
+    tracking, stock management, and worker-distributor coordination. Built entirely in remote mode within just one month,
+    the project showcases the strength of digital teamwork and passion-driven innovation. Our 8-member team worked
+    collaboratively under expert mentorship to deliver a functional, scalable, and modern solution tailored for the LPG
+    industry. With robust role-based access and automation, the app empowers distributors, managers, and field workers
+    across India.
+  </p>
+  
+ 
+</section>
   <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Project Roadmap</h2>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
     <div style="background-color: rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 1rem; width: 250px; animation: fadeInUp 1s ease forwards;">
@@ -260,62 +403,33 @@ s0.parentNode.insertBefore(s1,s0);
     </div>
   </div>
 </section>
+
 <section id="team" style="padding: 4rem 2rem; text-align: center;">
-  <p style="max-width: 700px; margin: auto; padding-bottom: 2rem; color: #fff;">
-    The Smart LPG Distribution App is Ignito Corporation’s flagship project. It is designed to streamline LPG delivery,
-    tracking, stock management, and worker-distributor coordination. Built entirely in remote mode within just one month,
-    the project showcases the strength of digital teamwork and passion-driven innovation. Our 8-member team worked
-    collaboratively under expert mentorship to deliver a functional, scalable, and modern solution tailored for the LPG
-    industry. With robust role-based access and automation, the app empowers distributors, managers, and field workers
-    across India.
-  </p>
   <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Project & Team</h2>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem;">
-    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
-      <h4>Mrugen Fichadia</h4>
-      <p>Project Lead</p>
-    </div>
-    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
-      <h4>Krishna Jaiswal</h4>
-      <p>Team Leader & Backend Lead</p>
-    </div>
-    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
-      <h4>Irfan Khan</h4>
-      <p>Frontend Developer</p>
-    </div>
-    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
-      <h4>Varun T P</h4>
-      <p>Backend Developer</p>
-    </div>
-    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
-      <h4>Arya Pal</h4>
-      <p>Developer</p>
-    </div>
-    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
-      <h4>Shlok Shetiya</h4>
-      <p>Developer</p>
-    </div>
-    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
-      <h4>Kaushi Chauhan</h4>
-      <p>Intern</p>
-    </div>
-    <div style="background-color: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px; width: 200px; transition: 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.07)'">
-      <h4>Dipak Singh</h4>
-      <p>Intern</p>
-    </div>
+    <div class="member-card"><h4>Mrugen Fichadia</h4><p>Project Lead</p></div>
+    <div class="member-card"><h4>Krishna Jaiswal</h4><p>Backend Lead</p></div>
+    <div class="member-card"><h4>Irfan Khan</h4><p>Frontend Developer</p></div>
+    <div class="member-card"><h4>Varun T P</h4><p>Backend Developer</p></div>
+    <div class="member-card"><h4>Arya Pal</h4><p>Developer</p></div>
+    <div class="member-card"><h4>Shlok Shetiya</h4><p>Developer</p></div>
+    <div class="member-card"><h4>Kaushi Chauhan</h4><p>Intern</p></div>
+    <div class="member-card"><h4>Dipak Singh</h4><p>Intern</p></div>
   </div>
 </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-icons">
-      <a href="https://wa.me/916232480899" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="mailto:support@ignitocorporation.in" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://x.com/Ignito485001" title="Twitter"><i class="fab fa-twitter"></i></a>
-    </div>
-    <p>Our Office at Bhagirathpura, Indore</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7359.055946004716!2d75.85446499183443!3d22.745779567474788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396302826b4d4fb9%3A0xd77fbc01a65120d3!2sBhagirathpura%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1749893351999!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </section>
+  <h2>Contact Us</h2>
+  <div class="contact-icons">
+    <a href="https://wa.me/916232480899" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:support@ignitocorporation.in" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://x.com/Ignito485001" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/ignitocorporation_live?igsh=aTEyZG9tajIybmFr" title="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+  <p>Our Office at Bhagirathpura, Indore</p>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7359.055946004716!2d75.85446499183443!3d22.745779567474788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396302826b4d4fb9%3A0xd77fbc01a65120d3!2sBhagirathpura%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1749893351999!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
 
   <footer>
     <p>© 2025 Ignito Corporation. All rights reserved.</p>
