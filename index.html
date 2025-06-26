@@ -15,6 +15,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
+     nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap; /* prevent wrapping */
+    background-color: #003366;
+    padding: 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+
+  /* Optional: make font size smaller on small screens if needed */
+  @media (max-width: 600px) {
+    nav a {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
     * {
       margin: 0;
       padding: 0;
@@ -250,8 +273,90 @@
   font-size: 0.95rem;
   line-height: 1.5;
 }
+<style>
+  #services {
+    padding: 40px 20px;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+  }
 
-  </style>
+  #services h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  #services p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .service-card {
+ 
+    border: 1px solid #2f0659;
+    border-radius: 12px;
+    width: 300px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(214, 184, 63, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
+  }
+
+  .service-card i {
+    font-size: 40px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+  }
+
+  .service-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+  }
+
+  .service-card p {
+    font-size: 15px;
+    color: #ddd;
+  }
+
+  @media (max-width: 768px) {
+    .service-card {
+      width: 90%;
+    }
+  }
+  .service-card {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+}
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+  background-color: #1f1f1f;
+}
+.service-card i {
+  background: #ffcc00;
+  color: #000;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+</style>
+
 </head>
 <body>
   <div class="stars" id="stars-container"></div>
@@ -290,28 +395,14 @@
     From startups to enterprises, we offer <strong>end-to-end services</strong> including Website Development, Mobile App Development, UI/UX Design, Backend/API setup, Hosting, SEO, Deployment & Maintenance — all under one digital roof. Our solutions are <strong>cost-effective</strong>, <strong>responsive</strong>, and <strong>tailored to client needs</strong>.
   </p>
 
-  <p style="max-width: 900px; margin: auto; line-height: 1.8; padding-bottom: 1rem;">
-    Ignito Corporation prioritizes <strong>data security</strong>, <strong>user confidentiality</strong>, and <strong>fair digital practices</strong>. We operate under strict privacy and copyright policies, and maintain legal documentation including:
-    <ul style="text-align: left; max-width: 800px; margin: auto; line-height: 1.6;">
-      <li> <strong>Privacy Policy</strong>: Transparent handling of user data. No GPS or Aadhaar tracking.</li>
-      <li><strong>Terms & Conditions</strong>: Clear terms of usage for apps and services.</li>
-      <li> <strong>Copyright & Piracy Policy</strong>: Intellectual property safeguarded. Reproduction or redistribution is strictly prohibited.</li>
-    </ul>
-  </p>
-
+  
   <p style="max-width: 900px; margin: auto; line-height: 1.8;">
     As we continue to scale, Ignito remains committed to solving real-world problems with smart technology — empowering the next generation of businesses through innovation, collaboration, and digital transformation.
   </p>
 </section>
 
 
-  <section id="about">
-    <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">About Ignito Corporation</h2>
-    <p>Ignito Corporation was established in <strong>2025</strong> as a <strong>sole proprietorship</strong> and is officially registered under the Indian MSME scheme with registration number <strong>UDYAM-MP-37-0051379</strong>.</p>
-    <p>Our first project — the <strong>Smart LPG Distribution App</strong> — is designed to simplify and automate the LPG delivery process by enabling digital record-keeping, tracking, and workforce management for distributors.</p>
-    <p>As a startup, our focus is on bringing digital solutions to real-world problems through smart automation and accessible platforms.</p>
-    <p>Ignito Corporation is committed to building tools that help local businesses grow and operate more efficiently while contributing to the broader goal of India's digital future.</p>
-  </section>
+  
 
 <!-- Start of Tawk.to Script -->
 <script type="text/javascript">
@@ -362,6 +453,76 @@ s0.parentNode.insertBefore(s1,s0);
       <h3>Maintenance & Support</h3>
       <p>We provide ongoing updates, SEO optimization, performance monitoring, and technical support post-deployment.</p>
     </div>
+    <div class="service-card">
+  <i class="fas fa-search"></i>
+  <h3>SEO Optimization</h3>
+  <p>Boost visibility with smart keyword strategies, on-page optimization, and analytics tracking for your site.</p>
+</div>
+<div class="service-card">
+  <i class="fas fa-shield-alt"></i>
+  <h3>Cybersecurity Solutions</h3>
+  <p>Protect your systems and data with firewalls, SSL, two-factor authentication, and secure architecture.</p>
+</div>
+<div class="service-card">
+  <i class="fas fa-bug"></i>
+  <h3>Software Testing</h3>
+  <p>Manual and automated testing services to ensure bug-free, high-performance applications and websites.</p>
+</div>
+
+<div class="service-card">
+  <i class="fas fa-plug"></i>
+  <h3>API Integration</h3>
+  <p>Integrate payment gateways, CRMs, third-party tools (like Razorpay, WhatsApp, Maps) into your applications.</p>
+</div>
+
+<div class="service-card">
+  <i class="fas fa-layer-group"></i>
+  <h3>CMS Solutions</h3>
+  <p>WordPress, Shopify, Wix-based websites for clients needing fast and flexible content management solutions.</p>
+</div>
+
+<div class="service-card">
+  <i class="fas fa-cogs"></i>
+  <h3>Automation Tools</h3>
+  <p>Build internal tools, custom scripts, and dashboards to automate business operations and boost efficiency.</p>
+</div>
+
+<div class="service-card">
+  <i class="fas fa-chart-line"></i>
+  <h3>Analytics & Insights</h3>
+  <p>Track user behavior and KPIs using Google Analytics, custom dashboards, and reporting tools.</p>
+</div>
+
+<div class="service-card">
+  <i class="fas fa-user-shield"></i>
+  <h3>Privacy & Policy Drafting</h3>
+  <p>We help you create legally compliant privacy policies, terms & conditions, and user agreements.</p>
+</div>
+<div class="service-card">
+  <i class="fas fa-chart-pie"></i>
+  <h3>Power BI & Dashboards</h3>
+  <p>Interactive business dashboards, custom reports, and real-time insights using Microsoft Power BI & Excel.</p>
+</div>
+
+<div class="service-card">
+  <i class="fas fa-database"></i>
+  <h3>Data Analysis</h3>
+  <p>Analyze business, sales, and user data to derive trends and help in decision-making using Python, Excel, and SQL.</p>
+</div>
+
+<div class="service-card">
+  <i class="fas fa-project-diagram"></i>
+  <h3>Data Visualization</h3>
+  <p>Create visual stories from data using tools like Tableau, Power BI, and custom React/JS dashboards.</p>
+</div>
+
+<div class="service-card">
+  <i class="fas fa-cloud"></i>
+  <h3>Cloud-based Data Management</h3>
+  <p>Setup and manage data pipelines and cloud databases (e.g., Firebase, MongoDB Atlas, AWS S3) for scalable solutions.</p>
+</div>
+
+
   </div>
 </section>
 
