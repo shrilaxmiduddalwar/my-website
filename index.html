@@ -15,6 +15,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
+.tagline span {
+  display: inline-block;
+  animation: marquee 12s linear infinite, fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+
      nav {
     display: flex;
     justify-content: space-around;
@@ -273,42 +286,49 @@
   font-size: 0.95rem;
   line-height: 1.5;
 }
-<style>
-  #services {
-    padding: 40px 20px;
-    background-color: #1a1a1a;
+#services {
+   
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: white;
     text-align: center;
+    padding: 40px 20px;
   }
-
-  #services h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-
-  #services p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 40px;
-  }
-
   .services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0;
   }
-
   .service-card {
- 
-    border: 1px solid #2f0659;
-    border-radius: 12px;
-    width: 300px;
-    padding: 25px;
-    box-shadow: 0 0 10px rgba(214, 184, 63, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.1);
+  }
+  .service-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+  }
+  .service-card i {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    color: #ffcc00;
+  }
+  .service-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .service-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
+ 
   .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
@@ -387,8 +407,110 @@
     font-size: 16px;
   }
 }
+.carousel-wrapper {
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-card {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  position: relative;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+}
+.carousel-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmerBorder 5s linear infinite;
+  z-index: 0;
+}
+@keyframes shimmerBorder {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.carousel-card * {
+  position: relative;
+  z-index: 1;
+}
+.carousel-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid transparent;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: shineLogo 3s ease-in-out infinite;
+}
+@keyframes shineLogo {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
+  }
+}
+.carousel-card p {
+  font-style: italic;
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 0.8rem;
+}
+.carousel-card h4 {
+  color: #ffcc00;
+  font-weight: bold;
+}
+.carousel-buttons {
+  margin-top: 1.5rem;
+}
+.carousel-buttons button {
+  background-color: transparent;
+  color: #ffcc00;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+.carousel-buttons button:hover {
+  color: white;
+}
+.carousel-multi-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+}
 
-
+  html {
+    scroll-behavior: smooth;
+  }
+  section {
+    background-color: transparent;
+  }
+    html {
+    scroll-behavior: smooth;
+  }
+  section {
+    background-color: transparent;
+  }
 
 </style>
 
@@ -560,7 +682,7 @@ s0.parentNode.insertBefore(s1,s0);
 
   </div>
 </section>
-<section id="roadmap" style="padding: 2rem 0rem; text-align: center;">
+<section id="roadmap" style="padding: 4rem 0rem; text-align: center;">
  <section id="project" style="padding: 4rem 0; text-align: center;">
   <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Project</h2>
 
@@ -583,6 +705,7 @@ s0.parentNode.insertBefore(s1,s0);
 <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000; font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">
   Project Roadmap
 </h2>
+
 
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
     <div style="background-color: rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 1rem; width: 250px; animation: fadeInUp 1s ease forwards;">
@@ -621,7 +744,37 @@ s0.parentNode.insertBefore(s1,s0);
     <div class="member-card"><h4>Dipak Singh</h4><p>Intern</p></div>
   </div>
 </section>
-
+<section id="customers" style="padding: 4rem 2rem; text-align: center;">
+  <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Clients & Channel Partners</h2>
+  <div class="carousel-wrapper">
+    <div class="carousel-track" id="carousel-track">
+      <div class="carousel-card">
+        <img src="matru.jpeg" alt="IOCL" />
+        <p>"User-friendly system and fast execution. Highly satisfied."</p>
+        <h4>Mahaveer oils and intralogistics</h4>
+      </div>
+      <div class="carousel-card">
+        <img src="salasar.jpeg" alt="BPCL" />
+        <p>"Streamlined distribution and improved efficiency in record time."</p>
+        <h4>Salasar Logistics</h4>
+      </div>
+      <div class="carousel-card">
+        <img src="lpg.jpeg" alt="HPCL" />
+        <p>"The Smart LPG App has significantly improved our delivery tracking and analytics. Traditional record-keeping ledgers have now been fully digitalized, and we can even export accurate PDFs for income tax filing."</p>
+        <h4>Hindustan Petroleum</h4>
+      </div>
+      <div class="carousel-card">
+        <img src="mahaveer.jpeg" alt="Mahaveer Oils" />
+        <p>"Ignito helped us go digital in less than a month.Fast service,clean smooth project dispatch"</p>
+        <h4>Mahaveer Oils</h4>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-buttons">
+    <button onclick="prevSlide()">‹</button>
+    <button onclick="nextSlide()">›</button>
+  </div>
+</section>
   <section id="contact">
   <h2>Contact Us</h2>
   <div class="contact-icons">
@@ -641,13 +794,61 @@ s0.parentNode.insertBefore(s1,s0);
   </footer>
 </body>
 </html><script>
-  const container = document.getElementById('stars-container');
-  for (let i = 0; i < 80; i++) {
-    const star = document.createElement('div');
-    star.className = 'star';
-    star.style.top = Math.random() * 100 + 'vh';
-    star.style.left = Math.random() * 100 + 'vw';
-    star.style.animationDelay = Math.random() * 3 + 's';
-    container.appendChild(star);
+ 
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel-card');
+  const track = document.getElementById('carousel-track');
+
+  function updateCarousel() {
+    const slideWidth = slides[0].offsetWidth;
+    track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
   }
+
+  function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      setTimeout(() => {
+        currentSlide = 0;
+        updateCarousel();
+      }, 10002); // Pause before looping
+    } else {
+      updateCarousel();
+    }
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateCarousel();
+  }
+
+  setInterval(nextSlide, 9000);
+
+let startX = 0;
+
+track.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+track.addEventListener('touchend', (e) => {
+  let endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) nextSlide();
+  else if (endX - startX > 50) prevSlide();
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll("nav a[href^='#']");
+    navLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 60,
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+  });
 </script>
+
+
+
