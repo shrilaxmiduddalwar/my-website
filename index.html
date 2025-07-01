@@ -258,7 +258,9 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
   padding: 2rem 0;
+  justify-items: center; /* ⭐ ADD THIS LINE */
 }
+
 .service-card {
   background-color: rgba(255, 255, 255, 0.07);
   padding: 1.5rem;
@@ -533,6 +535,36 @@
     0%, 100% { opacity: 0.1; }
     50% { opacity: 1; }
   }
+  .counter-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.counter-box {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 200px;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+.counter-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.5);
+}
+.counter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+.counter-box p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #eee;
+}
+
 </style>
 
 </head>
@@ -579,6 +611,23 @@
   </p>
 </section>
 
+<section id="achievements" style="padding: 4rem 2rem; text-align: center; background: transparent;">
+  <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Achievements</h2>
+  <div class="counter-grid">
+    <div class="counter-box">
+      <div class="counter" data-target="12">0</div>
+      <p>🚀 Projects Delivered</p>
+    </div>
+    <div class="counter-box">
+      <div class="counter" data-target="30">0</div>
+      <p>👨‍💼 Clients</p>
+    </div>
+    <div class="counter-box">
+      <div class="counter" data-target="1000">0</div>
+      <p>💻 Hours of Development</p>
+    </div>
+  </div>
+</section>
 
   
 
@@ -880,6 +929,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
   });
+
+  const counters = document.querySelectorAll('.counter');
+  const speed = 100;
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = Math.ceil(target / speed);
+
+        if (count < target) {
+          counter.innerText = count + increment;
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target + '+';
+        }
+      };
+      updateCount();
+    });
+  };
+
+  let triggered = false;
+  window.addEventListener('scroll', () => {
+    const section = document.getElementById('achievements');
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop < window.innerHeight && !triggered) {
+      animateCounters();
+      triggered = true;
+    }
+  });
+
 
 </script>
 
