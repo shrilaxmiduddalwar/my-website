@@ -798,6 +798,76 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.team-member {
+  flex: 1 1 calc(25% - 30px); /* 4 per row on desktop */
+  max-width: 250px;
+  background-color: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  text-align: center;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.team-member img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.overlay {
+  padding: 15px;
+}
+
+.overlay h4 {
+  margin: 0;
+  color: #ffcc00;
+  font-size: 1.1rem;
+}
+
+.overlay p {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Tablet (2 per row) */
+@media (max-width: 768px) {
+  .team-member {
+    flex: 1 1 calc(45% - 20px);
+    max-width: 100%;
+  }
+
+  .team-member img {
+    height: 260px;
+  }
+}
+
+/* Mobile (2 per row) */
+@media (max-width: 480px) {
+  .team-member {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 100%;
+  }
+
+  .team-member img {
+    height: 230px;
+  }
+}
 
 
 
@@ -1043,9 +1113,7 @@ s0.parentNode.insertBefore(s1,s0);
 </section>
 <section id="team" style="padding: 4rem 2rem; text-align: center;">
   <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Team</h2>
-  <section id="team" style="padding: 4rem 2rem; text-align: center;">
-  <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Team</h2>
-
+  
   <div class="team-grid">
     <div class="team-member">
       <img src="MRUGEN.jpg" alt="Mrugen Fichadia">
