@@ -564,6 +564,167 @@
   font-size: 1rem;
   color: #eee;
 }
+.team-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  scroll-behavior: smooth;
+  justify-content: center;
+}
+.team-member {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.team-member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s;
+}
+.team-member .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffcc00;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.3;
+}
+.team-member {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  flex: 0 0 auto;
+  border-radius: 12px; /* Instead of 50% */
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.team-member:hover .overlay {
+  opacity: 1;
+}
+
+.team-member:hover .overlay {
+  bottom: 0;
+}
+.team-member:hover img {
+  filter: brightness(0.5);
+}
+
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.shimmer-effect::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: rotate(25deg);
+  animation: shimmerMove 3s linear infinite;
+  z-index: 0;
+}
+
+.shimmer-effect img,
+.shimmer-effect .overlay {
+  position: relative;
+  z-index: 1;
+}
+.legal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.legal-card {
+  width: 300px;
+  background: #111;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.legal-card:hover {
+  transform: scale(1.05);
+}
+
+.legal-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #000;
+  background: #ffcc00;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #e6b800;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .legal-card {
+    width: 90%;
+  }
+}
+.portfolio-download {
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #ffcc00, #ffa500);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.portfolio-download:hover {
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 204, 0, 0.5);
+}
+
 
 </style>
 
@@ -575,6 +736,7 @@
   <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
+
 
 
   <header>
@@ -610,7 +772,11 @@
     As we continue to scale, Ignito remains committed to solving real-world problems with smart technology — empowering the next generation of businesses through innovation, collaboration, and digital transformation.
   </p>
 </section>
-
+<div style="text-align: center; padding: 40px 20px;">
+  <a href="PORTFOLIOO.pdf" download class="portfolio-download">
+    📁 Click Here to Download Portfolio
+  </a>
+</div>
 <section id="achievements" style="padding: 4rem 2rem; text-align: center; background: transparent;">
   <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Achievements</h2>
   <div class="counter-grid">
@@ -800,20 +966,92 @@ s0.parentNode.insertBefore(s1,s0);
     </div>
   </div>
 </section>
-
 <section id="team" style="padding: 4rem 2rem; text-align: center;">
-  <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Project & Team</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem;">
-    <div class="member-card"><h4>Mrugen Fichadia</h4><p>Project Lead</p></div>
-    <div class="member-card"><h4>Krishna Jaiswal</h4><p>Backend Lead</p></div>
-    <div class="member-card"><h4>Irfan Khan</h4><p>Frontend Developer</p></div>
-    <div class="member-card"><h4>Varun T P</h4><p>Backend Developer</p></div>
-    <div class="member-card"><h4>Arya Pal</h4><p>Developer</p></div>
-    <div class="member-card"><h4>Shlok Shetiya</h4><p>Developer</p></div>
-    <div class="member-card"><h4>Kaushi Chauhan</h4><p>Intern</p></div>
-    <div class="member-card"><h4>Dipak Singh</h4><p>Intern</p></div>
+  <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Team</h2>
+  <div class="team-carousel">
+    <div class="team-member">
+      <img src="MRUGEN.jpg" alt="Mrugen Fichadia">
+      <div class="overlay">
+        <h4>Mrugen Fichadia</h4>
+        <p>Project Lead</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <img src="KRISHNAA.png" alt="Krishna Jaiswal">
+      <div class="overlay">
+        <h4>Krishna Jaiswal</h4>
+        <p>Backend Lead</p>
+      </div>
+    </div>
+  <div class="team-member">
+      <img src="IRFAN.png" alt="IRFAN">
+      <div class="overlay">
+        <h4>Irfan Khan</h4>
+        <p>Frontend Developer</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <img src="VARUN.jpg" alt="varun ">
+      <div class="overlay">
+        <h4>Varun TP</h4>
+        <p>Backend Developer</p>
+      </div>
+    </div>
+     
+    <div class="team-member">
+      <img src="ARYA.jpg" alt="ARYA">
+      <div class="overlay">
+        <h4>Arya Pal</h4>
+        <p>Full Stack Developer</p>
+      </div>
+      </div>
+      <div class="team-member">
+  <img src="SHLOKAA.png" alt="Shloka Shetiya" 
+       style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+  <div class="overlay">
+    <h4>Shloka Shetiya</h4>
+    <p>Full Stack Developer</p>
+  </div>
+
+
+</div>
+
+         <div class="team-member">
+      <img src="KAUSHII.png" alt="KAUSHI">
+      <div class="overlay">
+        <h4>Kaushi Chauhan</h4>
+        <p>Intern</p>
+      </div></div>
+    </div>
+     </div>
+    
+
+    
   </div>
 </section>
+
+<section id="legal-section" style="padding: 4rem 2rem; text-align: center;">
+  <h2 style="color: #ffcc00;">Legal Documents</h2>
+
+  <div class="legal-grid">
+    <!-- Terms & Conditions -->
+    <div class="legal-card">
+      <div class="legal-icon">📜</div>
+      <h3>Terms & Conditions</h3>
+      <p>Click below to download</p>
+      <a href="terms.pdf" download class="download-btn">Download PDF</a>
+    </div>
+
+    <!-- Privacy Policy -->
+    <div class="legal-card">
+      <div class="legal-icon">🔒</div>
+      <h3>Privacy Policy</h3>
+      <p>Click below to download </p>
+      <a href="privacy.pdf" download class="download-btn">Download PDF</a>
+    </div>
+  </div>
+</section>
+
 <section id="customers" style="padding: 4rem 2rem; text-align: center;">
   <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Clients & Channel Partners</h2>
   <div class="carousel-wrapper">
@@ -963,7 +1201,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
+if (navigator.userAgent.includes("Instagram")) {
+  document.getElementById("bg-video").style.display = "none";
+}
 </script>
 
 
