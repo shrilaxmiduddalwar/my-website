@@ -725,6 +725,73 @@
   box-shadow: 0 6px 15px rgba(255, 204, 0, 0.5);
 }
 
+/* Add this to your existing CSS */
+@media (max-width: 768px), (pointer: coarse) {
+  #bg-video {
+    display: none !important;
+  }
+}
+body {
+  position: relative;
+  overflow-x: hidden; /* important to prevent horizontal shift */
+}
+.team-member {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .team-carousel {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .team-member {
+    width: 120px;
+    height: 120px;
+  }
+}
+.counter-box {
+  width: 200px; /* ❌ static */
+}
+.counter-box {
+  width: 200px; /* ❌ static */
+}
+.team-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.team-member {
+  scroll-snap-align: center;
+}
+.team-member {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .team-carousel {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .team-member {
+    width: 120px;
+    height: 120px;
+  }
+}
 
 </style>
 
