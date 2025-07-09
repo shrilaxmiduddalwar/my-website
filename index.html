@@ -725,7 +725,71 @@
   box-shadow: 0 6px 15px rgba(255, 204, 0, 0.5);
 }
 
+.team-carousel-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.team-carousel-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
 
+/* Main carousel */
+.team-carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  min-width: max-content;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Each team member card */
+.team-member {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 210px;
+  border-radius: 16px;
+  overflow: hidden;
+  scroll-snap-align: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Image settings */
+.team-member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Hover overlay with name/role */
+.team-member .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffcc00;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.3;
+  border-radius: 16px;
+}
+.team-member:hover .overlay {
+  opacity: 1;
+}
 </style>
 
 </head>
@@ -777,23 +841,7 @@
     📁 Click Here to Download Portfolio
   </a>
 </div>
-<section id="achievements" style="padding: 4rem 2rem; text-align: center; background: transparent;">
-  <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Achievements</h2>
-  <div class="counter-grid">
-    <div class="counter-box">
-      <div class="counter" data-target="12">0</div>
-      <p>Upcoming Projects</p>
-    </div>
-    <div class="counter-box">
-      <div class="counter" data-target="10">0</div>
-      <p> Clients</p>
-    </div>
-    <div class="counter-box">
-      <div class="counter" data-target="1000">0</div>
-      <p>💻 Hours of Development</p>
-    </div>
-  </div>
-</section>
+
 
   
 
@@ -968,62 +1016,79 @@ s0.parentNode.insertBefore(s1,s0);
 </section>
 <section id="team" style="padding: 4rem 2rem; text-align: center;">
   <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Team</h2>
-  <div class="team-carousel">
-    <div class="team-member">
-      <img src="MRUGEN.jpg" alt="Mrugen Fichadia">
-      <div class="overlay">
-        <h4>Mrugen Fichadia</h4>
-        <p>Project Lead</p>
-      </div>
-    </div>
-    <div class="team-member">
-      <img src="KRISHNAA.png" alt="Krishna Jaiswal">
-      <div class="overlay">
-        <h4>Krishna Jaiswal</h4>
-        <p>Backend Lead</p>
-      </div>
-    </div>
-  <div class="team-member">
-      <img src="IRFAN.png" alt="IRFAN">
-      <div class="overlay">
-        <h4>Irfan Khan</h4>
-        <p>Frontend Developer</p>
-      </div>
-    </div>
-    <div class="team-member">
-      <img src="VARUN.jpg" alt="varun ">
-      <div class="overlay">
-        <h4>Varun TP</h4>
-        <p>Backend Developer</p>
-      </div>
-    </div>
-     
-    <div class="team-member">
-      <img src="ARYA.jpg" alt="ARYA">
-      <div class="overlay">
-        <h4>Arya Pal</h4>
-        <p>Full Stack Developer</p>
-      </div>
-      </div>
+
+  <div class="team-carousel-wrapper">
+    <div class="team-carousel">
+
+      <!-- Team Member Cards -->
       <div class="team-member">
-  <img src="SHLOKAA.png" alt="Shloka Shetiya" 
-       style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
-  <div class="overlay">
-    <h4>Shloka Shetiya</h4>
-    <p>Full Stack Developer</p>
-  </div>
+        <img src="MRUGEN.jpg" alt="Mrugen Fichadia">
+        <div class="overlay">
+          <h4>Mrugen Fichadia</h4>
+          <p>Project Lead</p>
+        </div>
+      </div>
 
+      <div class="team-member">
+        <img src="KRISHNAA.png" alt="Krishna Jaiswal">
+        <div class="overlay">
+          <h4>Krishna Jaiswal</h4>
+          <p>Backend Lead</p>
+        </div>
+      </div>
 
-</div>
+      <div class="team-member">
+        <img src="IRFAN.png" alt="Irfan Khan">
+        <div class="overlay">
+          <h4>Irfan Khan</h4>
+          <p>Frontend Developer</p>
+        </div>
+      </div>
 
-         <div class="team-member">
-      <img src="KAUSHII.png" alt="KAUSHI">
-      <div class="overlay">
-        <h4>Kaushi Chauhan</h4>
-        <p>Intern</p>
-      </div></div>
+      <div class="team-member">
+        <img src="VARUN.jpg" alt="Varun TP">
+        <div class="overlay">
+          <h4>Varun TP</h4>
+          <p>Backend Developer</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="ARYA.jpg" alt="Arya Pal">
+        <div class="overlay">
+          <h4>Arya Pal</h4>
+          <p>Full Stack Developer</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="SHLOKAA.png" alt="Shloka Shetiya">
+        <div class="overlay">
+          <h4>Shloka Shetiya</h4>
+          <p>Full Stack Developer</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="KAUSHII.png" alt="Kaushi Chauhan">
+        <div class="overlay">
+          <h4>Kaushi Chauhan</h4>
+          <p>Intern</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="deepak.jpg" alt="Deepak Sharma">
+        <div class="overlay">
+          <h4>Deepak Sharma</h4>
+          <p>Intern</p>
+        </div>
+      </div>
+
     </div>
-     </div>
+  </div>
+</section>
+
     
 
     
