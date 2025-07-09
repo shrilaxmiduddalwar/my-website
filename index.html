@@ -287,46 +287,7 @@
 .service-card p {
   font-size: 0.95rem;
   line-height: 1.5;
-}.team-carousel-wrapper {
-  overflow-x: auto;
-  width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
-
-  /* Hide scrollbar (cross-browser) */
-  scrollbar-width: none;        /* Firefox */
-  -ms-overflow-style: none;     /* IE and Edge */
 }
-
-.team-carousel-wrapper::-webkit-scrollbar {
-  display: none;                /* Chrome, Safari, Opera */
-}
-
-.team-carousel {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 1rem;
-  min-width: max-content;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-.team-member {
-  flex: 0 0 auto;
-  width: 150px;
-  height: 210px;
-  border-radius: 16px;
-  overflow: hidden;
-  scroll-snap-align: center;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.team-member img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-}
-
 #services {
    
     background-size: 400% 400%;
@@ -440,36 +401,6 @@
   line-height: 1.8;
   color: #fff;
   text-align: justify;
-}
-.team-carousel-wrapper {
-  overflow-x: auto;
-  padding: 1rem;
-}
-
-.team-carousel {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  min-width: max-content;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-.team-member {
-  flex: 0 0 auto;
-  width: 150px;
-  height: 210px;
-  border-radius: 16px;
-  overflow: hidden;
-  scroll-snap-align: center;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.team-member img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
 }
 
 @media (max-width: 768px) {
@@ -794,194 +725,6 @@
   box-shadow: 0 6px 15px rgba(255, 204, 0, 0.5);
 }
 
-/* Add this to your existing CSS */
-@media (max-width: 768px), (pointer: coarse) {
-  #bg-video {
-    display: none !important;
-  }
-}
-body {
-  position: relative;
-  overflow-x: hidden; /* important to prevent horizontal shift */
-}
-.team-member {
-  position: relative;
-  width: 140px;
-  height: 140px;
-  flex: 0 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-}
-@media (max-width: 768px) {
-  .team-carousel {
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .team-member {
-    width: 120px;
-    height: 120px;
-  }
-}
-.counter-box {
-  width: 200px; /* ❌ static */
-}
-.counter-box {
-  width: 200px; /* ❌ static */
-}
-.team-carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 1.5rem;
-  padding: 2rem 1rem;
-}
-
-.team-member {
-  scroll-snap-align: center;
-}
-.team-member {
-  position: relative;
-  width: 140px;
-  height: 140px;
-  flex: 0 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-}
-@media (max-width: 768px) {
-  .team-carousel {
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .team-member {
-    width: 120px;
-    height: 120px;
-  }
-}
-.team-carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 1rem;
-  padding: 2rem 1rem;
-  justify-content: flex-start;
-  scroll-behavior: smooth;
-}
-
-.team-member {
-  flex: 0 0 auto;
-  width: 130px;
-  height: 180px;
-  border-radius: 16px;
-  overflow: hidden;
-  scroll-snap-align: center;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.team-member img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  transition: filter 0.3s;
-}
-
-.team-member .overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  color: #ffcc00;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.3;
-}
-.team-member {
-  width: 150px;
-  height: 220px;
-}
-.team-carousel-wrapper {
-  overflow-x: auto;
-  width: 100%;
-  padding: 0 1rem;
-}
-
-.team-carousel {
-  display: flex;
-  gap: 1rem;
-  min-width: max-content;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-.team-member {
-  flex: 0 0 auto;
-  width: 160px;
-  height: 220px;
-  border-radius: 16px;
-  overflow: hidden;
-  scroll-snap-align: center;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.team-member img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-}
-
-.team-member:hover .overlay {
-  opacity: 1;
-}
-.team-carousel {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
-  background: transparent;
-}
-
-.team-member {
-  text-align: center;
-  background: transparent;
-}
-
-.team-member img {
-  width: 160px;
-  height: 170px;
-  border-radius: 10px;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 6px;
-}
-.team-member p{
-  font-size: 12px;
-}
-.team-member h4 {
-  font-size: 12px;
-  color: #fff; /* or #000 depending on bg */
-  margin: 0;
-  transition: color 0.3s;
-}
-
-.team-member h4:hover {
-  color: #fbbc05; /* hover effect color */
-}
-
 
 </style>
 
@@ -1034,7 +777,23 @@ body {
     📁 Click Here to Download Portfolio
   </a>
 </div>
-
+<section id="achievements" style="padding: 4rem 2rem; text-align: center; background: transparent;">
+  <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Achievements</h2>
+  <div class="counter-grid">
+    <div class="counter-box">
+      <div class="counter" data-target="12">0</div>
+      <p>Upcoming Projects</p>
+    </div>
+    <div class="counter-box">
+      <div class="counter" data-target="10">0</div>
+      <p> Clients</p>
+    </div>
+    <div class="counter-box">
+      <div class="counter" data-target="1000">0</div>
+      <p>💻 Hours of Development</p>
+    </div>
+  </div>
+</section>
 
   
 
@@ -1209,60 +968,67 @@ s0.parentNode.insertBefore(s1,s0);
 </section>
 <section id="team" style="padding: 4rem 2rem; text-align: center;">
   <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">Our Team</h2>
-
-  <section class="team-section">
   <div class="team-carousel">
     <div class="team-member">
-      <img src="MRUGEN.jpg" alt="Mrugen Fichadia" />
-      <h4>Mrugen Fichadia</h4>
-      <p>Project Lead</p>
+      <img src="MRUGEN.jpg" alt="Mrugen Fichadia">
+      <div class="overlay">
+        <h4>Mrugen Fichadia</h4>
+        <p>Project Lead</p>
+      </div>
     </div>
-
     <div class="team-member">
-      <img src="KRISHNAA.png" alt="Krishna Jaiswal" />
-      <h4>Krishna Jaiswal</h4>
-      <p>Backend Lead</p>
+      <img src="KRISHNAA.png" alt="Krishna Jaiswal">
+      <div class="overlay">
+        <h4>Krishna Jaiswal</h4>
+        <p>Backend Lead</p>
+      </div>
     </div>
-
+  <div class="team-member">
+      <img src="IRFAN.png" alt="IRFAN">
+      <div class="overlay">
+        <h4>Irfan Khan</h4>
+        <p>Frontend Developer</p>
+      </div>
+    </div>
     <div class="team-member">
-      <img src="IRFAN.png" alt="Irfan Khan" />
-      <h4>Irfan Khan</h4>
-      <p>Frontend Developer</p>
+      <img src="VARUN.jpg" alt="varun ">
+      <div class="overlay">
+        <h4>Varun TP</h4>
+        <p>Backend Developer</p>
+      </div>
     </div>
-
+     
     <div class="team-member">
-      <img src="VARUN.jpg" alt="Varun TP" />
-      <h4>Varun TP</h4>
-      <p>Backend Developer</p>
-    </div>
+      <img src="ARYA.jpg" alt="ARYA">
+      <div class="overlay">
+        <h4>Arya Pal</h4>
+        <p>Full Stack Developer</p>
+      </div>
+      </div>
+      <div class="team-member">
+  <img src="SHLOKAA.png" alt="Shloka Shetiya" 
+       style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+  <div class="overlay">
+    <h4>Shloka Shetiya</h4>
+    <p>Full Stack Developer</p>
+  </div>
 
-    <div class="team-member">
-      <img src="ARYA.jpg" alt="Arya Pal" />
-      <h4>Arya Pal</h4>
-      <p>Full Stack Developer</p>
-    </div>
 
-    <div class="team-member">
-      <img src="SHLOKAA.png" alt="Shloka Shetiya" />
-      <h4>Shloka Shetiya</h4>
-      <p>Full Stack Developer</p>
-    </div>
+</div>
 
-    <div class="team-member">
-      <img src="KAUSHII.png" alt="Kaushi Chauhan" />
-      <h4>Kaushi Chauhan</h4>
-      <p>Intern</p>
+         <div class="team-member">
+      <img src="KAUSHII.png" alt="KAUSHI">
+      <div class="overlay">
+        <h4>Kaushi Chauhan</h4>
+        <p>Intern</p>
+      </div></div>
     </div>
+     </div>
+    
 
-    <div class="team-member">
-      <img src="deepak.jpg" alt="Deepak Singh" />
-      <h4>Deepak Singh</h4>
-      <p>Intern</p>
-    </div>
+    
   </div>
 </section>
-
-         
 
 <section id="legal-section" style="padding: 4rem 2rem; text-align: center;">
   <h2 style="color: #ffcc00;">Legal Documents</h2>
@@ -1344,7 +1110,7 @@ s0.parentNode.insertBefore(s1,s0);
 
   function updateCarousel() {
     const slideWidth = slides[0].offsetWidth;
-    track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    track.style.transform = translateX(-${currentSlide * slideWidth}px);
   }
 
   function nextSlide() {
@@ -1439,6 +1205,3 @@ if (navigator.userAgent.includes("Instagram")) {
   document.getElementById("bg-video").style.display = "none";
 }
 </script>
-
-
-
