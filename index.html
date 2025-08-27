@@ -816,6 +816,7 @@
   <a href="#services">Services</a>
   <a href="#roadmap">Projects</a>
   <a href="#contact">Contact</a>
+  <a href="#legal-section">Privacy Policy</a>
 </nav>
 <section id="about">
   <h2 style="color: #ffcc00; text-shadow: 1px 1px 2px #000;">About Ignito Corporation</h2>
@@ -1108,11 +1109,85 @@ s0.parentNode.insertBefore(s1,s0);
     </div>
 
     <!-- Privacy Policy -->
-    <div class="legal-card">
-      <div class="legal-icon">🔒</div>
-      <h3>Privacy Policy</h3>
-      <p>Click below to download </p>
-      <a href="privacy.pdf" download class="download-btn">Download PDF</a>
+    <div class="privacy-policy-full" style="width: 100%; max-width: 800px; margin: 20px auto; background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 30px; text-align: left; color: white; line-height: 1.6;">
+      <div style="text-align: center; margin-bottom: 30px;">
+        <div class="legal-icon" style="font-size: 40px; margin-bottom: 15px;">🔒</div>
+        <h3 style="color: #ffcc00; font-size: 2rem; margin-bottom: 10px;">Privacy Policy</h3>
+        <p style="color: #ccc;"><strong>Effective Date:</strong> 1st June 2025</p>
+        <p style="color: #ccc;"><strong>App Name:</strong> Smart Distributor App</p>
+        <p style="color: #ccc;"><strong>Business Name:</strong> Ignito Corporation (Sole Proprietorship - Poonam Kale)</p>
+        <p style="color: #ccc;"><strong>Business Email:</strong> support@ignitocorporation.live</p>
+      </div>
+      
+      <div style="text-align: left;">
+        <h4 style="color: #ffcc00; margin-top: 25px; margin-bottom: 10px;">1. Introduction</h4>
+        <p>This Privacy Policy explains how the Smart Distributor App ("we", "our", or "the App") developed and operated by Ignito Corporation, a sole proprietorship owned by Poonam Kale, collects, uses, discloses, and protects the personal data of users. By using the App, you agree to the terms outlined in this Privacy Policy.</p>
+        
+        <h4 style="color: #ffcc00; margin-top: 25px; margin-bottom: 10px;">2. Information We Collect</h4>
+        <p>We may collect the following types of information from app users:</p>
+        <ul style="margin-left: 20px;">
+          <li><strong>Personal Information:</strong>
+            <ul style="margin-left: 20px;">
+              <li>Name, contact number, and address of customers and hawkers</li>
+              <li>Manager, worker, and delivery personnel details</li>
+              <li>Agency/distributor business name and distributor code</li>
+            </ul>
+          </li>
+          <li><strong>Transactional Information:</strong>
+            <ul style="margin-left: 20px;">
+              <li>Cylinder stock in/out details</li>
+              <li>Delivery records and payment updates</li>
+              <li>Customer connection and disconnection logs</li>
+            </ul>
+          </li>
+          <li><strong>Device Information:</strong>
+            <ul style="margin-left: 20px;">
+              <li>Device type, operating system, and usage analytics (for performance improvement)</li>
+            </ul>
+          </li>
+        </ul>
+        <p><strong>Note:</strong> We do not access, collect, or store users' real-time or background location data. The Smart Distributor App functions without requiring any GPS or geolocation permissions.</p>
+        
+        <h4 style="color: #ffcc00; margin-top: 25px; margin-bottom: 10px;">3. How We Use Your Information</h4>
+        <p>We use the collected information for the following purposes:</p>
+        <ul style="margin-left: 20px;">
+          <li>To manage LPG stock and deliveries efficiently</li>
+          <li>To provide a personalized dashboard and user experience</li>
+          <li>To maintain records of users, hawkers, customers, and workers</li>
+          <li>To generate delivery and sales reports</li>
+          <li>To enhance the performance and security of the app</li>
+          <li>To send relevant updates or service-related communication</li>
+        </ul>
+        
+        <h4 style="color: #ffcc00; margin-top: 25px; margin-bottom: 10px;">4. Data Sharing and Disclosure</h4>
+        <p>We do not sell or rent your personal data. Your information is only shared:</p>
+        <ul style="margin-left: 20px;">
+          <li>With team members added by the account owner (e.g., manager, worker, hawker)</li>
+          <li>When required by law or regulatory authorities</li>
+          <li>With cloud service providers for secure data storage and backup</li>
+        </ul>
+        
+        <h4 style="color: #ffcc00; margin-top: 25px; margin-bottom: 10px;">5. Data Security</h4>
+        <p>We implement standard security measures including encrypted cloud storage and authentication to protect your data from unauthorized access, alteration, or deletion.</p>
+        
+        <h4 style="color: #ffcc00; margin-top: 25px; margin-bottom: 10px;">6. User Control and Responsibility</h4>
+        <ul style="margin-left: 20px;">
+          <li>Only the distributor (account owner) can manage roles and access</li>
+          <li>It is the responsibility of the user to keep login credentials confidential</li>
+          <li>Users can request deletion of their data by contacting us</li>
+        </ul>
+        
+        <h4 style="color: #ffcc00; margin-top: 25px; margin-bottom: 10px;">7. Children's Privacy</h4>
+        <p>The App is not intended for use by individuals under the age of 18.</p>
+        
+        <h4 style="color: #ffcc00; margin-top: 25px; margin-bottom: 10px;">8. Changes to This Policy</h4>
+        <p>We may update this Privacy Policy from time to time. Users will be notified of significant changes through the app or via registered email.</p>
+        
+        <h4 style="color: #ffcc00; margin-top: 25px; margin-bottom: 10px;">9. Contact Us</h4>
+        <p>If you have any questions or requests related to this Privacy Policy, please contact:</p>
+        <p><strong>Ignito Corporation (Proprietor: Poonam Kale)</strong><br>
+        Email: support@ignitocorporation.live</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1170,27 +1245,39 @@ s0.parentNode.insertBefore(s1,s0);
 </html><script>
  
   let currentSlide = 0;
-  const slides = document.querySelectorAll('.carousel-card');
-  const track = document.getElementById('carousel-track');
+  let slides = [];
+  let track = null;
+
+  // Initialize carousel when DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    slides = document.querySelectorAll('.carousel-card');
+    track = document.getElementById('carousel-track');
+    
+    if (slides.length > 0 && track) {
+      updateCarousel();
+    }
+  });
 
   function updateCarousel() {
+    if (slides.length === 0 || !track) return;
+    
     const slideWidth = slides[0].offsetWidth;
-    track.style.transform = translateX(-${currentSlide * slideWidth}px);
+    track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
   }
 
   function nextSlide() {
+    if (slides.length === 0) return;
+    
     currentSlide++;
     if (currentSlide >= slides.length) {
-      setTimeout(() => {
-        currentSlide = 0;
-        updateCarousel();
-      }, 14002); // Pause before looping
-    } else {
-      updateCarousel();
+      currentSlide = 0;
     }
+    updateCarousel();
   }
 
   function prevSlide() {
+    if (slides.length === 0) return;
+    
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     updateCarousel();
   }
