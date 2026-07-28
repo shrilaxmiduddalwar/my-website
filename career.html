@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers | Ignito Corporation</title>
+  <meta name="description" content="Build your career with Ignito Corporation. Explore open roles in web, mobile, backend, UX and cloud engineering." />
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Modern Enterprise SaaS Typography: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      color-scheme: light;
+      --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-dark: #1e3a8a;
+      --primary-light: #eff6ff;
+      
+      --bg-page: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-alt: #f1f5f9;
+      
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #64748b;
+      
+      --border-light: #e2e8f0;
+      --shadow-card: 0 10px 30px -10px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.03);
+      --shadow-hover: 0 20px 40px -15px rgba(37, 99, 235, 0.15), 0 8px 12px -6px rgba(15, 23, 42, 0.05);
+      
+      --radius-md: 20px;
+      --radius-lg: 28px;
+      --radius-full: 9999px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Animated Job Announcement Ticker Bar */
+    .job-announcement-bar {
+      background: linear-gradient(90deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+      color: #ffffff;
+      padding: 0.55rem 1rem;
+      font-size: 0.88rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      position: relative;
+      z-index: 101;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .job-ticker-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .job-ticker-badge {
+      background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+      color: #ffffff;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-weight: 800;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+      animation: pulse-glow 2s infinite;
+      box-shadow: 0 0 12px rgba(239, 68, 68, 0.5);
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.92; transform: scale(1.04); }
+    }
+
+    .job-ticker-marquee {
+      flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .job-ticker-marquee span {
+      display: inline-block;
+      font-weight: 500;
+      color: #e2e8f0;
+      animation: marquee-scroll 22s linear infinite;
+    }
+
+    .job-ticker-marquee:hover span {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee-scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .job-ticker-btn {
+      background: #ffffff;
+      color: #1e3a8a;
+      padding: 0.35rem 0.95rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      white-space: nowrap;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+    }
+
+    .job-ticker-btn:hover {
+      background: #f8fafc;
+      color: #2563eb;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.35);
+    }
+
+    @media (max-width: 768px) {
+      .job-ticker-marquee { display: none; }
+      .job-ticker-wrap { justify-content: space-between; }
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0.9rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 1px solid var(--border-light);
+    }
+
+    .brand-text {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+    .brand-text span { color: var(--primary); }
+
+    nav.nav-links { display: flex; align-items: center; gap: 0.5rem; }
+    nav.nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 0.55rem 1rem;
+      border-radius: var(--radius-full);
+      transition: all 0.25s ease;
+    }
+    nav.nav-links a:hover, nav.nav-links a.active {
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 2rem 5rem;
+    }
+
+    .career-hero {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem 3rem;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 3.5rem;
+    }
+
+    .badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 0.4rem 0.95rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 1.2rem;
+    }
+
+    .career-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+      margin-bottom: 1.2rem;
+    }
+
+    .career-hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 750px;
+      margin-bottom: 2rem;
+    }
+
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--primary);
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      padding: 0.9rem 1.8rem;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.28);
+      transition: all 0.3s ease;
+    }
+
+    .btn-apply:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.5rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .enterprise-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
+    }
+
+    .enterprise-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .enterprise-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .enterprise-card p {
+      color: var(--text-muted);
+      font-size: 0.97rem;
+    }
+
+    .positions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .position-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      box-shadow: var(--shadow-card);
+    }
+
+    .position-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .position-info strong {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .position-info p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border-light);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: var(--text-subtle);
+      font-size: 0.9rem;
+    }
+    .site-footer a { color: var(--primary); text-decoration: none; }
+
+    .salary-hero-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1d4ed8 100%);
+      color: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 1.5rem 2rem;
+      margin: 1.8rem 0;
+      box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .salary-hero-card .salary-text {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .salary-hero-card .salary-text h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .salary-hero-card .salary-text p {
+      color: #cbd5e1;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .salary-pill {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      padding: 0.6rem 1.3rem;
+      border-radius: 9999px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .salary-badge-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: #ecfdf5;
+      color: #047857;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      border: 1px solid #a7f3d0;
+      margin-left: 0.5rem;
+    }
+
+    .position-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.8rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
+    }
+
+    .position-item:hover {
+      border-color: #93c5fd;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .position-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      flex: 1;
+    }
+
+    .btn-apply-sm {
+      background: var(--primary);
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 0.65rem 1.35rem;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+      transition: all 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .btn-apply-sm:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+    }
+
+    @media (max-width: 768px) {
+      .career-hero { padding: 2.2rem 1.5rem; }
+      .position-item { flex-direction: column; align-items: stretch; gap: 1.2rem; }
+      .btn-apply-sm { justify-content: center; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Job Announcement Ticker Bar -->
+  <div class="job-announcement-bar">
+    <div class="job-ticker-wrap">
+      <div class="job-ticker-badge">
+        <i class="fas fa-briefcase"></i> WE'RE HIRING
+      </div>
+      <div class="job-ticker-marquee">
+        <span>Join Ignito Corporation — Hiring Open for Frontend Developers, Backend Engineers, UI/UX Designers & Operations Specialists — Apply Now &nbsp;&bull;&nbsp; Fast Track Interview Process &nbsp;&bull;&nbsp; Competitive Salary Packages Starting @ ₹4 LPA+ &nbsp;&bull;&nbsp;</span>
+      </div>
+      <a href="career.html" class="job-ticker-btn">
+        Apply Now <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="ignito.png" alt="Ignito Logo" />
+        <span class="brand-text">Ignito <span>Corporation</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="career.html" class="active">Careers</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="career-hero fade-up">
+      <div class="badge-tag"><i class="fas fa-briefcase"></i> BUILD YOUR CAREER</div>
+      <h1>Join Ignito Corporation — Engineer High-Impact Enterprise Products.</h1>
+      <p>
+        Accelerate your tech career with Ignito Corporation. We are actively expanding our engineering, product, and operations teams with high-paying packages and fast-track career growth.
+      </p>
+
+      <!-- Salary Highlight Card -->
+      <div class="salary-hero-card">
+        <div class="salary-text">
+          <h3><i class="fas fa-coins" style="color: #fbbf24;"></i> Competitive Compensation Package</h3>
+          <p>Salary starts from <strong>₹4,00,000 / Year (₹4 LPA)</strong> up to <strong>₹12,00,000 / Year (₹12 LPA)</strong> based on role & expertise + Annual Performance Bonuses!</p>
+        </div>
+        <div class="salary-pill">
+          <i class="fas fa-chart-line"></i> ₹4 LPA to ₹12 LPA
+        </div>
+      </div>
+
+      <a class="btn-apply" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-paper-plane"></i> Apply Now <i class="fas fa-arrow-right"></i>
+      </a>
+    </section>
+
+    <section class="fade-up">
+      <h2 class="section-title">Why Join Ignito Corporation?</h2>
+      <div class="cards-grid">
+        <div class="enterprise-card">
+          <div style="font-size: 1.8rem; margin-bottom: 0.8rem;">💰</div>
+          <h3>Industry-Leading Pay</h3>
+          <p>Attractive salary starting from <strong>₹4 Lacs per year</strong> with guaranteed performance bonuses, annual appraisal increments, and incentive plans.</p>
+        </div>
+        <div class="enterprise-card">
+          <div style="font-size: 1.8rem; margin-bottom: 0.8rem;">🚀</div>
+          <h3>Fast-Track Hiring</h3>
+          <p>Quick 2-step evaluation process with direct interview schedules within 48 hours and rapid offer letter issuance upon selection.</p>
+        </div>
+        <div class="enterprise-card">
+          <div style="font-size: 1.8rem; margin-bottom: 0.8rem;">💻</div>
+          <h3>Modern Work Setup</h3>
+          <p>Flexible hybrid/remote options, premium workstation hardware, paid learning allowances, and enterprise hands-on project exposure.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="fade-up">
+      <h2 class="section-title">Open Positions & Direct Application Links</h2>
+      <div class="positions-list">
+        
+        <div class="position-item">
+          <div class="position-left">
+            <div class="position-icon"><i class="fas fa-code"></i></div>
+            <div class="position-info">
+              <strong>Frontend Developer <span class="salary-badge-mini">₹4.0L - ₹7.5L / year</span></strong>
+              <p>Build high-performance web apps & SaaS dashboards using React, modern JS & enterprise design systems.</p>
+            </div>
+          </div>
+          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+            Apply Now <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="position-item">
+          <div class="position-left">
+            <div class="position-icon"><i class="fas fa-server"></i></div>
+            <div class="position-info">
+              <strong>Backend Engineer <span class="salary-badge-mini">₹4.5L - ₹9.0L / year</span></strong>
+              <p>Architect robust APIs, cloud microservices, and database systems for scalability & security.</p>
+            </div>
+          </div>
+          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+            Apply Now <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="position-item">
+          <div class="position-left">
+            <div class="position-icon"><i class="fas fa-pencil-ruler"></i></div>
+            <div class="position-info">
+              <strong>UI/UX Designer <span class="salary-badge-mini">₹4.0L - ₹6.8L / year</span></strong>
+              <p>Design modern enterprise product interfaces, component libraries, and interactive visual graphics.</p>
+            </div>
+          </div>
+          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+            Apply Now <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="position-item">
+          <div class="position-left">
+            <div class="position-icon"><i class="fas fa-headset"></i></div>
+            <div class="position-info">
+              <strong>Delivery & Operations Specialist <span class="salary-badge-mini">₹4.0L - ₹6.5L / year</span></strong>
+              <p>Oversee enterprise client deliverables, project timelines, quality standards & communication.</p>
+            </div>
+          </div>
+          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+            Apply Now <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="fade-up">
+      <h2 class="section-title">Hiring Process</h2>
+      <div class="cards-grid">
+        <div class="enterprise-card">
+          <div style="font-family: var(--font-heading); font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">STEP 01</div>
+          <h3>Submit Application</h3>
+          <p>Click <strong>Apply Now</strong> to submit your details and registration via our online Razorpay form portal.</p>
+        </div>
+
+        <div class="enterprise-card">
+          <div style="font-family: var(--font-heading); font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">STEP 02</div>
+          <h3>Application Review</h3>
+          <p>Our recruitment team reviews your profile within 48 hours and confirms your interview slot.</p>
+        </div>
+
+        <div class="enterprise-card">
+          <div style="font-family: var(--font-heading); font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">STEP 03</div>
+          <h3>Interview & Offer Letter</h3>
+          <p>Complete the technical & team fit interview to receive your official offer letter with package breakdown starting @ ₹4 LPA+.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Ignito Corporation. Have questions? Contact our recruitment team at <a href="mailto:ayumifurniture@gmail.com">ayumifurniture@gmail.com</a>.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-up').forEach(el => scrollObserver.observe(el));
+    });
+  </script>
+</body>
+</html>
