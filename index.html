@@ -363,7 +363,8 @@
 
     .hero-title .gradient-text {
       background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 50%, var(--accent) 100%);
-      -webkit-background-clip: text;
+      
+      : text;
       -webkit-text-fill-color: transparent;
     }
 
@@ -1012,6 +1013,31 @@
       font-weight: 600;
     }
 
+    .team-linkedin-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+      color: #0a66c2;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .team-linkedin-btn:hover {
+      background: #0a66c2;
+      color: #ffffff;
+      border-color: #0a66c2;
+      box-shadow: 0 4px 12px rgba(10, 102, 194, 0.25);
+      transform: translateY(-1px);
+    }
+
     /* Clients & Partners Carousel / Track */
     .client-track-container {
       overflow-x: auto;
@@ -1319,7 +1345,7 @@
         <i class="fas fa-briefcase"></i> WE'RE HIRING
       </div>
       <div class="job-ticker-marquee">
-        <span>Join Ignito Corporation — Hiring Open for Frontend Developers, Backend Engineers, UI/UX Designers & Operations Specialists — Apply Now &nbsp;&bull;&nbsp; Fast Track Interview Process &nbsp;&bull;&nbsp; Competitive Salary Packages Starting @ ₹4 LPA+ &nbsp;&bull;&nbsp;</span>
+        <span>🚨 LAST DATE TO APPLY: 20 SEPTEMBER 2026 &nbsp;&bull;&nbsp; 🔴 ROUND 1 INTERVIEW (GOOGLE MEET): 25 SEPTEMBER 2026 &nbsp;&bull;&nbsp; Hiring Open for Front Desk Executive, Sales Managers, Telecallers, CRM, Security Guards, Interns & Engineers &nbsp;&bull;&nbsp; Fast Track Selection &nbsp;&bull;&nbsp;</span>
       </div>
       <a href="career.html" class="job-ticker-btn">
         Apply Now <i class="fas fa-arrow-right"></i>
@@ -1621,6 +1647,9 @@
               <div class="team-details">
                 <div class="team-name">Mrugen Fichadia</div>
                 <div class="team-role">Project Lead</div>
+                <a href="https://www.linkedin.com/in/mrugen-fichadia/" target="_blank" rel="noopener noreferrer" class="team-linkedin-btn" aria-label="Mrugen Fichadia LinkedIn Profile">
+                  <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
               </div>
             </article>
 
@@ -1631,6 +1660,9 @@
               <div class="team-details">
                 <div class="team-name">Krishna Jaiswal</div>
                 <div class="team-role">Backend Lead</div>
+                <a href="https://www.linkedin.com/in/krishna-jaiswal10" target="_blank" rel="noopener noreferrer" class="team-linkedin-btn" aria-label="Krishna Jaiswal LinkedIn Profile">
+                  <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
               </div>
             </article>
 
@@ -1651,6 +1683,9 @@
               <div class="team-details">
                 <div class="team-name">Varun TP</div>
                 <div class="team-role">Backend Developer</div>
+                <a href="https://www.linkedin.com/in/varun-tp-8ab642262" target="_blank" rel="noopener noreferrer" class="team-linkedin-btn" aria-label="Varun TP LinkedIn Profile">
+                  <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
               </div>
             </article>
 
@@ -1661,6 +1696,9 @@
               <div class="team-details">
                 <div class="team-name">Arya Pal</div>
                 <div class="team-role">Full Stack Developer</div>
+                <a href="https://www.linkedin.com/in/arya-pal-5602b228b" target="_blank" rel="noopener noreferrer" class="team-linkedin-btn" aria-label="Arya Pal LinkedIn Profile">
+                  <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
               </div>
             </article>
 
@@ -1681,6 +1719,9 @@
               <div class="team-details">
                 <div class="team-name">Kaushi Chauhan</div>
                 <div class="team-role">Intern Developer</div>
+                <a href="https://www.linkedin.com/in/kaushi-chauhan-89861626a" target="_blank" rel="noopener noreferrer" class="team-linkedin-btn" aria-label="Kaushi Chauhan LinkedIn Profile">
+                  <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
               </div>
             </article>
 
@@ -1722,7 +1763,7 @@
                 <p class="client-quote">"Best and fast service for application development."</p>
               </div>
               <div class="client-profile">
-                <img src="filedoc.jpeg" alt="FileDoc Client Store" class="client-avatar" />
+                <img src="images/filedoc.jpeg" alt="FileDoc Client Store" class="client-avatar" />
                 <div>
                   <div class="client-name">FILEDOC <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Application Development</div>
@@ -1739,7 +1780,7 @@
                 <p class="client-quote">"Exceptional work delivered application on time."</p>
               </div>
               <div class="client-profile">
-                <img src="fixkar.jpeg" alt="Fixkar Client Store" class="client-avatar" />
+                <img src="images/fixkar.jpeg" alt="Fixkar Client Store" class="client-avatar" />
                 <div>
                   <div class="client-name">FIXKAR <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Service & Retail Client</div>
@@ -1756,7 +1797,7 @@
                 <p class="client-quote">"Fully automated our business with application, thanks to all Ignito team!"</p>
               </div>
               <div class="client-profile">
-                <img src="uaw auto.jpeg" alt="UAW Auto Client Store" class="client-avatar" />
+                <img src="images/uaw_auto.jpeg" alt="UAW Auto Client Store" class="client-avatar" />
                 <div>
                   <div class="client-name">UAW AUTO <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Automotive & Enterprise Client</div>
@@ -1770,7 +1811,7 @@
                 <p class="client-quote">"User-friendly system and exceptionally fast execution. Highly satisfied with the results."</p>
               </div>
               <div class="client-profile">
-                <img src="matru.jpeg" alt="Matruchaya Corporation" class="client-avatar" />
+                <img src="images/matru.jpeg" alt="Matruchaya Corporation" class="client-avatar" />
                 <div>
                   <div class="client-name">MATRUCHAYA CORPORATION</div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">LPG Distributor</div>
@@ -1784,7 +1825,7 @@
                 <p class="client-quote">"Streamlined distribution and significantly better reporting transparency across our operational teams."</p>
               </div>
               <div class="client-profile">
-                <img src="salasar.jpeg" alt="Salasar Logistics" class="client-avatar" />
+                <img src="images/salasar.jpeg" alt="Salasar Logistics" class="client-avatar" />
                 <div>
                   <div class="client-name">SALASAR LOGISTICS</div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Logistics & Supply</div>
@@ -1801,7 +1842,7 @@
                 <p class="client-quote">"Delivery tracking became reliable overnight, and operational reports are available instantly."</p>
               </div>
               <div class="client-profile">
-                <img src="lpg.jpeg" alt="Smart LPG Distribution App" class="client-avatar" />
+                <img src="images/lpg.jpeg" alt="Smart LPG Distribution App" class="client-avatar" />
                 <div>
                   <div class="client-name">SMART LPG DISTRIBUTION <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">HPCL | BPCL | GOGAS Network</div>
@@ -1815,7 +1856,7 @@
                 <p class="client-quote">"Ignito helped us go digital in less than a month with a clean, stable, and intuitive mobile application."</p>
               </div>
               <div class="client-profile">
-                <img src="mahaveer.jpeg" alt="Mahaveer Oils" class="client-avatar" />
+                <img src="images/mahaveer.jpeg" alt="Mahaveer Oils" class="client-avatar" />
                 <div>
                   <div class="client-name">MAHAVEER OILS</div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Industrial Client</div>
@@ -1835,7 +1876,7 @@
         </div>
         <h2 class="section-title" style="color: #ffffff; margin-bottom: 1.2rem;">Want to Build Enterprise Software with Us?</h2>
         <p style="color: #cbd5e1; font-size: 1.1rem; line-height: 1.8; margin-bottom: 2.2rem;">
-          We are hiring frontend developers, backend engineers, UI designers, and delivery specialists who care about craft and growth.
+          We are hiring Sales Managers, Telecallers, Customer Relationship Managers, Security Guards, Interns, Engineers & Designers. Join our growing team today!
         </p>
         <a class="btn btn-primary" href="career.html" style="background: #ffffff; color: var(--primary-dark); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);">
           Apply Now <i class="fas fa-arrow-right"></i>
@@ -1861,7 +1902,8 @@
             <h3>Ignito Corporation HQ</h3>
             <p>
               Bhagirathpura, Indore, Madhya Pradesh, India<br />
-              <strong>Official Email:</strong> support@ignitocorporation.live
+              <strong>Official Email:</strong> support@ignitocorporation.live<br />
+              <strong>Careers Email:</strong> <a href="mailto:carrers@ignitocorporation.com" style="color: var(--primary); text-decoration: none; font-weight: 600;">carrers@ignitocorporation.com</a>
             </p>
 
             <div style="margin-bottom: 1.8rem; border-top: 1px solid var(--border-light); padding-top: 1.4rem;">
@@ -1872,7 +1914,7 @@
                 <a class="social-btn" href="https://wa.me/916232480899" aria-label="WhatsApp" target="_blank" rel="noopener">
                   <i class="fab fa-whatsapp"></i>
                 </a>
-                <a class="social-btn" href="mailto:support@ignitocorporation.in" aria-label="Email">
+                <a class="social-btn" href="mailto:carrers@ignitocorporation.com" aria-label="Email">
                   <i class="fas fa-envelope"></i>
                 </a>
                 <a class="social-btn" href="https://x.com/Ignito485001" aria-label="X Twitter" target="_blank" rel="noopener">
@@ -1901,7 +1943,7 @@
           © 2025-2026 <strong>Ignito Corporation</strong>. All rights reserved. &bull; <a href="privacy.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">Privacy Policy & Terms</a>
         </div>
         <div>
-          Career Enquiries: <a href="mailto:ayumifurniture@gmail.com">ayumifurniture@gmail.com</a>
+          Career Enquiries: <a href="mailto:carrers@ignitocorporation.com">carrers@ignitocorporation.com</a>
         </div>
       </div>
     </div>
@@ -2018,13 +2060,3 @@
   </script>
 </body>
 </html>
-<!-- Mobile responsive fix -->
-<style>
-  @media (max-width: 768px) {
-    div, section, article, .card {
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      overflow-wrap: break-word;
-    }
-  }
-</style>
