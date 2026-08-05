@@ -1336,6 +1336,170 @@
       margin-left: 0.5rem;
     }
 
+    .salary-hero-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1d4ed8 100%);
+      color: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 1.5rem 2rem;
+      margin: 1.8rem 0;
+      box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .salary-hero-card .salary-text {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .salary-hero-card .salary-text h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .salary-hero-card .salary-text p {
+      color: #cbd5e1;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .salary-pill {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      padding: 0.6rem 1.3rem;
+      border-radius: 9999px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--primary);
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      padding: 0.9rem 1.8rem;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.28);
+      transition: all 0.3s ease;
+    }
+
+    .btn-apply:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Prominent Deadline & Interview Highlight Banner */
+    .deadline-highlight-card {
+      background: linear-gradient(135deg, #fff5f5 0%, #ffffff 50%, #eff6ff 100%);
+      border: 2px solid #fca5a5;
+      border-radius: var(--radius-md);
+      padding: 1.8rem 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 10px 30px rgba(239, 68, 68, 0.12);
+      position: relative;
+    }
+
+    .deadline-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+    }
+
+    .deadline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .deadline-item {
+      background: #ffffff;
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.4rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+    }
+
+    .deadline-item.warning-border {
+      border-left: 4px solid #ef4444;
+    }
+
+    .deadline-item.highlight-border {
+      border-left: 4px solid #2563eb;
+    }
+
+    .deadline-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .deadline-icon.red { background: #fee2e2; color: #ef4444; }
+    .deadline-icon.blue { background: #eff6ff; color: #2563eb; }
+
+    .deadline-label {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: var(--text-subtle);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .deadline-date {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 0.3rem;
+    }
+
+    .deadline-date.red-text { color: #dc2626; }
+    .deadline-date.blue-text { color: #1d4ed8; }
+
+    .deadline-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
     /* Contact Blocks */
     .contact-grid {
       display: grid;
@@ -1646,6 +1810,11 @@
         padding: 1.4rem 1.2rem;
       }
 
+      .salary-hero-card { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1.25rem 1.25rem; }
+      .salary-pill { width: 100%; justify-content: center; }
+      .deadline-highlight-card { padding: 1.4rem 1.25rem; }
+      .deadline-item { flex-direction: row; gap: 1rem; padding: 1rem 1.1rem; }
+
       .position-item {
         flex-direction: column;
         align-items: stretch;
@@ -1738,6 +1907,8 @@
         align-items: flex-start;
         gap: 0.85rem;
       }
+
+      .deadline-item { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
 
       .team-grid {
         grid-auto-columns: minmax(220px, 85vw);
@@ -2207,7 +2378,7 @@
                 <p class="client-quote">"Exceptional work delivered application on time."</p>
               </div>
               <div class="client-profile">
-                <img src="fixkar.jpeg" alt="Fixkar Client Store" class="client-avatar" />
+                <img src="images/fixkar.jpeg" alt="Fixkar Client Store" class="client-avatar" />
                 <div>
                   <div class="client-name">FIXKAR <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Service & Retail Client</div>
@@ -2224,7 +2395,7 @@
                 <p class="client-quote">"Fully automated our business with application, thanks to all Ignito team!"</p>
               </div>
               <div class="client-profile">
-                <img src="uaw auto.jpeg" alt="UAW Auto Client Store" class="client-avatar" />
+                <img src="images/uaw_auto.jpeg" alt="UAW Auto Client Store" class="client-avatar" />
                 <div>
                   <div class="client-name">UAW AUTO <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Automotive & Enterprise Client</div>
@@ -2238,7 +2409,7 @@
                 <p class="client-quote">"User-friendly system and exceptionally fast execution. Highly satisfied with the results."</p>
               </div>
               <div class="client-profile">
-                <img src="matru.jpeg" alt="Matruchaya Corporation" class="client-avatar" />
+                <img src="images/matru.jpeg" alt="Matruchaya Corporation" class="client-avatar" />
                 <div>
                   <div class="client-name">MATRUCHAYA CORPORATION</div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">LPG Distributor</div>
@@ -2252,7 +2423,7 @@
                 <p class="client-quote">"Streamlined distribution and significantly better reporting transparency across our operational teams."</p>
               </div>
               <div class="client-profile">
-                <img src="salasar.jpeg" alt="Salasar Logistics" class="client-avatar" />
+                <img src="images/salasar.jpeg" alt="Salasar Logistics" class="client-avatar" />
                 <div>
                   <div class="client-name">SALASAR LOGISTICS</div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Logistics & Supply</div>
@@ -2269,7 +2440,7 @@
                 <p class="client-quote">"Delivery tracking became reliable overnight, and operational reports are available instantly."</p>
               </div>
               <div class="client-profile">
-                <img src="lpg.jpeg" alt="Smart LPG Distribution App" class="client-avatar" />
+                <img src="images/lpg.jpeg" alt="Smart LPG Distribution App" class="client-avatar" />
                 <div>
                   <div class="client-name">SMART LPG DISTRIBUTION <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">HPCL | BPCL | GOGAS Network</div>
@@ -2283,7 +2454,7 @@
                 <p class="client-quote">"Ignito helped us go digital in less than a month with a clean, stable, and intuitive mobile application."</p>
               </div>
               <div class="client-profile">
-                <img src="mahaveer.jpeg" alt="Mahaveer Oils" class="client-avatar" />
+                <img src="images/mahaveer.jpeg" alt="Mahaveer Oils" class="client-avatar" />
                 <div>
                   <div class="client-name">MAHAVEER OILS</div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Industrial Client</div>
@@ -2300,12 +2471,115 @@
       <div class="section-container">
         <div class="section-header fade-up">
           <div class="section-tag"><i class="fas fa-briefcase"></i> CAREERS & HIRING</div>
-          <h2 class="section-title">Open Positions & <span class="marker-teal">Direct Application Links</span></h2>
+          <h2 class="section-title">Join Ignito Corporation — <span class="marker-teal">Selection Process & Open Positions</span></h2>
           <p class="section-subtitle">
-            Explore active openings at Ignito Corporation. Fast-track 3-round selection process with attractive packages!
+            Accelerate your tech career with Ignito Corporation. We are actively expanding our engineering, product, and operations teams with high-paying packages and fast-track career growth.
             <br />
-            <span class="doodle-note" style="margin-top: 0.4rem;">🚨 Last Date to Apply: <strong>20 September 2026</strong> &bull; Round 1 Interview: <strong>25 September 2026</strong></span>
+            <span class="doodle-note" style="margin-top: 0.4rem;">✨ 100% Transparent 3-Round Selection &bull; Apply Today!</span>
           </p>
+        </div>
+
+        <!-- Salary Highlight Card -->
+        <div class="salary-hero-card fade-up">
+          <div class="salary-text">
+            <h3><i class="fas fa-coins" style="color: #fbbf24;"></i> Competitive Compensation Package</h3>
+            <p>Salary packages range from <strong>₹2,00,000 / Year</strong> up to <strong>₹12,00,000 / Year (₹12 LPA)</strong> based on role & experience + Performance Bonuses & Paid Internships!</p>
+          </div>
+          <div class="salary-pill">
+            <i class="fas fa-chart-line"></i> ₹2 LPA to ₹12 LPA+
+          </div>
+        </div>
+
+        <!-- IMPORTANT DEADLINE & INTERVIEW HIGHLIGHT CARD -->
+        <div class="deadline-highlight-card fade-up">
+          <div class="deadline-badge">
+            <i class="fas fa-exclamation-triangle"></i> CRITICAL DATES & DEADLINES
+          </div>
+          <div class="deadline-grid">
+            <div class="deadline-item warning-border">
+              <div class="deadline-icon red"><i class="fas fa-calendar-xmark"></i></div>
+              <div>
+                <span class="deadline-label">LAST DATE TO APPLY</span>
+                <h3 class="deadline-date red-text">20 September 2026</h3>
+                <p class="deadline-desc">Registration portal closes strictly on 20 Sept 2026. Submit your application early!</p>
+              </div>
+            </div>
+            <div class="deadline-item highlight-border">
+              <div class="deadline-icon blue"><i class="fas fa-video"></i></div>
+              <div>
+                <span class="deadline-label">ROUND 1 (FIRST INTERVIEW)</span>
+                <h3 class="deadline-date blue-text">25 September 2026</h3>
+                <p class="deadline-desc">Online interview via <strong>Google Meet</strong> for all candidates who submit applications before the deadline.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-ROUND SELECTION & INTERVIEW PROCESS -->
+        <div class="fade-up" style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px dashed var(--border-light);">
+          <h3 class="section-title" style="font-size: 1.65rem; margin-bottom: 0.5rem;">
+            3-Round Selection & <span class="marker-teal">Interview Process</span>
+          </h3>
+          <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 1.8rem;">
+            Follow our 3 structured evaluation steps to secure your role at Ignito Corporation:
+          </p>
+
+          <div class="cards-grid" style="margin-bottom: 2.5rem;">
+            <div class="enterprise-card" style="border-top: 4px solid #ef4444; background: #ffffff;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                <span style="font-family: var(--font-heading); font-weight: 800; color: #ef4444;">ROUND 01</span>
+                <span style="background: #fee2e2; color: #dc2626; font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: 9999px; border: 1px solid #fca5a5;">
+                  <i class="fas fa-exclamation-circle"></i> IMPORTANT &bull; 25 SEPT 2026
+                </span>
+              </div>
+              <h3>First Interview (Google Meet)</h3>
+              <p>
+                Scheduled on <strong>25 September 2026</strong>. All registered applicants who submit before the <strong>20 September 2026</strong> deadline will receive their <strong>Google Meet</strong> interview slot time & link.
+              </p>
+              <div style="margin-top: 1rem; padding: 0.65rem 0.85rem; background: #fff5f5; border-radius: 10px; font-size: 0.85rem; color: #b91c1c; font-weight: 600;">
+                <i class="fas fa-video"></i> Mode: Online via Google Meet
+              </div>
+            </div>
+
+            <div class="enterprise-card" style="border-top: 4px solid #2563eb; background: #ffffff;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                <span style="font-family: var(--font-heading); font-weight: 800; color: #2563eb;">ROUND 02</span>
+                <span style="background: #eff6ff; color: #1d4ed8; font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: 9999px; border: 1px solid #bfdbfe;">
+                  <i class="fas fa-envelope"></i> EMAIL INVITATION
+                </span>
+              </div>
+              <h3>Written Examination</h3>
+              <p>
+                Shortlisted candidates from Round 1 will receive an official email notification with written test guidelines, exam link, and schedule instructions.
+              </p>
+              <div style="margin-top: 1rem; padding: 0.65rem 0.85rem; background: #eff6ff; border-radius: 10px; font-size: 0.85rem; color: #1e40af; font-weight: 600;">
+                <i class="fas fa-file-pen"></i> Format: Online Written Assessment
+              </div>
+            </div>
+
+            <div class="enterprise-card" style="border-top: 4px solid #10b981; background: #ffffff;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                <span style="font-family: var(--font-heading); font-weight: 800; color: #10b981;">ROUND 03</span>
+                <span style="background: #ecfdf5; color: #047857; font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: 9999px; border: 1px solid #a7f3d0;">
+                  <i class="fas fa-certificate"></i> OFFER LETTER ISSUANCE
+                </span>
+              </div>
+              <h3>Document Verification & Call Letter</h3>
+              <p>
+                Final document verification stage (Identity, Academic & Experience credentials). Upon successful verification, candidates receive their official <strong>Call Letter / Offer Letter</strong>.
+              </p>
+              <div style="margin-top: 1rem; padding: 0.65rem 0.85rem; background: #ecfdf5; border-radius: 10px; font-size: 0.85rem; color: #047857; font-weight: 600;">
+                <i class="fas fa-file-signature"></i> Final Output: Call Letter / Joining Letter
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OPEN POSITIONS HEADER & CARDS -->
+        <div class="fade-up" style="margin-top: 1rem;">
+          <h3 class="section-title" style="font-size: 1.65rem; margin-bottom: 1.5rem;">
+            Open Vacancies & <span class="marker-yellow">Direct Apply Links</span>
+          </h3>
         </div>
 
         <div class="positions-list fade-up">
@@ -2522,9 +2796,12 @@
 
         </div>
 
-        <div style="text-align: center; margin-top: 2rem;">
-          <a class="btn btn-primary" href="career.html">
-            View Full Recruitment Process & Schedule <i class="fas fa-arrow-right"></i>
+        <div style="text-align: center; margin-top: 2.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; align-items: center;">
+          <a class="btn-apply" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-paper-plane"></i> Apply Now Before 20 Sept 2026 <i class="fas fa-arrow-right"></i>
+          </a>
+          <a class="btn btn-secondary" href="career.html">
+            View Full Dedicated Career Page <i class="fas fa-arrow-right"></i>
           </a>
         </div>
       </div>
