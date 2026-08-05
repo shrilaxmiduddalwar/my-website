@@ -1137,7 +1137,142 @@
       color: var(--text-main);
     }
 
-    /* Careers & Contact Blocks */
+    /* Careers & Open Positions Cards */
+    .positions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .position-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.8rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
+    }
+
+    .position-item:hover {
+      border-color: #93c5fd;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .position-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      flex: 1;
+    }
+
+    .position-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .position-info strong {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .position-info p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .btn-apply-sm {
+      background: var(--primary);
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 0.65rem 1.35rem;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+      transition: all 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .btn-apply-sm:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+    }
+
+    .eligibility-box {
+      margin-top: 0.85rem;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--border-light);
+    }
+
+    .eligibility-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .eligibility-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .elig-tag {
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    .salary-badge-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: #ecfdf5;
+      color: #047857;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      border: 1px solid #a7f3d0;
+      margin-left: 0.5rem;
+    }
+
+    /* Contact Blocks */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1298,6 +1433,11 @@
         display: flex;
       }
 
+      .position-item { flex-direction: column; align-items: stretch; gap: 1.2rem; padding: 1.25rem 1.25rem; }
+      .position-left { flex-direction: row; align-items: flex-start; gap: 1rem; }
+      .btn-apply-sm { justify-content: center; width: 100%; }
+      .salary-badge-mini { display: inline-block; margin-top: 0.25rem; margin-left: 0; }
+
       nav.nav-links a {
         padding: 0.8rem 1rem;
         border-radius: var(--radius-sm);
@@ -1371,7 +1511,7 @@
         <a href="index.html#project">Project</a>
         <a href="index.html#team">Team</a>
         <a href="index.html#clients">Clients</a>
-        <a href="career.html">Careers</a>
+        <a href="index.html#careers">Careers</a>
         <a href="privacy.html">Privacy</a>
         <a href="PORTFOLIOO.pdf" download class="nav-cta"><i class="fas fa-download"></i> Portfolio</a>
       </nav>
@@ -1868,19 +2008,238 @@
       </div>
     </section>
 
-    <!-- Careers Banner Callout -->
-    <section class="section-block" style="background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); color: #ffffff;">
-      <div class="section-container" style="text-align: center; max-width: 840px;">
-        <div class="hero-badge" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border-color: rgba(255, 255, 255, 0.3);">
-          <i class="fas fa-briefcase"></i> JOIN OUR TEAM
+    <!-- Careers Banner Callout & Open Positions Section -->
+    <section id="careers" class="section-block" style="background: var(--bg-alt);">
+      <div class="section-container">
+        <div class="section-header fade-up">
+          <div class="section-tag"><i class="fas fa-briefcase"></i> CAREERS & HIRING</div>
+          <h2 class="section-title">Open Positions & <span class="marker-teal">Direct Application Links</span></h2>
+          <p class="section-subtitle">
+            Explore active openings at Ignito Corporation. Fast-track 3-round selection process with attractive packages!
+            <br />
+            <span class="doodle-note" style="margin-top: 0.4rem;">🚨 Last Date to Apply: <strong>20 September 2026</strong> &bull; Round 1 Interview: <strong>25 September 2026</strong></span>
+          </p>
         </div>
-        <h2 class="section-title" style="color: #ffffff; margin-bottom: 1.2rem;">Want to Build Enterprise Software with Us?</h2>
-        <p style="color: #cbd5e1; font-size: 1.1rem; line-height: 1.8; margin-bottom: 2.2rem;">
-          We are hiring Sales Managers, Telecallers, Customer Relationship Managers, Security Guards, Interns, Engineers & Designers. Join our growing team today!
-        </p>
-        <a class="btn btn-primary" href="career.html" style="background: #ffffff; color: var(--primary-dark); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);">
-          Apply Now <i class="fas fa-arrow-right"></i>
-        </a>
+
+        <div class="positions-list fade-up">
+          
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-code"></i></div>
+              <div class="position-info">
+                <strong>Frontend Developer <span class="salary-badge-mini">₹4.0L - ₹7.5L / year</span></strong>
+                <p>Build high-performance web apps & SaaS dashboards using React, modern JS & enterprise design systems.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> B.Tech / BE / BCA / MCA / B.Sc IT</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> Freshers to 3 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-layer-group"></i> React.js, JavaScript (ES6+), HTML5/CSS3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+              Apply Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-server"></i></div>
+              <div class="position-info">
+                <strong>Backend Engineer <span class="salary-badge-mini">₹4.5L - ₹9.0L / year</span></strong>
+                <p>Architect robust APIs, cloud microservices, and database systems for scalability & security.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> B.Tech / BE / BCA / MCA / CS</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> 1 to 4 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-database"></i> Node.js / Python / Java, REST APIs, SQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+              Apply Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-pencil-ruler"></i></div>
+              <div class="position-info">
+                <strong>UI/UX Designer <span class="salary-badge-mini">₹4.0L - ₹6.8L / year</span></strong>
+                <p>Design modern enterprise product interfaces, component libraries, and interactive visual graphics.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Graduate / Diploma in Design or CS</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> 0 to 3 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-palette"></i> Figma, Adobe XD, Wireframing, UI Design</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+              Apply Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="position-info">
+                <strong>Sales Manager <span class="salary-badge-mini">₹5.0L - ₹10.0L / year</span></strong>
+                <p>Lead B2B client acquisition, enterprise sales strategy, client negotiations, and revenue growth.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> MBA / BBA / Any Graduate</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> 1 to 5 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-handshake"></i> B2B Sales, Lead Gen, Client Relations</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+              Apply Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-handshake"></i></div>
+              <div class="position-info">
+                <strong>Customer Relationship Manager (CRM) <span class="salary-badge-mini">₹4.0L - ₹8.0L / year</span></strong>
+                <p>Manage client relations, account retention, customer satisfaction, and key enterprise partner support.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Any Bachelor's Degree</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> 1 to 3 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-headset"></i> Client Support, Account Mgmt, Communication</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+              Apply Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="position-info">
+                <strong>Telecaller / Calling Executive <span class="salary-badge-mini">₹2.5L - ₹4.5L / year</span></strong>
+                <p>Handle outbound calls, client follow-ups, lead qualification, and customer support communications.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> 12th Pass / Any Graduate</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> Freshers to 2 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-comments"></i> Hindi/English Communication, Active Calling</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+              Apply Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-concierge-bell"></i></div>
+              <div class="position-info">
+                <strong>Front Desk Executive / Receptionist <span class="salary-badge-mini">₹2.5L - ₹4.2L / year</span></strong>
+                <p>Manage front desk operations, visitor reception, office inquiries, call routing, and administrative support.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Graduate / Higher Secondary</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> Freshers to 2 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-desktop"></i> Front Desk Mgmt, Basic Computer & Office MS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+              Apply Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-user-graduate"></i></div>
+              <div class="position-info">
+                <strong>Internship Program (Tech, Sales & Marketing) <span class="salary-badge-mini">Stipend + Certificate</span></strong>
+                <p>Gain hands-on corporate project experience, direct mentorship, Pre-Placement Offer (PPO) potential, and monthly stipend.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Pursuing / Recent Graduates (B.Tech, BCA, BBA, MBA, B.Com)</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> Freshers / Students</span>
+                    <span class="elig-tag"><i class="fas fa-award"></i> Willingness to Learn, Basic Tech or Sales Aptitude</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+              Apply Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-user-shield"></i></div>
+              <div class="position-info">
+                <strong>Security Guard / Premises Officer <span class="salary-badge-mini">₹2.0L - ₹3.6L / year</span></strong>
+                <p>Ensure office campus security, visitor logging, entry/exit management, and workplace safety protocols.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> 10th / 12th Pass</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> 0 to 3 Years Exp. (Security Background)</span>
+                    <span class="elig-tag"><i class="fas fa-shield-alt"></i> Campus Security, Visitor Registry, Vigilance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+              Apply Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-headset"></i></div>
+              <div class="position-info">
+                <strong>Delivery & Operations Specialist <span class="salary-badge-mini">₹4.0L - ₹6.5L / year</span></strong>
+                <p>Oversee enterprise client deliverables, project timelines, quality standards & communication.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Any Graduate / Diploma</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> 0 to 3 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-tasks"></i> Operations Mgmt, Logistics & Project Coordination</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
+              Apply Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <a class="btn btn-primary" href="career.html">
+            View Full Recruitment Process & Schedule <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -2011,6 +2370,11 @@
       }, observerOptions);
 
       document.querySelectorAll('.fade-up').forEach(el => scrollObserver.observe(el));
+
+      // Safety fallback: Ensure all sections & job cards become visible even if scroll observer fails
+      setTimeout(() => {
+        document.querySelectorAll('.fade-up').forEach(el => el.classList.add('is-visible'));
+      }, 300);
 
       // Active Section ScrollSpy
       const spyObserver = new IntersectionObserver((entries) => {
