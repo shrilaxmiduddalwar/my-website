@@ -9,6 +9,70 @@
   <meta name="author" content="Ignito Corporation" />
   <meta name="robots" content="index, follow" />
 
+  <!-- Favicon & Touch Icon Links (Using Existing Logo File ignito.png) -->
+  <link rel="icon" type="image/png" href="ignito.png" />
+  <link rel="shortcut icon" href="ignito.png" type="image/png" />
+  <link rel="apple-touch-icon" href="ignito.png" />
+
+  <!-- Open Graph & Social Metadata for Google & Search Previews -->
+  <meta property="og:title" content="Ignito Corporation | Enterprise Digital Solutions & Software" />
+  <meta property="og:description" content="Ignito Corporation delivers enterprise-grade digital solutions for LPG distribution, mobile apps, websites, data analytics, and cloud automation." />
+  <meta property="og:image" content="https://ignitocorporation.com/ignito.png" />
+  <meta property="og:url" content="https://ignitocorporation.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ignito Corporation | Enterprise Digital Solutions & Software" />
+  <meta name="twitter:description" content="Enterprise digital solutions for LPG distribution, mobile apps, websites, data analytics, and cloud automation." />
+  <meta name="twitter:image" content="https://ignitocorporation.com/ignito.png" />
+
+  <!-- Schema.org Structured Data (JSON-LD) for Google Search Logo & Sitelinks -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ignitocorporation.com/#organization",
+        "name": "Ignito Corporation",
+        "url": "https://ignitocorporation.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ignitocorporation.com/ignito.png",
+          "caption": "Ignito Corporation Logo"
+        },
+        "image": "https://ignitocorporation.com/ignito.png",
+        "description": "Ignito Corporation delivers enterprise-grade digital solutions for LPG distribution, mobile apps, websites, data analytics, and cloud automation.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Indore",
+          "addressRegion": "Madhya Pradesh",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@ignitocorporation.live",
+          "availableLanguage": ["English", "Hindi"]
+        },
+        "sameAs": [
+          "https://x.com/Ignito485001",
+          "https://www.linkedin.com/company/ignito-corporation/about/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ignitocorporation.com/#website",
+        "url": "https://ignitocorporation.com/",
+        "name": "Ignito Corporation",
+        "description": "Enterprise Digital Solutions & Software Engineering",
+        "publisher": {
+          "@id": "https://ignitocorporation.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
@@ -363,8 +427,8 @@
 
     .hero-title .gradient-text {
       background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 50%, var(--accent) 100%);
-      
-      : text;
+      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
@@ -1411,6 +1475,15 @@
     }
 
     @media (max-width: 768px) {
+      .job-ticker-marquee { display: none; }
+      .job-ticker-wrap { justify-content: space-between; gap: 0.5rem; }
+      .job-ticker-badge { font-size: 0.72rem; padding: 0.2rem 0.6rem; }
+      .job-ticker-btn { font-size: 0.75rem; padding: 0.3rem 0.75rem; }
+
+      .nav-container { padding: 0.75rem 1.25rem; }
+      .brand img { width: 38px; height: 38px; }
+      .brand-text { font-size: 1.05rem; }
+
       .mobile-menu-btn {
         display: block;
       }
@@ -1423,41 +1496,255 @@
         right: 0;
         background: #ffffff;
         flex-direction: column;
-        padding: 1.5rem 2rem;
+        padding: 1.25rem 1.5rem;
         border-bottom: 1px solid var(--border-light);
-        box-shadow: 0 15px 30px rgba(15, 23, 42, 0.1);
+        box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
         align-items: stretch;
+        gap: 0.4rem;
       }
 
       nav.nav-links.mobile-open {
         display: flex;
       }
 
-      .position-item { flex-direction: column; align-items: stretch; gap: 1.2rem; padding: 1.25rem 1.25rem; }
-      .position-left { flex-direction: row; align-items: flex-start; gap: 1rem; }
-      .btn-apply-sm { justify-content: center; width: 100%; }
-      .salary-badge-mini { display: inline-block; margin-top: 0.25rem; margin-left: 0; }
-
       nav.nav-links a {
-        padding: 0.8rem 1rem;
+        padding: 0.75rem 1rem;
         border-radius: var(--radius-sm);
+        text-align: center;
+        font-size: 0.95rem;
+        width: 100%;
+      }
+
+      .nav-cta {
+        justify-content: center;
+        width: 100%;
+        margin-top: 0.4rem;
+        text-align: center;
       }
 
       .hero {
-        padding: 3.5rem 1.25rem 4rem;
+        padding: 2.5rem 1.25rem 3.5rem;
       }
 
       .hero-title {
-        font-size: clamp(2.2rem, 7vw, 3.2rem);
+        font-size: clamp(2rem, 7.5vw, 3rem);
+        line-height: 1.15;
       }
 
-      .showcase-wrapper {
-        padding: 2rem 1.5rem;
+      .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.8rem;
+      }
+
+      .hero-actions-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-pricing-note {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .hero-card-panel {
+        padding: 1.5rem 1.25rem;
+      }
+
+      /* Fix typography marker overflow on mobile */
+      .marker-highlight,
+      .marker-yellow,
+      .marker-cyan,
+      .marker-pink,
+      .marker-teal,
+      .wavy-underline,
+      .doodle-circle,
+      .doodle-underline-orange {
+        white-space: normal !important;
+        display: inline !important;
+      }
+
+      .doodle-note {
+        display: inline-block;
+        font-size: 1.25rem;
+        text-align: center;
+        max-width: 100%;
+        word-break: break-word;
+      }
+
+      section.section-block {
+        padding: 3.5rem 1.25rem;
+      }
+
+      .section-header {
+        margin-bottom: 2.2rem;
       }
 
       .cards-grid-3,
       .cards-grid-2 {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .enterprise-card {
+        padding: 1.6rem 1.25rem;
+      }
+
+      .showcase-wrapper {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .showcase-info h3 {
+        font-size: 1.45rem;
+      }
+
+      .showcase-info p {
+        font-size: 0.95rem;
+      }
+
+      .pill-features {
+        gap: 0.5rem;
+      }
+
+      .pill-badge {
+        padding: 0.5rem 0.85rem;
+        font-size: 0.85rem;
+      }
+
+      .highlight-item {
+        padding: 1.25rem 1rem;
+      }
+
+      .team-grid {
+        grid-auto-columns: minmax(230px, 75vw);
+        gap: 1rem;
+      }
+
+      .team-card {
+        scroll-snap-align: start;
+      }
+
+      .client-track {
+        grid-auto-columns: minmax(270px, 82vw);
+        gap: 1rem;
+      }
+
+      .client-card {
+        padding: 1.4rem 1.2rem;
+      }
+
+      .position-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.2rem;
+        padding: 1.35rem 1.25rem;
+      }
+
+      .position-left {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .btn-apply-sm {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .salary-badge-mini {
+        display: inline-block;
+        margin-top: 0.35rem;
+        margin-left: 0;
+      }
+
+      .elig-tag {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+        white-space: normal;
+        word-break: break-word;
+        max-width: 100%;
+      }
+
+      .contact-info-card {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .contact-info-card h3 {
+        font-size: 1.35rem;
+      }
+
+      .social-strip {
+        gap: 0.6rem;
+      }
+
+      .social-btn {
+        width: 46px;
+        height: 46px;
+        font-size: 1.1rem;
+        border-radius: 12px;
+      }
+
+      .map-card {
+        height: 280px;
+        min-height: 280px;
+      }
+
+      .map-card iframe {
+        height: 280px;
+        min-height: 280px;
+      }
+
+      footer.site-footer {
+        padding: 2.5rem 1.25rem 1.75rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.85rem;
+        font-size: 0.88rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .job-announcement-bar {
+        padding: 0.45rem 0.75rem;
+      }
+
+      .hero-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+
+      .handwritten-text {
+        font-size: 1.3rem;
+      }
+
+      .position-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.85rem;
+      }
+
+      .team-grid {
+        grid-auto-columns: minmax(220px, 85vw);
+      }
+
+      .client-track {
+        grid-auto-columns: minmax(250px, 88vw);
       }
     }
 
@@ -1903,7 +2190,7 @@
                 <p class="client-quote">"Best and fast service for application development."</p>
               </div>
               <div class="client-profile">
-                <img src="filedoc.jpeg" alt="FileDoc Client Store" class="client-avatar" />
+                <img src="images/filedoc.jpeg" alt="FileDoc Client Store" class="client-avatar" />
                 <div>
                   <div class="client-name">FILEDOC <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Application Development</div>
@@ -1920,7 +2207,7 @@
                 <p class="client-quote">"Exceptional work delivered application on time."</p>
               </div>
               <div class="client-profile">
-                <img src="fixkar.jpeg" alt="Fixkar Client Store" class="client-avatar" />
+                <img src="images/fixkar.jpeg" alt="Fixkar Client Store" class="client-avatar" />
                 <div>
                   <div class="client-name">FIXKAR <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Service & Retail Client</div>
@@ -1937,7 +2224,7 @@
                 <p class="client-quote">"Fully automated our business with application, thanks to all Ignito team!"</p>
               </div>
               <div class="client-profile">
-                <img src="uaw auto.jpeg" alt="UAW Auto Client Store" class="client-avatar" />
+                <img src="images/uaw_auto.jpeg" alt="UAW Auto Client Store" class="client-avatar" />
                 <div>
                   <div class="client-name">UAW AUTO <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Automotive & Enterprise Client</div>
@@ -1951,7 +2238,7 @@
                 <p class="client-quote">"User-friendly system and exceptionally fast execution. Highly satisfied with the results."</p>
               </div>
               <div class="client-profile">
-                <img src="matru.jpeg" alt="Matruchaya Corporation" class="client-avatar" />
+                <img src="images/matru.jpeg" alt="Matruchaya Corporation" class="client-avatar" />
                 <div>
                   <div class="client-name">MATRUCHAYA CORPORATION</div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">LPG Distributor</div>
@@ -1965,7 +2252,7 @@
                 <p class="client-quote">"Streamlined distribution and significantly better reporting transparency across our operational teams."</p>
               </div>
               <div class="client-profile">
-                <img src="salasar.jpeg" alt="Salasar Logistics" class="client-avatar" />
+                <img src="images/salasar.jpeg" alt="Salasar Logistics" class="client-avatar" />
                 <div>
                   <div class="client-name">SALASAR LOGISTICS</div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Logistics & Supply</div>
@@ -1982,7 +2269,7 @@
                 <p class="client-quote">"Delivery tracking became reliable overnight, and operational reports are available instantly."</p>
               </div>
               <div class="client-profile">
-                <img src="lpg.jpeg" alt="Smart LPG Distribution App" class="client-avatar" />
+                <img src="images/lpg.jpeg" alt="Smart LPG Distribution App" class="client-avatar" />
                 <div>
                   <div class="client-name">SMART LPG DISTRIBUTION <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">HPCL | BPCL | GOGAS Network</div>
@@ -1996,7 +2283,7 @@
                 <p class="client-quote">"Ignito helped us go digital in less than a month with a clean, stable, and intuitive mobile application."</p>
               </div>
               <div class="client-profile">
-                <img src="mahaveer.jpeg" alt="Mahaveer Oils" class="client-avatar" />
+                <img src="images/mahaveer.jpeg" alt="Mahaveer Oils" class="client-avatar" />
                 <div>
                   <div class="client-name">MAHAVEER OILS</div>
                   <div style="font-size: 0.8rem; color: var(--text-subtle);">Industrial Client</div>
