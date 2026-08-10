@@ -3,18 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Careers | Ignito Corporation</title>
-  <meta name="description" content="Build your career with Ignito Corporation. Explore open roles in web, mobile, backend, UX and cloud engineering." />
-  
+  <title>Ignito Corporation | Enterprise Digital Solutions & Software</title>
+  <meta name="description" content="Ignito Corporation delivers enterprise-grade digital solutions for LPG distribution, mobile apps, websites, data analytics, and cloud automation." />
+  <meta name="keywords" content="Ignito Corporation, digital solutions, enterprise website, IT services, LPG distribution app, Indore, software engineering" />
+  <meta name="author" content="Ignito Corporation" />
+  <meta name="robots" content="index, follow" />
+
   <!-- Favicon & Touch Icon Links (Using Existing Logo File ignito.png) -->
   <link rel="icon" type="image/png" href="ignito.png" />
   <link rel="shortcut icon" href="ignito.png" type="image/png" />
   <link rel="apple-touch-icon" href="ignito.png" />
 
+  <!-- Open Graph & Social Metadata for Google & Search Previews -->
+  <meta property="og:title" content="Ignito Corporation | Enterprise Digital Solutions & Software" />
+  <meta property="og:description" content="Ignito Corporation delivers enterprise-grade digital solutions for LPG distribution, mobile apps, websites, data analytics, and cloud automation." />
+  <meta property="og:image" content="https://ignitocorporation.com/ignito.png" />
+  <meta property="og:url" content="https://ignitocorporation.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ignito Corporation | Enterprise Digital Solutions & Software" />
+  <meta name="twitter:description" content="Enterprise digital solutions for LPG distribution, mobile apps, websites, data analytics, and cloud automation." />
+  <meta name="twitter:image" content="https://ignitocorporation.com/ignito.png" />
+
+  <!-- Schema.org Structured Data (JSON-LD) for Google Search Logo & Sitelinks -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ignitocorporation.com/#organization",
+        "name": "Ignito Corporation",
+        "url": "https://ignitocorporation.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ignitocorporation.com/ignito.png",
+          "caption": "Ignito Corporation Logo"
+        },
+        "image": "https://ignitocorporation.com/ignito.png",
+        "description": "Ignito Corporation delivers enterprise-grade digital solutions for LPG distribution, mobile apps, websites, data analytics, and cloud automation.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Indore",
+          "addressRegion": "Madhya Pradesh",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@ignitocorporation.live",
+          "availableLanguage": ["English", "Hindi"]
+        },
+        "sameAs": [
+          "https://x.com/Ignito485001",
+          "https://www.linkedin.com/company/ignito-corporation/about/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ignitocorporation.com/#website",
+        "url": "https://ignitocorporation.com/",
+        "name": "Ignito Corporation",
+        "description": "Enterprise Digital Solutions & Software Engineering",
+        "publisher": {
+          "@id": "https://ignitocorporation.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  <!-- Modern Enterprise SaaS Typography: Plus Jakarta Sans & Inter -->
+  <!-- SaaS Inspired Modern Typography: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -25,10 +87,15 @@
       --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       
+      /* Enterprise Color Palette */
       --primary: #2563eb;
       --primary-hover: #1d4ed8;
       --primary-dark: #1e3a8a;
       --primary-light: #eff6ff;
+      
+      --accent: #714b67; /* Elegant purple accent */
+      --teal: #0d9488;
+      --cyan: #06b6d4;
       
       --bg-page: #f8fafc;
       --bg-surface: #ffffff;
@@ -39,22 +106,68 @@
       --text-subtle: #64748b;
       
       --border-light: #e2e8f0;
+      --border-hover: #cbd5e1;
+      
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
       --shadow-card: 0 10px 30px -10px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.03);
       --shadow-hover: 0 20px 40px -15px rgba(37, 99, 235, 0.15), 0 8px 12px -6px rgba(15, 23, 42, 0.05);
       
+      --radius-sm: 12px;
       --radius-md: 20px;
       --radius-lg: 28px;
       --radius-full: 9999px;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: var(--font-body);
       background-color: var(--bg-page);
       color: var(--text-main);
       line-height: 1.6;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Ambient Background Mesh */
+    .bg-ambient {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .bg-blob-1 {
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.07) 0%, rgba(255, 255, 255, 0) 70%);
+      border-radius: 50%;
+      filter: blur(60px);
+    }
+
+    .bg-blob-2 {
+      position: absolute;
+      top: 40%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(113, 75, 103, 0.06) 0%, rgba(255, 255, 255, 0) 70%);
+      border-radius: 50%;
+      filter: blur(60px);
     }
 
     /* Animated Job Announcement Ticker Bar */
@@ -150,6 +263,7 @@
       .job-ticker-wrap { justify-content: space-between; }
     }
 
+    /* Header & Navigation */
     header {
       position: sticky;
       top: 0;
@@ -158,6 +272,12 @@
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-light);
+      transition: all 0.3s ease;
+    }
+
+    header.scrolled {
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+      background: rgba(255, 255, 255, 0.95);
     }
 
     .nav-container {
@@ -183,6 +303,12 @@
       border-radius: 14px;
       object-fit: cover;
       border: 1px solid var(--border-light);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .brand:hover img {
+      transform: scale(1.05);
     }
 
     .brand-text {
@@ -190,10 +316,19 @@
       font-weight: 800;
       font-size: 1.15rem;
       letter-spacing: -0.02em;
+      color: var(--text-main);
     }
-    .brand-text span { color: var(--primary); }
 
-    nav.nav-links { display: flex; align-items: center; gap: 0.5rem; }
+    .brand-text span {
+      color: var(--primary);
+    }
+
+    nav.nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
     nav.nav-links a {
       color: var(--text-muted);
       text-decoration: none;
@@ -204,27 +339,455 @@
       border-radius: var(--radius-full);
       transition: all 0.25s ease;
     }
-    nav.nav-links a:hover, nav.nav-links a.active {
+
+    nav.nav-links a:hover {
       color: var(--primary);
       background: var(--primary-light);
     }
 
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 4rem 2rem 5rem;
+    nav.nav-links a.active {
+      color: var(--primary);
+      background: var(--primary-light);
+      font-weight: 700;
     }
 
-    .career-hero {
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary);
+      color: #ffffff !important;
+      padding: 0.6rem 1.25rem !important;
+      border-radius: var(--radius-full);
+      font-weight: 700 !important;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+      transition: all 0.3s ease !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-hover) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+    }
+
+    /* Mobile Nav Menu Button */
+    .mobile-menu-btn {
+      display: none;
+      background: transparent;
+      border: none;
+      font-size: 1.4rem;
+      color: var(--text-main);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    /* Hero Section (Odoo Split Layout) */
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 5rem 2rem 6rem;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 1rem;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: var(--radius-full);
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.75rem, 4.8vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: var(--text-main);
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-title .gradient-text {
+      background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 50%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 600px;
+      margin-bottom: 2.2rem;
+    }
+
+    .hero-actions-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .hero-pricing-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      position: relative;
+    }
+
+    .handwritten-arrow {
+      width: 44px;
+      height: 34px;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .font-caveat {
+      font-family: 'Caveat', cursive, sans-serif;
+    }
+
+    .handwritten-text {
+      font-family: 'Caveat', cursive, sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    /* Marker highlight effect */
+    .marker-highlight {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+      padding: 0 0.25em;
+      white-space: nowrap;
+      color: #0f172a;
+    }
+
+    .marker-highlight::before {
+      content: '';
+      position: absolute;
+      inset: 12% -0.15em 8% -0.15em;
+      background-color: #fef08a; /* Yellow highlighter */
+      z-index: -1;
+      transform: rotate(-1.5deg);
+      border-radius: 4px 10px 5px 12px;
+      box-shadow: 0 2px 10px rgba(254, 240, 138, 0.6);
+    }
+
+    /* Blue wavy underline effect */
+    .wavy-underline {
+      position: relative;
+      display: inline-block;
+      white-space: nowrap;
+      color: var(--primary);
+    }
+
+    .wavy-underline::after {
+      content: '';
+      position: absolute;
+      left: -2px;
+      right: -2px;
+      bottom: -10px;
+      height: 14px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10 Q 25 18, 50 10 T 100 10' fill='none' stroke='%232563eb' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center center / 100% 100%;
+    }
+
+    /* Marker Highlights & Handwritten Callouts */
+    .marker-yellow {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+      padding: 0 0.25em;
+      color: #0f172a;
+    }
+    .marker-yellow::before {
+      content: '';
+      position: absolute;
+      inset: 14% -0.1em 8% -0.1em;
+      background-color: #fef08a;
+      z-index: -1;
+      transform: rotate(-1.5deg);
+      border-radius: 4px 10px 5px 12px;
+      box-shadow: 0 2px 8px rgba(254, 240, 138, 0.5);
+    }
+
+    .marker-cyan {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+      padding: 0 0.25em;
+      color: #0f172a;
+    }
+    .marker-cyan::before {
+      content: '';
+      position: absolute;
+      inset: 14% -0.1em 8% -0.1em;
+      background-color: #cff4fc;
+      z-index: -1;
+      transform: rotate(1deg);
+      border-radius: 6px 12px 4px 10px;
+    }
+
+    .marker-pink {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+      padding: 0 0.25em;
+      color: #0f172a;
+    }
+    .marker-pink::before {
+      content: '';
+      position: absolute;
+      inset: 14% -0.1em 8% -0.1em;
+      background-color: #fce7f3;
+      z-index: -1;
+      transform: rotate(-2deg);
+      border-radius: 8px 4px 10px 6px;
+    }
+
+    .marker-teal {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+      padding: 0 0.25em;
+      color: #0f172a;
+    }
+    .marker-teal::before {
+      content: '';
+      position: absolute;
+      inset: 14% -0.1em 8% -0.1em;
+      background-color: #ccfbf1;
+      z-index: -1;
+      transform: rotate(1.2deg);
+      border-radius: 5px 12px 6px 8px;
+    }
+
+    .doodle-circle {
+      position: relative;
+      display: inline-block;
+    }
+    .doodle-circle::after {
+      content: '';
+      position: absolute;
+      inset: -6px -12px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60' preserveAspectRatio='none'%3E%3Cpath d='M5,30 C10,5 90,3 95,28 C98,52 15,58 8,32 C5,15 85,10 92,25' fill='none' stroke='%232563eb' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center center / 100% 100%;
+      pointer-events: none;
+    }
+
+    .doodle-underline-orange {
+      position: relative;
+      display: inline-block;
+      color: #ea580c;
+    }
+    .doodle-underline-orange::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      height: 10px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M2 15 C 20 5, 40 18, 60 8 C 80 18, 95 10, 98 12' fill='none' stroke='%23ea580c' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center center / 100% 100%;
+    }
+
+    .doodle-note {
+      font-family: 'Caveat', cursive, sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.98rem;
+      padding: 0.95rem 1.8rem;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.28);
+      border: 1px solid transparent;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.38);
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface);
+      color: var(--text-main);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-alt);
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Odoo Style Hero Feature Card Panel */
+    .hero-card-panel {
       background: var(--bg-surface);
       border: 1px solid var(--border-light);
       border-radius: var(--radius-lg);
-      padding: 3.5rem 3rem;
+      padding: 2.2rem;
       box-shadow: var(--shadow-card);
-      margin-bottom: 3.5rem;
+      position: relative;
+      transition: all 0.3s ease;
     }
 
-    .badge-tag {
+    .hero-card-panel:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.4rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .hero-card-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .status-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      background-color: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    }
+
+    .hero-card-desc {
+      color: var(--text-muted);
+      font-size: 0.97rem;
+      line-height: 1.7;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .mini-stat-card {
+      background: var(--bg-page);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.2rem;
+      transition: all 0.25s ease;
+    }
+
+    .mini-stat-card:hover {
+      background: #ffffff;
+      border-color: #bfdbfe;
+      transform: translateY(-2px);
+    }
+
+    .mini-stat-num {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.65rem;
+      color: var(--primary);
+      line-height: 1.1;
+      margin-bottom: 0.3rem;
+    }
+
+    .mini-stat-label {
+      font-size: 0.85rem;
+      color: var(--text-subtle);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* Standard Section Wrapper */
+    section.section-block {
+      padding: 5.5rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    /* Section Typography Header (Odoo Style) */
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-tag {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
@@ -237,102 +800,440 @@
       background: var(--primary-light);
       padding: 0.4rem 0.95rem;
       border-radius: var(--radius-full);
-      margin-bottom: 1.2rem;
-    }
-
-    .career-hero h1 {
-      font-family: var(--font-heading);
-      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.035em;
-      margin-bottom: 1.2rem;
-    }
-
-    .career-hero p {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-      max-width: 750px;
-      margin-bottom: 2rem;
-    }
-
-    .btn-apply {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.65rem;
-      background: var(--primary);
-      color: #ffffff;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      padding: 0.9rem 1.8rem;
-      border-radius: var(--radius-full);
-      text-decoration: none;
-      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.28);
-      transition: all 0.3s ease;
-    }
-
-    .btn-apply:hover {
-      background: var(--primary-hover);
-      transform: translateY(-2px);
+      margin-bottom: 1rem;
     }
 
     .section-title {
       font-family: var(--font-heading);
-      font-size: 1.85rem;
+      font-size: clamp(2.2rem, 3.8vw, 3rem);
       font-weight: 800;
-      letter-spacing: -0.025em;
-      margin-bottom: 1.5rem;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      margin-bottom: 1rem;
     }
 
-    .cards-grid {
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* Clean Odoo Card Grid System */
+    .cards-grid-3 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 1.8rem;
-      margin-bottom: 3.5rem;
     }
 
+    .cards-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Modern Clean Card Component */
     .enterprise-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-light);
       border-radius: var(--radius-md);
-      padding: 2rem;
+      padding: 2.2rem;
       box-shadow: var(--shadow-card);
-      transition: all 0.3s ease;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .enterprise-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--cyan));
+      opacity: 0;
+      transition: opacity 0.35s ease;
     }
 
     .enterprise-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
       box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
     }
 
-    .enterprise-card h3 {
+    .enterprise-card:hover::before {
+      opacity: 1;
+    }
+
+    .icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .enterprise-card:hover .icon-box {
+      transform: scale(1.08);
+    }
+
+    .icon-blue { background: #eff6ff; color: var(--primary); }
+    .icon-purple { background: #f5f3ff; color: #7c3aed; }
+    .icon-teal { background: #f0fdf4; color: #059669; }
+    .icon-cyan { background: #ecfeff; color: #0891b2; }
+    .icon-amber { background: #fffbeb; color: #d97706; }
+    .icon-rose { background: #fff1f2; color: #e11d48; }
+
+    .card-title {
       font-family: var(--font-heading);
       font-size: 1.25rem;
       font-weight: 700;
+      color: var(--text-main);
       margin-bottom: 0.75rem;
+      line-height: 1.3;
     }
 
-    .enterprise-card p {
+    .card-text {
       color: var(--text-muted);
       font-size: 0.97rem;
+      line-height: 1.75;
+      flex-grow: 1;
     }
 
+    /* Flagship Product Showcase (LPG Distribution App) */
+    .showcase-wrapper {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem 3rem;
+      box-shadow: var(--shadow-card);
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .showcase-info h3 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .showcase-info p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .pill-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--bg-page);
+      border: 1px solid var(--border-light);
+      padding: 0.65rem 1.1rem;
+      border-radius: var(--radius-full);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--text-main);
+      transition: all 0.25s ease;
+    }
+
+    .pill-badge i {
+      color: var(--primary);
+    }
+
+    .pill-badge:hover {
+      background: var(--primary-light);
+      border-color: #bfdbfe;
+      transform: translateY(-2px);
+    }
+
+    .highlight-stack {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .highlight-item {
+      background: var(--bg-page);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1.6rem;
+      transition: all 0.3s ease;
+    }
+
+    .highlight-item:hover {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-sm);
+      transform: translateX(4px);
+    }
+
+    .highlight-item h5 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .highlight-item p {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Team Showcase Section */
+    .team-scroll-container {
+      overflow-x: auto;
+      padding-bottom: 1.5rem;
+      margin: 0 -0.5rem;
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 transparent;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(260px, 1fr);
+      gap: 1.5rem;
+      padding: 0.5rem;
+    }
+
+    .team-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: all 0.35s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
+    }
+
+    .team-img-box {
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      background: var(--bg-alt);
+      position: relative;
+    }
+
+    .team-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .team-card:hover .team-img-box img {
+      transform: scale(1.06);
+    }
+
+    .team-details {
+      padding: 1.4rem;
+    }
+
+    .team-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-bottom: 0.2rem;
+    }
+
+    .team-role {
+      font-size: 0.88rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .team-linkedin-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+      color: #0a66c2;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .team-linkedin-btn:hover {
+      background: #0a66c2;
+      color: #ffffff;
+      border-color: #0a66c2;
+      box-shadow: 0 4px 12px rgba(10, 102, 194, 0.25);
+      transform: translateY(-1px);
+    }
+
+    /* Clients & Partners Carousel / Track */
+    .client-track-container {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      padding: 0.5rem;
+      margin: 0 -0.5rem;
+    }
+
+    .client-track-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .client-track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(300px, 1fr);
+      gap: 1.5rem;
+    }
+
+    .client-card {
+      scroll-snap-align: start;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+    }
+
+    .client-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .store-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: var(--radius-full);
+      border: 1px solid #bfdbfe;
+      transition: all 0.2s ease;
+    }
+
+    .client-card:hover .store-badge {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+    }
+
+    .client-quote {
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 0.97rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .client-quote-icon {
+      color: #bfdbfe;
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .client-profile {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-top: 1px solid var(--border-light);
+      padding-top: 1.2rem;
+    }
+
+    .client-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid var(--border-light);
+    }
+
+    .client-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    /* Careers & Open Positions Cards */
     .positions-list {
       display: flex;
       flex-direction: column;
       gap: 1.2rem;
-      margin-bottom: 3.5rem;
+      margin-top: 2rem;
+      margin-bottom: 2.5rem;
     }
 
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    .position-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.8rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
     }
-    .fade-up.is-visible {
-      opacity: 1;
-      transform: translateY(0);
+
+    .position-item:hover {
+      border-color: #93c5fd;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .position-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      flex: 1;
     }
 
     .position-icon {
@@ -362,14 +1263,78 @@
       font-size: 0.95rem;
     }
 
-    .site-footer {
-      border-top: 1px solid var(--border-light);
-      padding: 2.5rem 2rem;
-      text-align: center;
-      color: var(--text-subtle);
-      font-size: 0.9rem;
+    .btn-apply-sm {
+      background: var(--primary);
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 0.65rem 1.35rem;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+      transition: all 0.25s ease;
+      flex-shrink: 0;
     }
-    .site-footer a { color: var(--primary); text-decoration: none; }
+
+    .btn-apply-sm:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+    }
+
+    .eligibility-box {
+      margin-top: 0.85rem;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--border-light);
+    }
+
+    .eligibility-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .eligibility-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .elig-tag {
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    .salary-badge-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: #ecfdf5;
+      color: #047857;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      border: 1px solid #a7f3d0;
+      margin-left: 0.5rem;
+    }
 
     .salary-hero-card {
       background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1d4ed8 100%);
@@ -424,176 +1389,24 @@
       gap: 0.5rem;
     }
 
-    .salary-badge-mini {
+    .btn-apply {
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
-      background: #ecfdf5;
-      color: #047857;
-      font-size: 0.82rem;
-      font-weight: 700;
-      padding: 0.25rem 0.65rem;
-      border-radius: 9999px;
-      border: 1px solid #a7f3d0;
-      margin-left: 0.5rem;
-    }
-
-    .position-item {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
-      padding: 1.8rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      box-shadow: var(--shadow-card);
-      transition: all 0.3s ease;
-    }
-
-    .position-item:hover {
-      border-color: #93c5fd;
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .position-left {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.5rem;
-      flex: 1;
-    }
-
-    .btn-apply-sm {
+      gap: 0.65rem;
       background: var(--primary);
       color: #ffffff;
       font-family: var(--font-heading);
       font-weight: 700;
-      font-size: 0.88rem;
-      padding: 0.65rem 1.35rem;
+      padding: 0.9rem 1.8rem;
       border-radius: var(--radius-full);
       text-decoration: none;
-      white-space: nowrap;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
-      transition: all 0.25s ease;
-      flex-shrink: 0;
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.28);
+      transition: all 0.3s ease;
     }
 
-    .btn-apply-sm:hover {
+    .btn-apply:hover {
       background: var(--primary-hover);
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
-    }
-
-    /* Eligibility Criteria Styling */
-    .eligibility-box {
-      margin-top: 0.85rem;
-      padding-top: 0.75rem;
-      border-top: 1px dashed var(--border-light);
-    }
-
-    .eligibility-title {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--text-main);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      margin-bottom: 0.45rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .eligibility-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-    }
-
-    .elig-tag {
-      background: var(--bg-alt);
-      color: var(--text-muted);
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 0.25rem 0.65rem;
-      border-radius: var(--radius-full);
-      border: 1px solid var(--border-light);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .elig-tag i {
-      color: var(--primary);
-      font-size: 0.7rem;
-    }
-
-    /* Marker Highlights & Typography Accents (matching index.html) */
-    .font-caveat { font-family: 'Caveat', cursive, sans-serif; }
-
-    .doodle-note {
-      font-family: 'Caveat', cursive, sans-serif;
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--primary);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .marker-yellow {
-      position: relative;
-      display: inline-block;
-      z-index: 1;
-      padding: 0 0.25em;
-      color: #0f172a;
-    }
-    .marker-yellow::before {
-      content: '';
-      position: absolute;
-      inset: 14% -0.1em 8% -0.1em;
-      background-color: #fef08a;
-      z-index: -1;
-      transform: rotate(-1.5deg);
-      border-radius: 4px 10px 5px 12px;
-      box-shadow: 0 2px 8px rgba(254, 240, 138, 0.5);
-    }
-
-    .marker-cyan {
-      position: relative;
-      display: inline-block;
-      z-index: 1;
-      padding: 0 0.25em;
-      color: #0f172a;
-    }
-    .marker-cyan::before {
-      content: '';
-      position: absolute;
-      inset: 14% -0.1em 8% -0.1em;
-      background-color: #cff4fc;
-      z-index: -1;
-      transform: rotate(1deg);
-      border-radius: 6px 12px 4px 10px;
-    }
-
-    .marker-pink {
-      position: relative;
-      display: inline-block;
-      z-index: 1;
-      padding: 0 0.25em;
-      color: #0f172a;
-    }
-    .marker-pink::before {
-      content: '';
-      position: absolute;
-      inset: 14% -0.1em 8% -0.1em;
-      background-color: #fce7f3;
-      z-index: -1;
-      transform: rotate(-2deg);
-      border-radius: 8px 4px 10px 6px;
     }
 
     /* Prominent Deadline & Interview Highlight Banner */
@@ -687,14 +1500,142 @@
       margin: 0;
     }
 
-    .mobile-menu-btn {
-      display: none;
-      background: transparent;
-      border: none;
-      font-size: 1.4rem;
+    /* Contact Blocks */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .contact-info-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-card);
+    }
+
+    .contact-info-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
       color: var(--text-main);
-      cursor: pointer;
-      padding: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-info-card p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 1.8rem;
+    }
+
+    .social-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .social-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: var(--bg-page);
+      border: 1px solid var(--border-light);
+      display: grid;
+      place-items: center;
+      color: var(--text-main);
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-btn:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+      border-color: #bfdbfe;
+      transform: translateY(-3px);
+    }
+
+    .map-card {
+      height: 100%;
+      min-height: 380px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-card);
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      border: 0;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border-light);
+      padding: 3.5rem 2rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-light);
+      font-size: 0.92rem;
+      color: var(--text-subtle);
+    }
+
+    .footer-bottom a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+
+    /* Smooth Scroll Reveal Animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .fade-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .showcase-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
     }
 
     @media (max-width: 768px) {
@@ -707,7 +1648,10 @@
       .brand img { width: 38px; height: 38px; }
       .brand-text { font-size: 1.05rem; }
 
-      .mobile-menu-btn { display: block; }
+      .mobile-menu-btn {
+        display: block;
+      }
+
       nav.nav-links {
         display: none;
         position: absolute;
@@ -716,50 +1660,281 @@
         right: 0;
         background: #ffffff;
         flex-direction: column;
-        padding: 1.2rem 1.5rem;
+        padding: 1.25rem 1.5rem;
         border-bottom: 1px solid var(--border-light);
-        box-shadow: 0 15px 30px rgba(15, 23, 42, 0.1);
+        box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
         align-items: stretch;
         gap: 0.4rem;
       }
-      nav.nav-links.mobile-open { display: flex; }
-      nav.nav-links a { padding: 0.75rem 1rem; border-radius: var(--radius-sm); text-align: center; width: 100%; font-size: 0.95rem; }
-      
-      .career-hero { padding: 2rem 1.25rem; }
-      .career-hero h1 { font-size: clamp(1.8rem, 6.5vw, 2.6rem); }
-      main { padding: 1.5rem 1.25rem 3.5rem; }
+
+      nav.nav-links.mobile-open {
+        display: flex;
+      }
+
+      nav.nav-links a {
+        padding: 0.75rem 1rem;
+        border-radius: var(--radius-sm);
+        text-align: center;
+        font-size: 0.95rem;
+        width: 100%;
+      }
+
+      .nav-cta {
+        justify-content: center;
+        width: 100%;
+        margin-top: 0.4rem;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 2.5rem 1.25rem 3.5rem;
+      }
+
+      .hero-title {
+        font-size: clamp(2rem, 7.5vw, 3rem);
+        line-height: 1.15;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.8rem;
+      }
+
+      .hero-actions-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-pricing-note {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .hero-card-panel {
+        padding: 1.5rem 1.25rem;
+      }
+
+      /* Fix typography marker overflow on mobile */
+      .marker-highlight,
+      .marker-yellow,
+      .marker-cyan,
+      .marker-pink,
+      .marker-teal,
+      .wavy-underline,
+      .doodle-circle,
+      .doodle-underline-orange {
+        white-space: normal !important;
+        display: inline !important;
+      }
+
+      .doodle-note {
+        display: inline-block;
+        font-size: 1.25rem;
+        text-align: center;
+        max-width: 100%;
+        word-break: break-word;
+      }
+
+      section.section-block {
+        padding: 3.5rem 1.25rem;
+      }
+
+      .section-header {
+        margin-bottom: 2.2rem;
+      }
+
+      .cards-grid-3,
+      .cards-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .enterprise-card {
+        padding: 1.6rem 1.25rem;
+      }
+
+      .showcase-wrapper {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .showcase-info h3 {
+        font-size: 1.45rem;
+      }
+
+      .showcase-info p {
+        font-size: 0.95rem;
+      }
+
+      .pill-features {
+        gap: 0.5rem;
+      }
+
+      .pill-badge {
+        padding: 0.5rem 0.85rem;
+        font-size: 0.85rem;
+      }
+
+      .highlight-item {
+        padding: 1.25rem 1rem;
+      }
+
+      .team-grid {
+        grid-auto-columns: minmax(230px, 75vw);
+        gap: 1rem;
+      }
+
+      .team-card {
+        scroll-snap-align: start;
+      }
+
+      .client-track {
+        grid-auto-columns: minmax(270px, 82vw);
+        gap: 1rem;
+      }
+
+      .client-card {
+        padding: 1.4rem 1.2rem;
+      }
 
       .salary-hero-card { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1.25rem 1.25rem; }
       .salary-pill { width: 100%; justify-content: center; }
-      
       .deadline-highlight-card { padding: 1.4rem 1.25rem; }
       .deadline-item { flex-direction: row; gap: 1rem; padding: 1rem 1.1rem; }
-      
-      .position-item { flex-direction: column; align-items: stretch; gap: 1.2rem; padding: 1.25rem 1.25rem; }
-      .position-left { flex-direction: row; align-items: flex-start; gap: 1rem; }
-      .btn-apply-sm { justify-content: center; width: 100%; }
-      .salary-badge-mini { display: inline-block; margin-top: 0.35rem; margin-left: 0; }
-      .elig-tag { font-size: 0.75rem; padding: 0.2rem 0.5rem; white-space: normal; word-break: break-word; max-width: 100%; }
 
-      .cards-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+      .position-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.2rem;
+        padding: 1.35rem 1.25rem;
+      }
 
-      /* Mobile text wrap fix for typography markers */
-      .marker-yellow, .marker-cyan, .marker-pink, .marker-teal, .wavy-underline, .doodle-circle, .doodle-note {
-        white-space: normal !important;
-        display: inline-block !important;
-        max-width: 100%;
+      .position-left {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .btn-apply-sm {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .salary-badge-mini {
+        display: inline-block;
+        margin-top: 0.35rem;
+        margin-left: 0;
+      }
+
+      .elig-tag {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+        white-space: normal;
         word-break: break-word;
+        max-width: 100%;
+      }
+
+      .contact-info-card {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .contact-info-card h3 {
+        font-size: 1.35rem;
+      }
+
+      .social-strip {
+        gap: 0.6rem;
+      }
+
+      .social-btn {
+        width: 46px;
+        height: 46px;
+        font-size: 1.1rem;
+        border-radius: 12px;
+      }
+
+      .map-card {
+        height: 280px;
+        min-height: 280px;
+      }
+
+      .map-card iframe {
+        height: 280px;
+        min-height: 280px;
+      }
+
+      footer.site-footer {
+        padding: 2.5rem 1.25rem 1.75rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.85rem;
+        font-size: 0.88rem;
       }
     }
 
     @media (max-width: 480px) {
-      .job-announcement-bar { padding: 0.45rem 0.75rem; }
+      .job-announcement-bar {
+        padding: 0.45rem 0.75rem;
+      }
+
+      .hero-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+
+      .handwritten-text {
+        font-size: 1.3rem;
+      }
+
+      .position-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.85rem;
+      }
+
       .deadline-item { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-      .position-left { flex-direction: column; align-items: flex-start; gap: 0.85rem; }
+
+      .team-grid {
+        grid-auto-columns: minmax(220px, 85vw);
+      }
+
+      .client-track {
+        grid-auto-columns: minmax(250px, 88vw);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- Ambient Backdrop -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="bg-blob-1"></div>
+    <div class="bg-blob-2"></div>
+  </div>
 
   <!-- Top Job Announcement Ticker Bar -->
   <div class="job-announcement-bar">
@@ -768,417 +1943,854 @@
         <i class="fas fa-briefcase"></i> WE'RE HIRING
       </div>
       <div class="job-ticker-marquee">
-        <span>🚨 LAST DATE TO APPLY: 20 SEPTEMBER 2026 &nbsp;&bull;&nbsp; 🔴 ROUND 1 INTERVIEW (GOOGLE MEET): 25 SEPTEMBER 2026 &nbsp;&bull;&nbsp; Hiring Open for Front Desk Executive, Sales Managers, Telecallers, CRM, Security Guards, Interns & Engineers &nbsp;&bull;&nbsp; Fast Track Selection &nbsp;&bull;&nbsp;</span>
+        <span>✉️ Send your updated Resume / CV to <a href="mailto:carrers@ignitocorporation.com" style="color: #ffffff; text-decoration: underline;">carrers@ignitocorporation.com</a> &nbsp;&bull;&nbsp; Openings in Engineering, Sales, CRM, Operations & Internships &nbsp;&bull;&nbsp;</span>
       </div>
-      <a href="career.html" class="job-ticker-btn">
-        Apply Now <i class="fas fa-arrow-right"></i>
+      <a href="mailto:carrers@ignitocorporation.com" class="job-ticker-btn">
+        <i class="fas fa-envelope"></i> Email Resume
       </a>
     </div>
   </div>
 
   <!-- Header Navigation -->
-  <header>
+  <header id="site-header">
     <div class="nav-container">
-      <a href="index.html" class="brand">
-        <img src="ignito.png" alt="Ignito Logo" />
+      <a href="#about" class="brand">
+        <img src="ignito.png" alt="Ignito Corporation Logo" />
         <span class="brand-text">Ignito <span>Corporation</span></span>
       </a>
-      <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Menu">
+
+      <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Navigation">
         <i class="fas fa-bars"></i>
       </button>
+
       <nav class="nav-links" id="nav-menu">
-        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
         <a href="index.html#services">Services</a>
-        <a href="career.html" class="active">Careers</a>
+        <a href="index.html#project">Project</a>
+        <a href="index.html#clients">Clients</a>
+        <a href="index.html#careers">Careers</a>
         <a href="privacy.html">Privacy</a>
+        <a href="PORTFOLIOO.pdf" download class="nav-cta"><i class="fas fa-download"></i> Portfolio</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="career-hero fade-up">
-      <div class="badge-tag"><i class="fas fa-briefcase"></i> BUILD YOUR CAREER</div>
-      <h1>Join Ignito Corporation — Engineer <span class="marker-yellow">Enterprise Products</span>.</h1>
-      <p>
-        Accelerate your tech career with Ignito Corporation. We are actively expanding our engineering, product, and operations teams with high-paying packages and fast-track career growth.
-        <br />
-        <span class="doodle-note" style="margin-top: 0.5rem;">✨ 100% Transparent 3-Round Selection &bull; Apply Today!</span>
-      </p>
-
-      <!-- Salary Highlight Card -->
-      <div class="salary-hero-card">
-        <div class="salary-text">
-          <h3><i class="fas fa-coins" style="color: #fbbf24;"></i> Competitive Compensation Package</h3>
-          <p>Salary packages range from <strong>₹2,00,000 / Year</strong> up to <strong>₹12,00,000 / Year (₹12 LPA)</strong> based on role & experience + Performance Bonuses & Paid Internships!</p>
-        </div>
-        <div class="salary-pill">
-          <i class="fas fa-chart-line"></i> ₹2 LPA to ₹12 LPA+
-        </div>
-      </div>
-
-      <!-- IMPORTANT DEADLINE & INTERVIEW HIGHLIGHT CARD -->
-      <div class="deadline-highlight-card">
-        <div class="deadline-badge">
-          <i class="fas fa-exclamation-triangle"></i> CRITICAL DATES & DEADLINES
-        </div>
-        <div class="deadline-grid">
-          <div class="deadline-item warning-border">
-            <div class="deadline-icon red"><i class="fas fa-calendar-xmark"></i></div>
-            <div>
-              <span class="deadline-label">LAST DATE TO APPLY</span>
-              <h3 class="deadline-date red-text">20 September 2026</h3>
-              <p class="deadline-desc">Registration portal closes strictly on 20 Sept 2026. Submit your application early!</p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-content fade-up">
+          <div class="hero-badge">
+            <i class="fas fa-sparkles"></i> Enterprise Digital Solutions
+          </div>
+          <h1 class="hero-title">
+            All your enterprise digital solutions on <span class="marker-highlight">one platform</span>, <span class="wavy-underline">affordable!</span>
+          </h1>
+          <p class="hero-subtitle">
+            Ignito Corporation builds enterprise websites, mobile applications, data automation, and cloud-ready systems for distributors, partners, and modern businesses.
+          </p>
+          <div class="hero-actions-wrapper">
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="PORTFOLIOO.pdf" download>
+                <i class="fas fa-file-arrow-down"></i> Download Portfolio
+              </a>
+              <a class="btn btn-secondary" href="#services">
+                <i class="fas fa-layer-group"></i> Explore Services
+              </a>
+            </div>
+            <div class="hero-pricing-note">
+              <svg class="handwritten-arrow" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 8 C 16 28, 32 36, 43 20 M 34 18 L 44 20 L 41 29" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="handwritten-text">Transparent pricing &bull; 0% hidden fees!</span>
             </div>
           </div>
-          <div class="deadline-item highlight-border">
-            <div class="deadline-icon blue"><i class="fas fa-video"></i></div>
-            <div>
-              <span class="deadline-label">ROUND 1 (FIRST INTERVIEW)</span>
-              <h3 class="deadline-date blue-text">25 September 2026</h3>
-              <p class="deadline-desc">Online interview via <strong>Google Meet</strong> for all candidates who submit applications before the deadline.</p>
+          <div class="hero-stats-grid">
+            <div class="mini-stat-card">
+              <div class="mini-stat-num">8+ Years</div>
+              <div class="mini-stat-label">Combined delivery experience across platforms</div>
+            </div>
+            <div class="mini-stat-card">
+              <div class="mini-stat-num">100%</div>
+              <div class="mini-stat-label">Custom enterprise workflows & product launches</div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- 3-ROUND SELECTION & INTERVIEW PROCESS (MOVED DIRECTLY BELOW IMPORTANT DATES CARD) -->
-      <div style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px dashed var(--border-light);">
-        <h2 class="section-title" style="font-size: 1.65rem; margin-bottom: 0.5rem;">
-          3-Round Selection & <span class="marker-teal">Interview Process</span>
-        </h2>
-        <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 1.8rem;">
-          Follow our 3 structured evaluation steps to secure your role at Ignito Corporation:
-        </p>
-
-        <div class="cards-grid" style="margin-bottom: 1.5rem;">
-          <div class="enterprise-card" style="border-top: 4px solid #ef4444; background: #ffffff;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
-              <span style="font-family: var(--font-heading); font-weight: 800; color: #ef4444;">ROUND 01</span>
-              <span style="background: #fee2e2; color: #dc2626; font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: 9999px; border: 1px solid #fca5a5;">
-                <i class="fas fa-exclamation-circle"></i> IMPORTANT &bull; 25 SEPT 2026
-              </span>
+        <aside class="hero-card-panel fade-up delay-2">
+          <div class="hero-card-header">
+            <div class="hero-card-title">
+              <i class="fas fa-shield-halved" style="color: var(--primary);"></i> Corporate Standard
             </div>
-            <h3>First Interview (Google Meet)</h3>
-            <p>
-              Scheduled on <strong>25 September 2026</strong>. All registered applicants who submit before the <strong>20 September 2026</strong> deadline will receive their <strong>Google Meet</strong> interview slot time & link.
-            </p>
-            <div style="margin-top: 1rem; padding: 0.65rem 0.85rem; background: #fff5f5; border-radius: 10px; font-size: 0.85rem; color: #b91c1c; font-weight: 600;">
-              <i class="fas fa-video"></i> Mode: Online via Google Meet
+            <div class="status-tag">
+              <span class="status-dot"></span> Active Systems
             </div>
           </div>
-
-          <div class="enterprise-card" style="border-top: 4px solid #2563eb; background: #ffffff;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
-              <span style="font-family: var(--font-heading); font-weight: 800; color: #2563eb;">ROUND 02</span>
-              <span style="background: #eff6ff; color: #1d4ed8; font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: 9999px; border: 1px solid #bfdbfe;">
-                <i class="fas fa-envelope"></i> EMAIL INVITATION
-              </span>
+          <p class="hero-card-desc">
+            We design seamless digital systems that look polished, behave consistently, and build trust. Our technology review process and client communication are tailored for enterprise reliability.
+          </p>
+          <div class="hero-stats-grid">
+            <div class="mini-stat-card">
+              <div style="color: var(--primary); font-weight: 700; font-size: 1.05rem; margin-bottom: 0.3rem;">Brand-First UI</div>
+              <div class="mini-stat-label">Modern visual identity aligned to global SaaS standards.</div>
             </div>
-            <h3>Written Examination</h3>
-            <p>
-              Shortlisted candidates from Round 1 will receive an official email notification with written test guidelines, exam link, and schedule instructions.
-            </p>
-            <div style="margin-top: 1rem; padding: 0.65rem 0.85rem; background: #eff6ff; border-radius: 10px; font-size: 0.85rem; color: #1e40af; font-weight: 600;">
-              <i class="fas fa-file-pen"></i> Format: Online Written Assessment
+            <div class="mini-stat-card">
+              <div style="color: var(--teal); font-weight: 700; font-size: 1.05rem; margin-bottom: 0.3rem;">Security Focus</div>
+              <div class="mini-stat-label">Secure deployment workflows and data-aware architecture.</div>
             </div>
           </div>
-
-          <div class="enterprise-card" style="border-top: 4px solid #10b981; background: #ffffff;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
-              <span style="font-family: var(--font-heading); font-weight: 800; color: #10b981;">ROUND 03</span>
-              <span style="background: #ecfdf5; color: #047857; font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: 9999px; border: 1px solid #a7f3d0;">
-                <i class="fas fa-certificate"></i> OFFER LETTER ISSUANCE
-              </span>
-            </div>
-            <h3>Document Verification & Call Letter</h3>
-            <p>
-              Final document verification stage (Identity, Academic & Experience credentials). Upon successful verification, candidates receive their official <strong>Call Letter / Offer Letter</strong>.
-            </p>
-            <div style="margin-top: 1rem; padding: 0.65rem 0.85rem; background: #ecfdf5; border-radius: 10px; font-size: 0.85rem; color: #047857; font-weight: 600;">
-              <i class="fas fa-file-signature"></i> Final Output: Call Letter / Joining Letter
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top: 2rem; text-align: center;">
-        <a class="btn-apply" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-paper-plane"></i> Apply Now Before 20 Sept 2026 <i class="fas fa-arrow-right"></i>
-        </a>
+        </aside>
       </div>
     </section>
 
-    <section class="fade-up">
-      <h2 class="section-title">Why Join Ignito Corporation?</h2>
-      <div class="cards-grid">
-        <div class="enterprise-card">
-          <div style="font-size: 1.8rem; margin-bottom: 0.8rem;">💰</div>
-          <h3>Industry-Leading Pay</h3>
-          <p>Attractive salary starting from <strong>₹4 Lacs per year</strong> with guaranteed performance bonuses, annual appraisal increments, and incentive plans.</p>
+    <!-- About Section -->
+    <section id="about" class="section-block">
+      <div class="section-container">
+        <div class="section-header fade-up">
+          <div class="section-tag"><i class="fas fa-building-user"></i> ABOUT IGNITO</div>
+          <h2 class="section-title">Built for <span class="marker-yellow">Enterprise Excellence</span></h2>
+          <p class="section-subtitle">
+            A registered <span class="doodle-circle">MSME</span> from Indore, Ignito Corporation delivers digital excellence for businesses that need polished products with enterprise appeal.
+            <br />
+            <span class="doodle-note" style="margin-top: 0.5rem;">✨ 100% Client Satisfaction &bull; Built with passion!</span>
+          </p>
         </div>
-        <div class="enterprise-card">
-          <div style="font-size: 1.8rem; margin-bottom: 0.8rem;">🚀</div>
-          <h3>Fast-Track Hiring</h3>
-          <p>Quick 2-step evaluation process with direct interview schedules within 48 hours and rapid offer letter issuance upon selection.</p>
-        </div>
-        <div class="enterprise-card">
-          <div style="font-size: 1.8rem; margin-bottom: 0.8rem;">💻</div>
-          <h3>Modern Work Setup</h3>
-          <p>Flexible hybrid/remote options, premium workstation hardware, paid learning allowances, and enterprise hands-on project exposure.</p>
+
+        <div class="cards-grid-3">
+          <article class="enterprise-card fade-up delay-1">
+            <div class="icon-box icon-blue">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3 class="card-title">Trusted Digital Delivery</h3>
+            <p class="card-text">
+              We combine reliability, UX clarity, and powerful workflows to create software solutions that feel as good as they perform.
+            </p>
+          </article>
+
+          <article class="enterprise-card fade-up delay-2">
+            <div class="icon-box icon-purple">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <h3 class="card-title">End-to-End Services</h3>
+            <p class="card-text">
+              Web, mobile, cloud, analytics, deployment, and ongoing support — all engineered to work together seamlessly for business growth.
+            </p>
+          </article>
+
+          <article class="enterprise-card fade-up delay-3">
+            <div class="icon-box icon-teal">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="card-title">Business-First Thinking</h3>
+            <p class="card-text">
+              Every feature is validated for operational efficiency, user clarity, and measurable business performance metrics.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="fade-up">
-      <h2 class="section-title">Open Positions & Direct Application Links</h2>
-      <div class="positions-list">
-        
-        <div class="position-item">
-          <div class="position-left">
-            <div class="position-icon"><i class="fas fa-code"></i></div>
-            <div class="position-info">
-              <strong>Frontend Developer <span class="salary-badge-mini">₹4.0L - ₹7.5L / year</span></strong>
-              <p>Build high-performance web apps & SaaS dashboards using React, modern JS & enterprise design systems.</p>
-              <div class="eligibility-box">
-                <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
-                <div class="eligibility-tags">
-                  <span class="elig-tag"><i class="fas fa-graduation-cap"></i> B.Tech / BE / BCA / MCA / B.Sc IT</span>
-                  <span class="elig-tag"><i class="fas fa-briefcase"></i> Freshers to 3 Years Exp.</span>
-                  <span class="elig-tag"><i class="fas fa-layer-group"></i> React.js, JavaScript (ES6+), HTML5/CSS3</span>
-                </div>
+    <!-- Services Section -->
+    <section id="services" class="section-block" style="background: #ffffff; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+      <div class="section-container">
+        <div class="section-header fade-up">
+          <div class="section-tag"><i class="fas fa-sliders"></i> OUR CAPABILITIES</div>
+          <h2 class="section-title">Everything to <span class="marker-teal">scale your business</span> <span class="wavy-underline">fast!</span></h2>
+          <p class="section-subtitle">
+            We deliver professional software products with modern aesthetics, streamlined processes, and enterprise-ready execution.
+            <br />
+            <span class="doodle-note" style="margin-top: 0.4rem;">🎨 Custom tailored for your specific industry!</span>
+          </p>
+        </div>
+
+        <div class="cards-grid-3">
+          <article class="enterprise-card fade-up delay-1">
+            <div class="icon-box icon-blue">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="card-title">Corporate Websites</h3>
+            <p class="card-text">
+              Responsive websites built for brand authority, conversions, and speed, with strong accessibility standards and SEO optimization.
+            </p>
+          </article>
+
+          <article class="enterprise-card fade-up delay-2">
+            <div class="icon-box icon-purple">
+              <i class="fas fa-mobile-screen-button"></i>
+            </div>
+            <h3 class="card-title">Mobile & Web Apps</h3>
+            <p class="card-text">
+              Scalable mobile applications with clean user interfaces, intuitive workflows, and robust backend integrations.
+            </p>
+          </article>
+
+          <article class="enterprise-card fade-up delay-3">
+            <div class="icon-box icon-cyan">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 class="card-title">API & Backend Systems</h3>
+            <p class="card-text">
+              Secure data systems, cloud-connected microservices, and custom API integrations designed for enterprise scale.
+            </p>
+          </article>
+
+          <article class="enterprise-card fade-up delay-1">
+            <div class="icon-box icon-amber">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <h3 class="card-title">Automation & Analytics</h3>
+            <p class="card-text">
+              Data-driven dashboards, automated reporting pipelines, and operational intelligence to help teams decide faster.
+            </p>
+          </article>
+
+          <article class="enterprise-card fade-up delay-2">
+            <div class="icon-box icon-teal">
+              <i class="fas fa-cubes-stacked"></i>
+            </div>
+            <h3 class="card-title">Cloud & Deployment</h3>
+            <p class="card-text">
+              Managed cloud deployments, containerized infrastructure, and CI/CD pipelines tailored for maximum uptime.
+            </p>
+          </article>
+
+          <article class="enterprise-card fade-up delay-3">
+            <div class="icon-box icon-rose">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3 class="card-title">Support & Maintenance</h3>
+            <p class="card-text">
+              Continuous monitoring, security updates, feature enhancements, and dedicated technical support for your ecosystem.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flagship Project Showcase (Smart LPG Distribution App) -->
+    <section id="project" class="section-block">
+      <div class="section-container">
+        <div class="section-header fade-up">
+          <div class="section-tag"><i class="fas fa-fire-flame-curved"></i> FLAGSHIP PRODUCT</div>
+          <h2 class="section-title">Smart LPG Distribution <span class="marker-pink">in action!</span></h2>
+          <p class="section-subtitle">
+            A comprehensive software suite built to streamline gas distribution, real-time delivery tracking, inventory management, and logistics operations.
+          </p>
+        </div>
+
+        <div class="showcase-wrapper fade-up delay-1">
+          <div class="showcase-grid">
+            <div class="showcase-info">
+              <h3>Modern Logistics Software for LPG Distributors</h3>
+              <p>
+                The Smart LPG Distribution App empowers distributors, managers, and field delivery agents with digital order workflows, automated dispatching, and role-based operational controls.
+              </p>
+
+              <div class="pill-features">
+                <div class="pill-badge"><i class="fas fa-circle-check"></i> Live Delivery Tracking</div>
+                <div class="pill-badge"><i class="fas fa-circle-check"></i> Stock Analytics</div>
+                <div class="pill-badge"><i class="fas fa-circle-check"></i> Role-Based Access</div>
+                <div class="pill-badge"><i class="fas fa-circle-check"></i> Digital Invoicing</div>
+                <div class="pill-badge"><i class="fas fa-circle-check"></i> Secure Data Vault</div>
+              </div>
+
+              <div style="margin-top: 1.5rem;">
+                <a href="https://play.google.com/store/apps/details?id=com.ignito.smartDistributorApp" target="_blank" rel="noopener noreferrer" class="nav-cta" style="text-decoration: none;">
+                  <i class="fab fa-google-play"></i> View Smart LPG App on Google Play
+                </a>
+              </div>
+            </div>
+
+            <div class="highlight-stack">
+              <div class="highlight-item">
+                <h5><i class="fas fa-bolt"></i> Rapid Engineering</h5>
+                <p>Engineered in just 30 days by an 8-member distributed team, demonstrating rapid delivery capabilities.</p>
+              </div>
+
+              <div class="highlight-item">
+                <h5><i class="fas fa-chart-line"></i> Direct ROI</h5>
+                <p>Reduces manual entry errors by up to 90% and accelerates order-to-delivery reporting for distributors.</p>
+              </div>
+
+              <div class="highlight-item">
+                <h5><i class="fas fa-handshake"></i> Trusted Partner Deployment</h5>
+                <p>Actively deployed across major LPG supply chains and regional logistics networks.</p>
               </div>
             </div>
           </div>
-          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
-            Apply Now <i class="fas fa-arrow-right"></i>
-          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients & Client Stores Section -->
+    <section id="clients" class="section-block">
+      <div class="section-container">
+        <div class="section-header fade-up">
+          <div class="section-tag"><i class="fas fa-store"></i> CLIENT STORIES & STORES</div>
+          <h2 class="section-title">Loved by <span class="doodle-underline-orange">real business leaders & client stores</span></h2>
+          <p class="section-subtitle">
+            Here is what our enterprise partners, client stores, and businesses say about working with Ignito Corporation.
+            <br />
+            <span class="doodle-note" style="margin-top: 0.4rem;">⭐⭐⭐⭐⭐ 5.0 Rating from client stores & enterprise partners</span>
+          </p>
         </div>
 
-        <div class="position-item">
-          <div class="position-left">
-            <div class="position-icon"><i class="fas fa-server"></i></div>
-            <div class="position-info">
-              <strong>Backend Engineer <span class="salary-badge-mini">₹4.5L - ₹9.0L / year</span></strong>
-              <p>Architect robust APIs, cloud microservices, and database systems for scalability & security.</p>
-              <div class="eligibility-box">
-                <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
-                <div class="eligibility-tags">
-                  <span class="elig-tag"><i class="fas fa-graduation-cap"></i> B.Tech / BE / BCA / MCA / CS</span>
-                  <span class="elig-tag"><i class="fas fa-briefcase"></i> 1 to 4 Years Exp.</span>
-                  <span class="elig-tag"><i class="fas fa-database"></i> Node.js / Python / Java, REST APIs, SQL</span>
+        <div class="client-track-container fade-up delay-1" id="client-container">
+          <div class="client-track" id="clients-track">
+            <a href="https://play.google.com/store/apps/details?id=com.ignito.filedockuser" target="_blank" rel="noopener noreferrer" class="client-card">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                  <i class="fas fa-quote-left client-quote-icon" style="margin-bottom:0;"></i>
+                  <span class="store-badge"><i class="fab fa-google-play"></i> Google Play</span>
+                </div>
+                <p class="client-quote">"Best and fast service for application development."</p>
+              </div>
+              <div class="client-profile">
+                <img src="images/filedoc.jpeg" alt="FileDoc Client Store" class="client-avatar" />
+                <div>
+                  <div class="client-name">FILEDOC <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
+                  <div style="font-size: 0.8rem; color: var(--text-subtle);">Application Development</div>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.fixkar.android" target="_blank" rel="noopener noreferrer" class="client-card">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                  <i class="fas fa-quote-left client-quote-icon" style="margin-bottom:0;"></i>
+                  <span class="store-badge"><i class="fab fa-google-play"></i> Google Play</span>
+                </div>
+                <p class="client-quote">"Exceptional work delivered application on time."</p>
+              </div>
+              <div class="client-profile">
+                <img src="images/fixkar.jpeg" alt="Fixkar Client Store" class="client-avatar" />
+                <div>
+                  <div class="client-name">FIXKAR <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
+                  <div style="font-size: 0.8rem; color: var(--text-subtle);">Service & Retail Client</div>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.uawauto.uaw" target="_blank" rel="noopener noreferrer" class="client-card">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                  <i class="fas fa-quote-left client-quote-icon" style="margin-bottom:0;"></i>
+                  <span class="store-badge"><i class="fab fa-google-play"></i> Google Play</span>
+                </div>
+                <p class="client-quote">"Fully automated our business with application, thanks to all Ignito team!"</p>
+              </div>
+              <div class="client-profile">
+                <img src="images/uaw_auto.jpeg" alt="UAW Auto Client Store" class="client-avatar" />
+                <div>
+                  <div class="client-name">UAW AUTO <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
+                  <div style="font-size: 0.8rem; color: var(--text-subtle);">Automotive & Enterprise Client</div>
+                </div>
+              </div>
+            </a>
+
+            <article class="client-card">
+              <div>
+                <i class="fas fa-quote-left client-quote-icon"></i>
+                <p class="client-quote">"User-friendly system and exceptionally fast execution. Highly satisfied with the results."</p>
+              </div>
+              <div class="client-profile">
+                <img src="images/matru.jpeg" alt="Matruchaya Corporation" class="client-avatar" />
+                <div>
+                  <div class="client-name">MATRUCHAYA CORPORATION</div>
+                  <div style="font-size: 0.8rem; color: var(--text-subtle);">LPG Distributor</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="client-card">
+              <div>
+                <i class="fas fa-quote-left client-quote-icon"></i>
+                <p class="client-quote">"Streamlined distribution and significantly better reporting transparency across our operational teams."</p>
+              </div>
+              <div class="client-profile">
+                <img src="images/salasar.jpeg" alt="Salasar Logistics" class="client-avatar" />
+                <div>
+                  <div class="client-name">SALASAR LOGISTICS</div>
+                  <div style="font-size: 0.8rem; color: var(--text-subtle);">Logistics & Supply</div>
+                </div>
+              </div>
+            </article>
+
+            <a href="https://play.google.com/store/apps/details?id=com.ignito.smartDistributorApp" target="_blank" rel="noopener noreferrer" class="client-card">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                  <i class="fas fa-quote-left client-quote-icon" style="margin-bottom:0;"></i>
+                  <span class="store-badge"><i class="fab fa-google-play"></i> Google Play</span>
+                </div>
+                <p class="client-quote">"Delivery tracking became reliable overnight, and operational reports are available instantly."</p>
+              </div>
+              <div class="client-profile">
+                <img src="images/lpg.jpeg" alt="Smart LPG Distribution App" class="client-avatar" />
+                <div>
+                  <div class="client-name">SMART LPG DISTRIBUTION <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--primary); margin-left: 0.3rem;"></i></div>
+                  <div style="font-size: 0.8rem; color: var(--text-subtle);">HPCL | BPCL | GOGAS Network</div>
+                </div>
+              </div>
+            </a>
+
+            <article class="client-card">
+              <div>
+                <i class="fas fa-quote-left client-quote-icon"></i>
+                <p class="client-quote">"Ignito helped us go digital in less than a month with a clean, stable, and intuitive mobile application."</p>
+              </div>
+              <div class="client-profile">
+                <img src="images/mahaveer.jpeg" alt="Mahaveer Oils" class="client-avatar" />
+                <div>
+                  <div class="client-name">MAHAVEER OILS</div>
+                  <div style="font-size: 0.8rem; color: var(--text-subtle);">Industrial Client</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Careers Banner Callout & Open Positions Section -->
+    <section id="careers" class="section-block" style="background: var(--bg-alt);">
+      <div class="section-container">
+        <div class="section-header fade-up">
+          <div class="section-tag"><i class="fas fa-briefcase"></i> CAREERS & HIRING</div>
+          <h2 class="section-title">Join Ignito Corporation — <span class="marker-teal">Open Positions</span></h2>
+          <p class="section-subtitle">
+            Accelerate your tech career with Ignito Corporation. We are actively expanding our engineering, product, and operations teams.
+            <br />
+            <span class="doodle-note" style="margin-top: 0.4rem;">✉️ Send your Resume to carrers@ignitocorporation.com</span>
+          </p>
+        </div>
+
+        <!-- How to Apply Card -->
+        <div class="fade-up" style="background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 16px; padding: 2.2rem 2rem; text-align: center; color: #ffffff; margin-bottom: 2.5rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.1);">
+          <div style="width: 60px; height: 60px; background: rgba(59, 130, 246, 0.2); border: 2px solid #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.6rem; color: #60a5fa;">
+            <i class="fas fa-envelope-open-text"></i>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; margin-bottom: 0.6rem; color: #ffffff;">Send Resume / CV to Apply</h3>
+          <p style="font-size: 1.05rem; color: #94a3b8; max-width: 650px; margin: 0 auto 1.4rem; line-height: 1.6;">
+            Interested in joining Ignito Corporation? Mail your updated Resume / CV directly to our Recruitment team:
+          </p>
+          <a href="mailto:carrers@ignitocorporation.com" style="display: inline-flex; align-items: center; gap: 0.75rem; background: #2563eb; color: #ffffff; padding: 0.85rem 2rem; border-radius: 9999px; font-weight: 700; font-size: 1.15rem; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);">
+            <i class="fas fa-paper-plane"></i> carrers@ignitocorporation.com
+          </a>
+          <p style="font-size: 0.88rem; color: #94a3b8; margin-top: 1rem;">
+            📌 Mention the position title in your email subject (e.g., <em>"Application for Frontend Developer"</em>).
+          </p>
+        </div>
+
+        <!-- OPEN POSITIONS HEADER & CARDS -->
+        <div class="fade-up" style="margin-top: 1rem;">
+          <h3 class="section-title" style="font-size: 1.65rem; margin-bottom: 1.5rem;">
+            Open Vacancies
+          </h3>
+        </div>
+
+        <div class="positions-list fade-up">
+          
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-code"></i></div>
+              <div class="position-info">
+                <strong>Frontend Developer <span class="salary-badge-mini">₹4.0L - ₹7.5L / year</span></strong>
+                <p>Build high-performance web apps & SaaS dashboards using React, modern JS & enterprise design systems.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> B.Tech / BE / BCA / MCA / B.Sc IT</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> Freshers to 3 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-layer-group"></i> React.js, JavaScript (ES6+), HTML5/CSS3</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <a class="btn-apply-sm" href="mailto:carrers@ignitocorporation.com?subject=Application for Frontend Developer">
+              <i class="fas fa-envelope"></i> Email Resume
+            </a>
           </div>
-          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
-            Apply Now <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
 
-        <div class="position-item">
-          <div class="position-left">
-            <div class="position-icon"><i class="fas fa-pencil-ruler"></i></div>
-            <div class="position-info">
-              <strong>UI/UX Designer <span class="salary-badge-mini">₹4.0L - ₹6.8L / year</span></strong>
-              <p>Design modern enterprise product interfaces, component libraries, and interactive visual graphics.</p>
-              <div class="eligibility-box">
-                <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
-                <div class="eligibility-tags">
-                  <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Graduate / Diploma in Design or CS</span>
-                  <span class="elig-tag"><i class="fas fa-briefcase"></i> 0 to 3 Years Exp.</span>
-                  <span class="elig-tag"><i class="fas fa-palette"></i> Figma, Adobe XD, Wireframing, UI Design</span>
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-server"></i></div>
+              <div class="position-info">
+                <strong>Backend Engineer <span class="salary-badge-mini">₹4.5L - ₹9.0L / year</span></strong>
+                <p>Architect robust APIs, cloud microservices, and database systems for scalability & security.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> B.Tech / BE / BCA / MCA / CS</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> 1 to 4 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-database"></i> Node.js / Python / Java, REST APIs, SQL</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <a class="btn-apply-sm" href="mailto:carrers@ignitocorporation.com?subject=Application for Backend Engineer">
+              <i class="fas fa-envelope"></i> Email Resume
+            </a>
           </div>
-          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
-            Apply Now <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
 
-        <div class="position-item">
-          <div class="position-left">
-            <div class="position-icon"><i class="fas fa-chart-line"></i></div>
-            <div class="position-info">
-              <strong>Sales Manager <span class="salary-badge-mini">₹5.0L - ₹10.0L / year</span></strong>
-              <p>Lead B2B client acquisition, enterprise sales strategy, client negotiations, and revenue growth.</p>
-              <div class="eligibility-box">
-                <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
-                <div class="eligibility-tags">
-                  <span class="elig-tag"><i class="fas fa-graduation-cap"></i> MBA / BBA / Any Graduate</span>
-                  <span class="elig-tag"><i class="fas fa-briefcase"></i> 1 to 5 Years Exp.</span>
-                  <span class="elig-tag"><i class="fas fa-handshake"></i> B2B Sales, Lead Gen, Client Relations</span>
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-pencil-ruler"></i></div>
+              <div class="position-info">
+                <strong>UI/UX Designer <span class="salary-badge-mini">₹4.0L - ₹6.8L / year</span></strong>
+                <p>Design modern enterprise product interfaces, component libraries, and interactive visual graphics.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Graduate / Diploma in Design or CS</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> 0 to 3 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-palette"></i> Figma, Adobe XD, Wireframing, UI Design</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <a class="btn-apply-sm" href="mailto:carrers@ignitocorporation.com?subject=Application for UI UX Designer">
+              <i class="fas fa-envelope"></i> Email Resume
+            </a>
           </div>
-          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
-            Apply Now <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
 
-        <div class="position-item">
-          <div class="position-left">
-            <div class="position-icon"><i class="fas fa-handshake"></i></div>
-            <div class="position-info">
-              <strong>Customer Relationship Manager (CRM) <span class="salary-badge-mini">₹4.0L - ₹8.0L / year</span></strong>
-              <p>Manage client relations, account retention, customer satisfaction, and key enterprise partner support.</p>
-              <div class="eligibility-box">
-                <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
-                <div class="eligibility-tags">
-                  <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Any Bachelor's Degree</span>
-                  <span class="elig-tag"><i class="fas fa-briefcase"></i> 1 to 3 Years Exp.</span>
-                  <span class="elig-tag"><i class="fas fa-headset"></i> Client Support, Account Mgmt, Communication</span>
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="position-info">
+                <strong>Sales Manager <span class="salary-badge-mini">₹5.0L - ₹10.0L / year</span></strong>
+                <p>Lead B2B client acquisition, enterprise sales strategy, client negotiations, and revenue growth.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> MBA / BBA / Any Graduate</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> 1 to 5 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-handshake"></i> B2B Sales, Lead Gen, Client Relations</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <a class="btn-apply-sm" href="mailto:carrers@ignitocorporation.com?subject=Application for Sales Manager">
+              <i class="fas fa-envelope"></i> Email Resume
+            </a>
           </div>
-          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
-            Apply Now <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
 
-        <div class="position-item">
-          <div class="position-left">
-            <div class="position-icon"><i class="fas fa-phone-alt"></i></div>
-            <div class="position-info">
-              <strong>Telecaller / Calling Executive <span class="salary-badge-mini">₹2.5L - ₹4.5L / year</span></strong>
-              <p>Handle outbound calls, client follow-ups, lead qualification, and customer support communications.</p>
-              <div class="eligibility-box">
-                <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
-                <div class="eligibility-tags">
-                  <span class="elig-tag"><i class="fas fa-graduation-cap"></i> 12th Pass / Any Graduate</span>
-                  <span class="elig-tag"><i class="fas fa-briefcase"></i> Freshers to 2 Years Exp.</span>
-                  <span class="elig-tag"><i class="fas fa-comments"></i> Hindi/English Communication, Active Calling</span>
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-handshake"></i></div>
+              <div class="position-info">
+                <strong>Customer Relationship Manager (CRM) <span class="salary-badge-mini">₹4.0L - ₹8.0L / year</span></strong>
+                <p>Manage client relations, account retention, customer satisfaction, and key enterprise partner support.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Any Bachelor's Degree</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> 1 to 3 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-headset"></i> Client Support, Account Mgmt, Communication</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <a class="btn-apply-sm" href="mailto:carrers@ignitocorporation.com?subject=Application for CRM Position">
+              <i class="fas fa-envelope"></i> Email Resume
+            </a>
           </div>
-          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
-            Apply Now <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
 
-        <div class="position-item">
-          <div class="position-left">
-            <div class="position-icon"><i class="fas fa-concierge-bell"></i></div>
-            <div class="position-info">
-              <strong>Front Desk Executive / Receptionist <span class="salary-badge-mini">₹2.5L - ₹4.2L / year</span></strong>
-              <p>Manage front desk operations, visitor reception, office inquiries, call routing, and administrative support.</p>
-              <div class="eligibility-box">
-                <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
-                <div class="eligibility-tags">
-                  <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Graduate / Higher Secondary</span>
-                  <span class="elig-tag"><i class="fas fa-briefcase"></i> Freshers to 2 Years Exp.</span>
-                  <span class="elig-tag"><i class="fas fa-desktop"></i> Front Desk Mgmt, Basic Computer & Office MS</span>
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="position-info">
+                <strong>Telecaller / Calling Executive <span class="salary-badge-mini">₹2.5L - ₹4.5L / year</span></strong>
+                <p>Handle outbound calls, client follow-ups, lead qualification, and customer support communications.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> 12th Pass / Any Graduate</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> Freshers to 2 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-comments"></i> Hindi/English Communication, Active Calling</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <a class="btn-apply-sm" href="mailto:carrers@ignitocorporation.com?subject=Application for Telecaller Executive">
+              <i class="fas fa-envelope"></i> Email Resume
+            </a>
           </div>
-          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
-            Apply Now <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
 
-        <div class="position-item">
-          <div class="position-left">
-            <div class="position-icon"><i class="fas fa-user-graduate"></i></div>
-            <div class="position-info">
-              <strong>Internship Program (Tech, Sales & Marketing) <span class="salary-badge-mini">Stipend + Certificate</span></strong>
-              <p>Gain hands-on corporate project experience, direct mentorship, Pre-Placement Offer (PPO) potential, and monthly stipend.</p>
-              <div class="eligibility-box">
-                <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
-                <div class="eligibility-tags">
-                  <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Pursuing / Recent Graduates (B.Tech, BCA, BBA, MBA, B.Com)</span>
-                  <span class="elig-tag"><i class="fas fa-briefcase"></i> Freshers / Students</span>
-                  <span class="elig-tag"><i class="fas fa-award"></i> Willingness to Learn, Basic Tech or Sales Aptitude</span>
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-concierge-bell"></i></div>
+              <div class="position-info">
+                <strong>Front Desk Executive / Receptionist <span class="salary-badge-mini">₹2.5L - ₹4.2L / year</span></strong>
+                <p>Manage front desk operations, visitor reception, office inquiries, call routing, and administrative support.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Graduate / Higher Secondary</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> Freshers to 2 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-desktop"></i> Front Desk Mgmt, Basic Computer & Office MS</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <a class="btn-apply-sm" href="mailto:carrers@ignitocorporation.com?subject=Application for Front Desk Executive">
+              <i class="fas fa-envelope"></i> Email Resume
+            </a>
           </div>
-          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
-            Apply Now <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
 
-        <div class="position-item">
-          <div class="position-left">
-            <div class="position-icon"><i class="fas fa-user-shield"></i></div>
-            <div class="position-info">
-              <strong>Security Guard / Premises Officer <span class="salary-badge-mini">₹2.0L - ₹3.6L / year</span></strong>
-              <p>Ensure office campus security, visitor logging, entry/exit management, and workplace safety protocols.</p>
-              <div class="eligibility-box">
-                <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
-                <div class="eligibility-tags">
-                  <span class="elig-tag"><i class="fas fa-graduation-cap"></i> 10th / 12th Pass</span>
-                  <span class="elig-tag"><i class="fas fa-briefcase"></i> 0 to 3 Years Exp. (Security Background)</span>
-                  <span class="elig-tag"><i class="fas fa-shield-alt"></i> Campus Security, Visitor Registry, Vigilance</span>
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-user-graduate"></i></div>
+              <div class="position-info">
+                <strong>Internship Program (Tech, Sales & Marketing) <span class="salary-badge-mini">Stipend + Certificate</span></strong>
+                <p>Gain hands-on corporate project experience, direct mentorship, Pre-Placement Offer (PPO) potential, and monthly stipend.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Pursuing / Recent Graduates (B.Tech, BCA, BBA, MBA, B.Com)</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> Freshers / Students</span>
+                    <span class="elig-tag"><i class="fas fa-award"></i> Willingness to Learn, Basic Tech or Sales Aptitude</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <a class="btn-apply-sm" href="mailto:carrers@ignitocorporation.com?subject=Application for Internship Program">
+              <i class="fas fa-envelope"></i> Email Resume
+            </a>
           </div>
-          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
-            Apply Now <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
 
-        <div class="position-item">
-          <div class="position-left">
-            <div class="position-icon"><i class="fas fa-headset"></i></div>
-            <div class="position-info">
-              <strong>Delivery & Operations Specialist <span class="salary-badge-mini">₹4.0L - ₹6.5L / year</span></strong>
-              <p>Oversee enterprise client deliverables, project timelines, quality standards & communication.</p>
-              <div class="eligibility-box">
-                <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
-                <div class="eligibility-tags">
-                  <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Any Graduate / Diploma</span>
-                  <span class="elig-tag"><i class="fas fa-briefcase"></i> 0 to 3 Years Exp.</span>
-                  <span class="elig-tag"><i class="fas fa-tasks"></i> Operations Mgmt, Logistics & Project Coordination</span>
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-user-shield"></i></div>
+              <div class="position-info">
+                <strong>Security Guard / Premises Officer <span class="salary-badge-mini">₹2.0L - ₹3.6L / year</span></strong>
+                <p>Ensure office campus security, visitor logging, entry/exit management, and workplace safety protocols.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> 10th / 12th Pass</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> 0 to 3 Years Exp. (Security Background)</span>
+                    <span class="elig-tag"><i class="fas fa-shield-alt"></i> Campus Security, Visitor Registry, Vigilance</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <a class="btn-apply-sm" href="mailto:carrers@ignitocorporation.com?subject=Application for Security Guard">
+              <i class="fas fa-envelope"></i> Email Resume
+            </a>
           </div>
-          <a class="btn-apply-sm" href="https://rzp.io/rzp/EZ5vMTx" target="_blank" rel="noopener noreferrer">
-            Apply Now <i class="fas fa-arrow-right"></i>
-          </a>
+
+          <div class="position-item">
+            <div class="position-left">
+              <div class="position-icon"><i class="fas fa-headset"></i></div>
+              <div class="position-info">
+                <strong>Delivery & Operations Specialist <span class="salary-badge-mini">₹4.0L - ₹6.5L / year</span></strong>
+                <p>Oversee enterprise client deliverables, project timelines, quality standards & communication.</p>
+                <div class="eligibility-box">
+                  <div class="eligibility-title"><i class="fas fa-user-check"></i> Eligibility Criteria:</div>
+                  <div class="eligibility-tags">
+                    <span class="elig-tag"><i class="fas fa-graduation-cap"></i> Any Graduate / Diploma</span>
+                    <span class="elig-tag"><i class="fas fa-briefcase"></i> 0 to 3 Years Exp.</span>
+                    <span class="elig-tag"><i class="fas fa-tasks"></i> Operations Mgmt, Logistics & Project Coordination</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn-apply-sm" href="mailto:carrers@ignitocorporation.com?subject=Application for Operations Specialist">
+              <i class="fas fa-envelope"></i> Email Resume
+            </a>
+          </div>
+
         </div>
 
+        <div style="text-align: center; margin-top: 2.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; align-items: center;">
+          <a class="btn btn-primary" href="mailto:carrers@ignitocorporation.com" style="background: var(--primary); color: white; padding: 0.85rem 1.8rem; border-radius: 9999px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-envelope"></i> Email Resume to carrers@ignitocorporation.com
+          </a>
+          <a class="btn btn-secondary" href="career.html">
+            View Dedicated Career Page <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-block">
+      <div class="section-container">
+        <div class="section-header fade-up">
+          <div class="section-tag"><i class="fas fa-paper-plane"></i> GET IN TOUCH</div>
+          <h2 class="section-title">Let's <span class="marker-cyan">build something great</span> together!</h2>
+          <p class="section-subtitle">
+            Connect with our team to discuss software development, enterprise integration, or digital product strategy.
+            <br />
+            <span class="doodle-note" style="margin-top: 0.4rem;">⚡ Direct support &bull; Fast response in &lt;24 hours!</span>
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card fade-up delay-1">
+            <h3>Ignito Corporation HQ</h3>
+            <p>
+              Bhagirathpura, Indore, Madhya Pradesh, India<br />
+              <strong>Official Email:</strong> support@ignitocorporation.live<br />
+              <strong>Careers Email:</strong> <a href="mailto:carrers@ignitocorporation.com" style="color: var(--primary); text-decoration: none; font-weight: 600;">carrers@ignitocorporation.com</a>
+            </p>
+
+            <div style="margin-bottom: 1.8rem; border-top: 1px solid var(--border-light); padding-top: 1.4rem;">
+              <div style="font-family: var(--font-heading); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.8rem; color: var(--text-main);">
+                Direct Channels
+              </div>
+              <div class="social-strip">
+                <a class="social-btn" href="https://wa.me/916232480899" aria-label="WhatsApp" target="_blank" rel="noopener">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a class="social-btn" href="mailto:carrers@ignitocorporation.com" aria-label="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a class="social-btn" href="https://x.com/Ignito485001" aria-label="X Twitter" target="_blank" rel="noopener">
+                  <i class="fab fa-x-twitter"></i>
+                </a>
+                <a class="social-btn" href="https://www.linkedin.com/company/ignito-corporation/about/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-card fade-up delay-2">
+            <iframe loading="lazy" title="Ignito Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7359.055946004716!2d75.85446499183443!3d22.745779567474788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396302826b4d4fb9%3A0xd77fbc01a65120d3!2sBhagirathpura%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1749893351999!5m2!1sen!2sin"></iframe>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <p>© 2025 Ignito Corporation. Have questions? Contact our recruitment team at <a href="mailto:carrers@ignitocorporation.com">carrers@ignitocorporation.com</a>.</p>
+    <div class="footer-container">
+      <div class="footer-bottom">
+        <div>
+          © 2025-2026 <strong>Ignito Corporation</strong>. All rights reserved. &bull; <a href="privacy.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">Privacy Policy & Terms</a>
+        </div>
+        <div>
+          Career Enquiries: <a href="mailto:carrers@ignitocorporation.com">carrers@ignitocorporation.com</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <!-- Interactive JavaScript for Animations & Navbar -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Header Sticky Effect & Active Scroll Spy
+      const header = document.getElementById('site-header');
+      const navLinks = document.querySelectorAll('nav.nav-links a[href^="#"], nav.nav-links a[href^="index.html#"]');
+      const sections = document.querySelectorAll('main section[id]');
       const mobileToggle = document.getElementById('mobile-toggle');
       const navMenu = document.getElementById('nav-menu');
 
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Mobile Menu Toggle
       if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => {
           navMenu.classList.toggle('mobile-open');
         });
       }
 
-      if (window.IntersectionObserver) {
-        const scrollObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
+      // Smooth Scroll Navigation
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          const hash = href.includes('#') ? href.substring(href.indexOf('#')) : null;
+          
+          if (hash) {
+            const targetEl = document.querySelector(hash);
+            if (targetEl) {
+              e.preventDefault();
+              if (navMenu) navMenu.classList.remove('mobile-open');
+              const offsetTop = targetEl.offsetTop - 85;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
             }
-          });
-        }, { threshold: 0.05 });
+          }
+        });
+      });
 
-        document.querySelectorAll('.fade-up').forEach(el => scrollObserver.observe(el));
-      }
+      // Intersection Observer for Smooth Scroll Animations (fade-up)
+      const observerOptions = {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      };
 
-      // Safety fallback: Ensure all cards become visible even if scroll observer fails
+      const scrollObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-up').forEach(el => scrollObserver.observe(el));
+
+      // Safety fallback: Ensure all sections & job cards become visible even if scroll observer fails
       setTimeout(() => {
         document.querySelectorAll('.fade-up').forEach(el => el.classList.add('is-visible'));
-      }, 250);
+      }, 300);
+
+      // Active Section ScrollSpy
+      const spyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(l => {
+              const href = l.getAttribute('href');
+              if (href.endsWith('#' + id)) {
+                l.classList.add('active');
+              } else {
+                l.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, { threshold: 0.35 });
+
+      sections.forEach(sec => spyObserver.observe(sec));
+
+      // Auto-scroll client track
+      const clientTrack = document.getElementById('client-container');
+      if (clientTrack) {
+        let scrollPos = 0;
+        setInterval(() => {
+          if (clientTrack.matches(':hover')) return;
+          const maxScroll = clientTrack.scrollWidth - clientTrack.clientWidth;
+          scrollPos += 320;
+          if (scrollPos > maxScroll) scrollPos = 0;
+          clientTrack.scrollTo({ left: scrollPos, behavior: 'smooth' });
+        }, 6000);
+      }
     });
+  </script>
+
+  <!-- Live Support Widget -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function() {
+      var s1 = document.createElement('script'), s0 = document.getElementsByTagName('script')[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/684d3d0e4aea20190b6351b0/1itmrd0ik';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
   </script>
 </body>
 </html>
