@@ -2,16 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, <!-- Mobile responsive fix -->
-<style>
-  @media (max-width: 768px) {
-    div, section, article, .card {
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      overflow-wrap: break-word;
-    }
-  }
-</styleinitial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms & Conditions & Privacy Policy | Ignito Corporation</title>
   <meta name="description" content="Official Terms & Conditions, Payment Policy, No Refund Policy, and Privacy Policy for Ignito Corporation and its application suite." />
   <meta name="robots" content="index, follow" />
@@ -326,6 +317,99 @@
       .legal-hero h1 {
         font-size: 2rem;
       }
+    /* Floating WhatsApp Button */
+    .whatsapp-float-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: #ffffff !important;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4), 0 2px 6px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .whatsapp-float-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.55), 0 4px 12px rgba(0, 0, 0, 0.12);
+      color: #ffffff !important;
+      background: linear-gradient(135deg, #2ae06d 0%, #159d8d 100%);
+    }
+
+    .whatsapp-float-btn:active {
+      transform: translateY(-1px) scale(0.98);
+    }
+
+    .whatsapp-float-btn .wa-icon {
+      font-size: 1.45rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .whatsapp-float-btn .wa-text {
+      white-space: nowrap;
+      font-weight: 700;
+    }
+
+    .whatsapp-pulse {
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 50px;
+      border: 2px solid rgba(37, 211, 102, 0.7);
+      animation: wa-pulse 2.2s infinite ease-out;
+      pointer-events: none;
+    }
+
+    @keyframes wa-pulse {
+      0% {
+        transform: scale(0.98);
+        opacity: 0.9;
+      }
+      70% {
+        transform: scale(1.12);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1.12);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .whatsapp-float-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 14px;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        justify-content: center;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      }
+      .whatsapp-float-btn .wa-text {
+        display: none;
+      }
+      .whatsapp-float-btn .wa-icon {
+        font-size: 1.65rem;
+      }
+      .whatsapp-pulse {
+        border-radius: 50%;
+      }
     }
   </style>
 </head>
@@ -452,6 +536,18 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating WhatsApp Contact Button -->
+  <a href="https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+     class="whatsapp-float-btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat with us on WhatsApp"
+     id="whatsapp-chat-button">
+    <span class="whatsapp-pulse" aria-hidden="true"></span>
+    <span class="wa-icon"><i class="fab fa-whatsapp"></i></span>
+    <span class="wa-text">Chat with us</span>
+  </a>
 
 </body>
 </html>
