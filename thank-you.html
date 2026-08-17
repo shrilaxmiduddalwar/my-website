@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17300844145"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17300844145');
+  </script>
+
+  <!-- Event snippet for Purchase conversion page -->
+  <script>
+    // Dynamically retrieve transaction_id if passed in URL params (e.g. ?order_id=XYZ or ?txn_id=XYZ)
+    const urlParams = new URLSearchParams(window.location.search);
+    const txnId = urlParams.get('txn_id') || urlParams.get('order_id') || urlParams.get('transaction_id') || '';
+
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17300844145/BN43CP2R8uIcEPHc17lA',
+      'transaction_id': txnId
+    });
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Ignito Corporation</title>
+  <meta name="description" content="Thank you for your order and choosing Ignito Corporation. Your confirmation and next steps are outlined here." />
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- Favicon & Touch Icon Links -->
+  <link rel="icon" type="image/png" href="ignito.png" />
+  <link rel="shortcut icon" href="ignito.png" type="image/png" />
+  <link rel="apple-touch-icon" href="ignito.png" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      color-scheme: light;
+      --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-dark: #1e3a8a;
+      --primary-light: #eff6ff;
+      
+      --accent: #714b67;
+      --success: #10b981;
+      --success-light: #ecfdf5;
+      --success-border: #a7f3d0;
+      
+      --bg-page: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-alt: #f1f5f9;
+      
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #64748b;
+      
+      --border-light: #e2e8f0;
+      --border-hover: #cbd5e1;
+      
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-card: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+      --shadow-hover: 0 20px 40px -15px rgba(37, 99, 235, 0.15);
+      
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Sticky Navigation Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0.9rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 1px solid var(--border-light);
+    }
+
+    .brand-text {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--text-main);
+    }
+
+    .brand-text span {
+      color: var(--primary);
+    }
+
+    nav.nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    nav.nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 0.55rem 1rem;
+      border-radius: var(--radius-full);
+      transition: all 0.25s ease;
+    }
+
+    nav.nav-links a:hover {
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    /* Main Content Container */
+    main {
+      flex: 1;
+      padding: 4rem 1.5rem 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .thankyou-wrapper {
+      max-width: 780px;
+      width: 100%;
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      color: #ffffff;
+      padding: 3.5rem 2rem 2.5rem;
+      position: relative;
+    }
+
+    .success-icon-badge {
+      width: 80px;
+      height: 80px;
+      background: #ffffff;
+      color: var(--success);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      margin-bottom: 1.25rem;
+      animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.4); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .hero-banner h1 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-banner p {
+      font-size: 1.05rem;
+      color: #e0e7ff;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .content-body {
+      padding: 2.5rem 2rem 3rem;
+    }
+
+    .confirmation-info {
+      background: var(--bg-alt);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .info-item {
+      text-align: left;
+    }
+
+    .info-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-subtle);
+      font-weight: 600;
+    }
+
+    .info-value {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--text-main);
+      font-size: 1.05rem;
+    }
+
+    /* Steps Section */
+    .next-steps {
+      text-align: left;
+      margin-bottom: 2.5rem;
+    }
+
+    .next-steps h2 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .step-card {
+      background: var(--bg-page);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      position: relative;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-hover);
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.85rem;
+      border-radius: 50%;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-card h3 {
+      font-family: var(--font-heading);
+      font-size: 0.98rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      color: var(--text-main);
+    }
+
+    .step-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Action Buttons */
+    .actions-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.75rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+      border: 1px solid transparent;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--text-main);
+      border: 1px solid var(--border-light);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--border-hover);
+      background: var(--bg-alt);
+      transform: translateY(-1px);
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border-light);
+      padding: 2rem 1.5rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .footer-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #25D366;
+      color: #ffffff;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .whatsapp-float-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+      color: #ffffff;
+    }
+
+    .wa-icon {
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero-banner h1 {
+        font-size: 1.75rem;
+      }
+      
+      .content-body {
+        padding: 1.5rem 1rem 2rem;
+      }
+      
+      .confirmation-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .actions-group {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="ignito.png" alt="Ignito Corporation Logo" />
+        <div class="brand-text">Ignito <span>Corporation</span></div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy & Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="thankyou-wrapper">
+      <div class="hero-banner">
+        <div class="success-icon-badge">
+          <i class="fas fa-check"></i>
+        </div>
+        <h1>Thank You for Your Order!</h1>
+        <p>Your request / transaction has been recorded successfully with Ignito Corporation.</p>
+      </div>
+
+      <div class="content-body">
+        <div class="confirmation-info">
+          <div class="info-item">
+            <div class="info-label">Status</div>
+            <div class="info-value" style="color: var(--success);"><i class="fas fa-check-circle"></i> Confirmed</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Support Email</div>
+            <div class="info-value">support@ignitocorporation.live</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Response Time</div>
+            <div class="info-value">Within 24 Hours</div>
+          </div>
+        </div>
+
+        <div class="next-steps">
+          <h2><i class="fas fa-list-check" style="color: var(--primary);"></i> What Happens Next?</h2>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h3>Order Recorded</h3>
+              <p>Your order details and requirements have been safely received by our backend system.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h3>Expert Review</h3>
+              <p>Our dedicated technical team reviews your setup and initiates the delivery workflow.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h3>Direct Onboarding</h3>
+              <p>We connect with you directly via Email / WhatsApp to share access keys and updates.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions-group">
+          <a href="index.html" class="btn btn-primary">
+            <i class="fas fa-arrow-left"></i> Back to Home
+          </a>
+          <a href="https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20just%20completed%20an%20order/inquiry." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <i class="fab fa-whatsapp" style="color: #25D366;"></i> Contact Support
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy & Terms</a>
+        <a href="mailto:support@ignitocorporation.live">Contact Support</a>
+      </div>
+      <div>
+        © 2025-2026 <strong>Ignito Corporation</strong>. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Contact Button -->
+  <a href="https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20have%20a%20question%20regarding%20my%20order." 
+     class="whatsapp-float-btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat with us on WhatsApp"
+     id="whatsapp-chat-button">
+    <span class="wa-icon"><i class="fab fa-whatsapp"></i></span>
+    <span class="wa-text">Chat with us</span>
+  </a>
+
+</body>
+</html>
