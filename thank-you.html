@@ -9,6 +9,38 @@
     gtag('js', new Date());
 
     gtag('config', 'AW-17300844145');
+
+    // Google Ads Conversion Event Tracker for Contact (Call & WhatsApp)
+    function gtag_report_conversion(url) {
+      var opened = false;
+      var callback = function () {
+        if (!opened && typeof(url) !== 'undefined' && url) {
+          opened = true;
+          if (url.startsWith('tel:') || url.startsWith('mailto:')) {
+            window.location.href = url;
+          } else {
+            window.open(url, '_blank', 'noopener,noreferrer');
+          }
+        }
+      };
+
+      setTimeout(callback, 400);
+
+      try {
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17300844145/e5HbCMW4heMcEPHc17lA',
+            'event_callback': callback,
+            'event_timeout': 2000
+          });
+        } else {
+          callback();
+        }
+      } catch (err) {
+        callback();
+      }
+      return false;
+    }
   </script>
 
   <!-- Event snippet for Purchase conversion page -->
@@ -539,7 +571,7 @@
           <a href="index.html" class="btn btn-primary">
             <i class="fas fa-arrow-left"></i> Back to Home
           </a>
-          <a href="https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20just%20completed%20an%20order/inquiry." target="_blank" rel="noopener noreferrer" class="btn btn-secondary" onclick="if(typeof gtag==='function'){gtag('event','conversion',{'send_to':'AW-17300844145/e5HbCMW4heMcEPHc17lA'});}">
+          <a href="https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20just%20completed%20an%20order/inquiry." target="_blank" rel="noopener noreferrer" class="btn btn-secondary" onclick="return gtag_report_conversion('https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20just%20completed%20an%20order/inquiry.');">
             <i class="fab fa-whatsapp" style="color: #25D366;"></i> Contact Support
           </a>
         </div>
@@ -568,25 +600,9 @@
      rel="noopener noreferrer" 
      aria-label="Chat with us on WhatsApp"
      id="whatsapp-chat-button"
-     onclick="if(typeof gtag==='function'){gtag('event','conversion',{'send_to':'AW-17300844145/e5HbCMW4heMcEPHc17lA'});}">
+     onclick="return gtag_report_conversion('https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20have%20a%20question%20regarding%20my%20order.');">
     <span class="wa-icon"><i class="fab fa-whatsapp"></i></span>
     <span class="wa-text">Chat with us</span>
   </a>
-
-  <!-- Google Ads Contact Conversion Click Tracker -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const contactLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"], a[href^="tel:"], #whatsapp-chat-button, .whatsapp-float-btn');
-      contactLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'conversion', {
-              'send_to': 'AW-17300844145/e5HbCMW4heMcEPHc17lA'
-            });
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>

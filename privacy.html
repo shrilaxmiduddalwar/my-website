@@ -9,6 +9,38 @@
     gtag('js', new Date());
 
     gtag('config', 'AW-17300844145');
+
+    // Google Ads Conversion Event Tracker for Contact (Call & WhatsApp)
+    function gtag_report_conversion(url) {
+      var opened = false;
+      var callback = function () {
+        if (!opened && typeof(url) !== 'undefined' && url) {
+          opened = true;
+          if (url.startsWith('tel:') || url.startsWith('mailto:')) {
+            window.location.href = url;
+          } else {
+            window.open(url, '_blank', 'noopener,noreferrer');
+          }
+        }
+      };
+
+      setTimeout(callback, 400);
+
+      try {
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17300844145/e5HbCMW4heMcEPHc17lA',
+            'event_callback': callback,
+            'event_timeout': 2000
+          });
+        } else {
+          callback();
+        }
+      } catch (err) {
+        callback();
+      }
+      return false;
+    }
   </script>
 
   <meta charset="UTF-8" />
@@ -554,26 +586,10 @@
      rel="noopener noreferrer" 
      aria-label="Chat with us on WhatsApp"
      id="whatsapp-chat-button"
-     onclick="if(typeof gtag==='function'){gtag('event','conversion',{'send_to':'AW-17300844145/e5HbCMW4heMcEPHc17lA'});}">
+     onclick="return gtag_report_conversion('https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20would%20like%20to%20inquire%20about%20your%20services.');">
     <span class="whatsapp-pulse" aria-hidden="true"></span>
     <span class="wa-icon"><i class="fab fa-whatsapp"></i></span>
     <span class="wa-text">Chat with us</span>
   </a>
-
-  <!-- Google Ads Contact Conversion Click Tracker -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const contactLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"], a[href^="tel:"], #whatsapp-chat-button, .whatsapp-float-btn');
-      contactLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'conversion', {
-              'send_to': 'AW-17300844145/e5HbCMW4heMcEPHc17lA'
-            });
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>
