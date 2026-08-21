@@ -242,18 +242,18 @@ void main() {
     resize();
 
     const start = performance.now();
-    let currentCloud = parseHex('#ffffff');
-    let currentSkyTop = parseHex('#2563eb');
-    let currentSkyBottom = parseHex('#93c5fd');
+    let currentCloud = parseHex('#fbf8f2');
+    let currentSkyTop = parseHex('#3876ba');
+    let currentSkyBottom = parseHex('#8cbfe8');
 
     function draw(now) {
       requestAnimationFrame(draw);
       const elapsed = ((now - start) / 1000) * 1.0;
 
       const isRaining = !!window.isRainingGlobalState;
-      const targetCloud = isRaining ? parseHex('#475569') : parseHex('#ffffff');
-      const targetSkyTop = isRaining ? parseHex('#0f172a') : parseHex('#2563eb');
-      const targetSkyBottom = isRaining ? parseHex('#334155') : parseHex('#93c5fd');
+      const targetCloud = isRaining ? parseHex('#475569') : parseHex('#fbf8f2');
+      const targetSkyTop = isRaining ? parseHex('#0f172a') : parseHex('#3876ba');
+      const targetSkyBottom = isRaining ? parseHex('#334155') : parseHex('#8cbfe8');
 
       // Smooth color lerp
       for (let i = 0; i < 3; i++) {

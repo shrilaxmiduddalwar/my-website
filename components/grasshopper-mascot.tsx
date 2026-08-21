@@ -82,29 +82,26 @@ export const GrasshopperMascot: React.FC<GrasshopperMascotProps> = ({ isRaining 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(width, height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.outputColorSpace = THREE.SRGBColorSpace;
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.3;
     renderer.shadowMap.enabled = true;
     container.appendChild(renderer.domElement);
 
-    // Studio Lights - Ultra Vibrant High-Key Illumination
-    const ambientLight = new THREE.AmbientLight(0xf0fdf4, 2.2);
+    // Studio Lights - Exact Localhost
+    const ambientLight = new THREE.AmbientLight(0xf0fdf4, 1.55);
     scene.add(ambientLight);
 
-    const mainLight = new THREE.DirectionalLight(0xffffff, 2.4);
+    const mainLight = new THREE.DirectionalLight(0xffffff, 1.85);
     mainLight.position.set(3, 5, 4);
     scene.add(mainLight);
 
-    const backRimLight = new THREE.DirectionalLight(0x38bdf8, 2.0);
+    const backRimLight = new THREE.DirectionalLight(0x38bdf8, 1.6);
     backRimLight.position.set(-3, 3, -4);
     scene.add(backRimLight);
 
-    const leftFillLight = new THREE.DirectionalLight(0x4ade80, 1.8);
+    const leftFillLight = new THREE.DirectionalLight(0x4ade80, 1.3);
     leftFillLight.position.set(-4, 2, 2);
     scene.add(leftFillLight);
 
-    const bottomWarmFill = new THREE.PointLight(0xfef08a, 1.4, 10);
+    const bottomWarmFill = new THREE.PointLight(0xfef08a, 0.95, 10);
     bottomWarmFill.position.set(0, -1, 2);
     scene.add(bottomWarmFill);
 
@@ -114,57 +111,15 @@ export const GrasshopperMascot: React.FC<GrasshopperMascotProps> = ({ isRaining 
     const mascotGroup = new THREE.Group();
     scene.add(mascotGroup);
 
-    // High-Vibrancy Pixar-Grade 3D Materials
-    const bodyMat = new THREE.MeshStandardMaterial({ 
-      color: 0x22c55e, 
-      emissive: 0x064e3b, 
-      emissiveIntensity: 0.28, 
-      roughness: 0.2, 
-      metalness: 0.12 
-    });
-    const bellyMat = new THREE.MeshStandardMaterial({ 
-      color: 0xa7f3d0, 
-      emissive: 0x047857, 
-      emissiveIntensity: 0.22, 
-      roughness: 0.25, 
-      metalness: 0.05 
-    });
-    const carapaceMat = new THREE.MeshStandardMaterial({ 
-      color: 0x15803d, 
-      emissive: 0x064e3b, 
-      emissiveIntensity: 0.25, 
-      roughness: 0.18, 
-      metalness: 0.2 
-    });
-    const accentMat = new THREE.MeshStandardMaterial({ 
-      color: 0x166534, 
-      emissive: 0x052e16, 
-      emissiveIntensity: 0.3, 
-      roughness: 0.25 
-    });
-    const eyeMat = new THREE.MeshStandardMaterial({ 
-      color: 0x090d16, 
-      roughness: 0.02, 
-      metalness: 0.95 
-    });
+    // Exact Localhost Colors
+    const bodyMat = new THREE.MeshStandardMaterial({ color: 0x22c55e, roughness: 0.26, metalness: 0.16 });
+    const bellyMat = new THREE.MeshStandardMaterial({ color: 0x86efac, roughness: 0.35, metalness: 0.08 });
+    const carapaceMat = new THREE.MeshStandardMaterial({ color: 0x16a34a, roughness: 0.22, metalness: 0.25 });
+    const accentMat = new THREE.MeshStandardMaterial({ color: 0x15803d, roughness: 0.32 });
+    const eyeMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, roughness: 0.05, metalness: 0.95 });
     const eyeHighlightMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
-    const wingMat = new THREE.MeshStandardMaterial({ 
-      color: 0x4ade80, 
-      emissive: 0x059669, 
-      emissiveIntensity: 0.3, 
-      roughness: 0.08, 
-      metalness: 0.2, 
-      transparent: true, 
-      opacity: 0.92 
-    });
-    const underWingMat = new THREE.MeshStandardMaterial({ 
-      color: 0x6ee7b7, 
-      emissive: 0x047857, 
-      emissiveIntensity: 0.25, 
-      roughness: 0.08, 
-      transparent: true, 
-      opacity: 0.75 
-    });
+    const wingMat = new THREE.MeshStandardMaterial({ color: 0x4ade80, roughness: 0.12, metalness: 0.2, transparent: true, opacity: 0.88 });
+    const underWingMat = new THREE.MeshStandardMaterial({ color: 0x6ee7b7, roughness: 0.1, transparent: true, opacity: 0.65 });
 
     // Torso / Thorax
     const thoraxGeo = new THREE.SphereGeometry(0.32, 24, 24);
