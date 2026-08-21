@@ -123,6 +123,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
+  <!-- 3D Grasshopper Mascot Styles -->
+  <link rel="stylesheet" href="grasshopper.css" />
+
   <style>
     :root {
       color-scheme: light;
@@ -1353,12 +1356,11 @@
       text-decoration: underline;
     }
 
-    /* Smooth Scroll Reveal Animations */
+    /* Smooth Scroll Reveal Animations - Always 100% Visible */
     .fade-up {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: opacity, transform;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     .fade-up.is-visible {
@@ -1721,6 +1723,198 @@
         border-radius: 50%;
       }
     }
+
+    /* Lead Qualification Form Styles */
+    .inquiry-service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card-option {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 1.1rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .service-card-option:hover {
+      border-color: #bfdbfe;
+      background: #f8fafc;
+      transform: translateY(-2px);
+    }
+
+    .service-card-option.selected {
+      background: #eff6ff;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .service-option-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: #eff6ff;
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .service-card-option.selected .service-option-icon {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .service-option-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
+
+    .service-option-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .budget-options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.65rem;
+    }
+
+    .budget-pill-btn {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      padding: 0.85rem 0.5rem;
+      border-radius: 12px;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--text-main);
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .budget-pill-btn:hover {
+      border-color: #bfdbfe;
+      background: #eff6ff;
+    }
+
+    .budget-pill-btn.selected {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    }
+
+    .timeline-options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.65rem;
+    }
+
+    .timeline-pill-btn {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      padding: 0.85rem 0.5rem;
+      border-radius: 12px;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .timeline-pill-btn:hover {
+      border-color: #bfdbfe;
+      background: #eff6ff;
+    }
+
+    .timeline-pill-btn.selected {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    }
+
+    .inquiry-field-group {
+      margin-bottom: 2rem;
+    }
+
+    .inquiry-label {
+      display: block;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+    }
+
+    .inquiry-hint {
+      font-size: 0.82rem;
+      color: var(--text-subtle);
+      margin-bottom: 0.85rem;
+    }
+
+    .inquiry-input, .inquiry-textarea {
+      width: 100%;
+      padding: 0.85rem 1.1rem;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-main);
+      background: #ffffff;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .inquiry-input:focus, .inquiry-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    .inquiry-input.has-error, .inquiry-textarea.has-error {
+      border-color: #ef4444 !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
+    }
+
+    .field-error-text {
+      color: #ef4444;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-top: 0.35rem;
+      display: none;
+    }
+
+    .field-error-text.visible {
+      display: block;
+    }
+
+    .form-contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+    }
   </style>
 </head>
 <body>
@@ -1747,6 +1941,7 @@
         <a href="index.html#about">About</a>
         <a href="index.html#services">Services</a>
         <a href="index.html#project">Project</a>
+        <a href="index.html#inquiry">Inquiry</a>
         <a href="index.html#clients">Clients</a>
         <a href="privacy.html">Privacy</a>
         <a href="PORTFOLIOO.pdf" download class="nav-cta"><i class="fas fa-download"></i> Portfolio</a>
@@ -1997,6 +2192,213 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Qualification & Project Inquiry Section -->
+    <section id="inquiry" class="section-block" style="background: rgba(255, 255, 255, 0.95); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+      <div class="section-container">
+        <div class="section-header fade-up">
+          <div class="section-tag"><i class="fas fa-clipboard-check"></i> PROJECT QUALIFICATION</div>
+          <h2 class="section-title">Tell Us About <span class="marker-yellow">Your Project</span></h2>
+          <p class="section-subtitle">
+            Tell us a few details about your project and our team will get back to you shortly.
+          </p>
+        </div>
+
+        <div style="max-width: 860px; margin: 0 auto;">
+          <!-- Success State Box -->
+          <div id="inquiry-success-box" class="enterprise-card fade-up" style="display: none; text-align: center; padding: 3rem 2rem; border-radius: var(--radius-lg); border: 1px solid #a7f3d0; background: #ffffff;">
+            <div style="width: 72px; height: 72px; background: #ecfdf5; color: #059669; border-radius: 50%; display: grid; place-items: center; font-size: 2rem; margin: 0 auto 1.5rem;">
+              <i class="fas fa-check"></i>
+            </div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.8rem;">
+              Thank You!
+            </h3>
+            <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 540px; margin: 0 auto 2rem; line-height: 1.6;">
+              Thank you! Your project details are ready to send on WhatsApp.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+              <a id="success-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #059669; border-color: #059669;">
+                <i class="fab fa-whatsapp"></i> Open WhatsApp Chat
+              </a>
+              <button type="button" id="inquiry-reset-btn" class="btn btn-secondary">
+                <i class="fas fa-rotate-left"></i> Submit Another Inquiry
+              </button>
+            </div>
+          </div>
+
+          <!-- Lead Form -->
+          <form id="project-qualification-form" class="enterprise-card fade-up delay-1" style="padding: 2.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-hover);" novalidate>
+            <!-- Field 1: Service Selection -->
+            <div class="inquiry-field-group">
+              <label class="inquiry-label">1. What are you looking to build? <span style="color: #ef4444;">*</span></label>
+              <div class="inquiry-hint">Select the primary solution you need.</div>
+              <div class="field-error-text" id="error-service"><i class="fas fa-circle-exclamation"></i> Please select what you are looking to build.</div>
+              
+              <div class="inquiry-service-grid" id="service-options-container">
+                <div class="service-card-option" data-value="Mobile App Development">
+                  <div>
+                    <div class="service-option-icon"><i class="fas fa-mobile-screen-button"></i></div>
+                    <div class="service-option-title">Mobile App Development</div>
+                    <div class="service-option-desc">iOS, Android Native & Cross-Platform (React Native, Flutter)</div>
+                  </div>
+                </div>
+
+                <div class="service-card-option" data-value="Website Development">
+                  <div>
+                    <div class="service-option-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="service-option-title">Website Development</div>
+                    <div class="service-option-desc">High-Converting Corporate & Landing Pages</div>
+                  </div>
+                </div>
+
+                <div class="service-card-option" data-value="Custom Software Development">
+                  <div>
+                    <div class="service-option-icon"><i class="fas fa-server"></i></div>
+                    <div class="service-option-title">Custom Software Development</div>
+                    <div class="service-option-desc">Enterprise Workflows, ERP & Backend Systems</div>
+                  </div>
+                </div>
+
+                <div class="service-card-option" data-value="Web Application / SaaS">
+                  <div>
+                    <div class="service-option-icon"><i class="fas fa-layer-group"></i></div>
+                    <div class="service-option-title">Web Application / SaaS</div>
+                    <div class="service-option-desc">Full-Stack Cloud Portals & Dashboards</div>
+                  </div>
+                </div>
+
+                <div class="service-card-option" data-value="App + Website + Software">
+                  <div>
+                    <div class="service-option-icon"><i class="fas fa-cubes-stacked"></i></div>
+                    <div class="service-option-title">App + Website + Software</div>
+                    <div class="service-option-desc">Complete End-to-End Digital Ecosystem</div>
+                  </div>
+                </div>
+
+                <div class="service-card-option" data-value="Not Sure — Need Consultation">
+                  <div>
+                    <div class="service-option-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="service-option-title">Not Sure — Need Consultation</div>
+                    <div class="service-option-desc">Strategy, Scope & Architecture Guidance</div>
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" id="selected-service" name="service" />
+            </div>
+
+            <!-- Field 2: Budget Selection with Currency Mode -->
+            <div class="inquiry-field-group" style="border-top: 1px solid var(--border-light); padding-top: 1.5rem;">
+              <label class="inquiry-label">2. What is your estimated project budget? <span style="color: #ef4444;">*</span></label>
+              <div class="inquiry-hint">Select your preferred currency and enter your target amount or pick a preset.</div>
+              <div class="field-error-text" id="error-budget"><i class="fas fa-circle-exclamation"></i> Please enter or select your estimated project budget.</div>
+
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                <div style="min-width: 140px; flex: 0 0 160px; position: relative;">
+                  <select id="inquiry-currency" class="inquiry-input" style="font-weight: 700; cursor: pointer; height: 48px;">
+                    <option value="USD ($)">USD ($) - US Dollar</option>
+                    <option value="INR (₹)">INR (₹) - Indian Rupee</option>
+                    <option value="EUR (€)">EUR (€) - Euro</option>
+                    <option value="GBP (£)">GBP (£) - British Pound</option>
+                    <option value="AED (AED)">AED (AED) - UAE Dirham</option>
+                    <option value="CAD (C$)">CAD (C$) - Canadian Dollar</option>
+                    <option value="AUD (A$)">AUD (A$) - Australian Dollar</option>
+                    <option value="SGD (S$)">SGD (S$) - Singapore Dollar</option>
+                  </select>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                  <input type="text" id="inquiry-budget-input" class="inquiry-input" style="height: 48px;" placeholder="e.g. 2,500 – 5,000 or Enter Custom Amount / Flexible" />
+                </div>
+              </div>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-subtle); margin-right: 0.3rem;">Quick Select:</span>
+                <button type="button" class="budget-pill-btn" style="padding: 0.35rem 0.65rem; font-size: 0.75rem;" data-value="1,000 – 2,500">1,000 – 2,500</button>
+                <button type="button" class="budget-pill-btn" style="padding: 0.35rem 0.65rem; font-size: 0.75rem;" data-value="2,500 – 5,000">2,500 – 5,000</button>
+                <button type="button" class="budget-pill-btn" style="padding: 0.35rem 0.65rem; font-size: 0.75rem;" data-value="5,000 – 10,000">5,000 – 10,000</button>
+                <button type="button" class="budget-pill-btn" style="padding: 0.35rem 0.65rem; font-size: 0.75rem;" data-value="10,000 – 25,000">10,000 – 25,000</button>
+                <button type="button" class="budget-pill-btn" style="padding: 0.35rem 0.65rem; font-size: 0.75rem;" data-value="25,000+">25,000+</button>
+                <button type="button" class="budget-pill-btn" style="padding: 0.35rem 0.65rem; font-size: 0.75rem;" data-value="Flexible / Need Quote">Flexible / Need Quote</button>
+              </div>
+            </div>
+
+            <!-- Field 3: Timeline Selection -->
+            <div class="inquiry-field-group" style="border-top: 1px solid var(--border-light); padding-top: 1.8rem;">
+              <label class="inquiry-label">3. When are you looking to start? <span style="color: #ef4444;">*</span></label>
+              <div class="inquiry-hint">Target kickoff timeframe.</div>
+              <div class="field-error-text" id="error-timeline"><i class="fas fa-circle-exclamation"></i> Please select your target timeline.</div>
+
+              <div class="timeline-options-grid" id="timeline-options-container">
+                <div class="timeline-pill-btn" data-value="ASAP"><i class="fas fa-bolt" style="color: var(--primary);"></i> ASAP</div>
+                <div class="timeline-pill-btn" data-value="Within 30 days"><i class="fas fa-calendar-days" style="color: var(--primary);"></i> Within 30 days</div>
+                <div class="timeline-pill-btn" data-value="1–3 months"><i class="fas fa-hourglass-half" style="color: var(--primary);"></i> 1–3 months</div>
+                <div class="timeline-pill-btn" data-value="Just researching"><i class="fas fa-magnifying-glass" style="color: var(--primary);"></i> Just researching</div>
+              </div>
+              <input type="hidden" id="selected-timeline" name="timeline" />
+            </div>
+
+            <!-- Field 4: Description -->
+            <div class="inquiry-field-group" style="border-top: 1px solid var(--border-light); padding-top: 1.8rem;">
+              <label class="inquiry-label" for="inquiry-desc">4. Tell us briefly about your project <span style="color: #ef4444;">*</span></label>
+              <div class="inquiry-hint">Key requirements, problems to solve, or core features needed.</div>
+              <textarea id="inquiry-desc" class="inquiry-textarea" rows="4" placeholder="Tell us what you want to build, the main features you need, or the problem you want to solve."></textarea>
+              <div class="field-error-text" id="error-desc"><i class="fas fa-circle-exclamation"></i> Please tell us briefly about your project.</div>
+            </div>
+
+            <!-- Field 5-8: Contact Details -->
+            <div class="inquiry-field-group" style="border-top: 1px solid var(--border-light); padding-top: 1.8rem;">
+              <label class="inquiry-label">5. Your Contact Information</label>
+              <div class="inquiry-hint">Where should our team send your scope breakdown and quote?</div>
+
+              <div class="form-contact-grid">
+                <div>
+                  <label style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-main); margin-bottom: 0.4rem;" for="inquiry-name">
+                    Full Name <span style="color: #ef4444;">*</span>
+                  </label>
+                  <input type="text" id="inquiry-name" class="inquiry-input" placeholder="e.g. John Doe" />
+                  <div class="field-error-text" id="error-name">Please enter your full name.</div>
+                </div>
+
+                <div>
+                  <label style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-main); margin-bottom: 0.4rem;" for="inquiry-company">
+                    Company Name <span style="font-weight: 400; color: var(--text-subtle);">(Optional)</span>
+                  </label>
+                  <input type="text" id="inquiry-company" class="inquiry-input" placeholder="e.g. Acme Inc." />
+                </div>
+
+                <div>
+                  <label style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-main); margin-bottom: 0.4rem;" for="inquiry-email">
+                    Email Address <span style="color: #ef4444;">*</span>
+                  </label>
+                  <input type="email" id="inquiry-email" class="inquiry-input" placeholder="e.g. john@company.com" />
+                  <div class="field-error-text" id="error-email">Please enter a valid email address.</div>
+                </div>
+
+                <div>
+                  <label style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-main); margin-bottom: 0.4rem;" for="inquiry-phone">
+                    WhatsApp / Phone Number <span style="color: #ef4444;">*</span>
+                  </label>
+                  <input type="tel" id="inquiry-phone" class="inquiry-input" placeholder="e.g. +1 (555) 234-5678" />
+                  <div class="field-error-text" id="error-phone">Please enter your WhatsApp / phone number.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button & Trust Points -->
+            <div style="border-top: 1px solid var(--border-light); padding-top: 1.8rem;">
+              <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.05rem; padding: 1.1rem; justify-content: center; gap: 0.75rem;">
+                <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> Get My Free Consultation <i class="fas fa-arrow-right"></i>
+              </button>
+
+              <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted);">
+                <span><i class="fas fa-lock" style="color: #10b981;"></i> 100% Confidential & Secure</span>
+                <span><i class="fas fa-bolt" style="color: #f59e0b;"></i> Instant WhatsApp Pre-Filled Chat</span>
+                <span><i class="fas fa-clock" style="color: var(--primary);"></i> Response in &lt;2 Hours</span>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -2331,8 +2733,218 @@
           clientTrack.scrollTo({ left: scrollPos, behavior: 'smooth' });
         }, 6000);
       }
+
+      // ==========================================
+      // Project Qualification Form Handler
+      // ==========================================
+      const form = document.getElementById('project-qualification-form');
+      const successBox = document.getElementById('inquiry-success-box');
+      const successWhatsAppBtn = document.getElementById('success-whatsapp-btn');
+      const resetBtn = document.getElementById('inquiry-reset-btn');
+
+      const serviceCards = document.querySelectorAll('.service-card-option');
+      const selectedServiceInput = document.getElementById('selected-service');
+      const currencySelect = document.getElementById('inquiry-currency');
+      const budgetInput = document.getElementById('inquiry-budget-input');
+      const budgetBtns = document.querySelectorAll('.budget-pill-btn');
+      const timelineBtns = document.querySelectorAll('.timeline-pill-btn');
+      const selectedTimelineInput = document.getElementById('selected-timeline');
+
+      // Service Card Selection
+      serviceCards.forEach(card => {
+        card.addEventListener('click', () => {
+          serviceCards.forEach(c => c.classList.remove('selected'));
+          card.classList.add('selected');
+          selectedServiceInput.value = card.getAttribute('data-value') || '';
+          document.getElementById('error-service').classList.remove('visible');
+        });
+      });
+
+      // Budget Preset Buttons
+      budgetBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          budgetBtns.forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+          if (budgetInput) {
+            budgetInput.value = btn.getAttribute('data-value') || '';
+          }
+          document.getElementById('error-budget').classList.remove('visible');
+        });
+      });
+
+      if (budgetInput) {
+        budgetInput.addEventListener('input', () => {
+          document.getElementById('error-budget').classList.remove('visible');
+        });
+      }
+
+      // Timeline Selection
+      timelineBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          timelineBtns.forEach(t => t.classList.remove('selected'));
+          btn.classList.add('selected');
+          selectedTimelineInput.value = btn.getAttribute('data-value') || '';
+          document.getElementById('error-timeline').classList.remove('visible');
+        });
+      });
+
+      // Form Submit & Validation
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          let isValid = true;
+          const service = selectedServiceInput.value.trim();
+          const curr = currencySelect ? currencySelect.value.trim() : 'USD ($)';
+          const rawBudget = budgetInput ? budgetInput.value.trim() : '';
+          const budget = rawBudget ? `${curr} ${rawBudget}` : '';
+          const timeline = selectedTimelineInput.value.trim();
+          const descInput = document.getElementById('inquiry-desc');
+          const nameInput = document.getElementById('inquiry-name');
+          const companyInput = document.getElementById('inquiry-company');
+          const emailInput = document.getElementById('inquiry-email');
+          const phoneInput = document.getElementById('inquiry-phone');
+
+          const desc = descInput ? descInput.value.trim() : '';
+          const name = nameInput ? nameInput.value.trim() : '';
+          const company = companyInput ? companyInput.value.trim() : '';
+          const email = emailInput ? emailInput.value.trim() : '';
+          const phone = phoneInput ? phoneInput.value.trim() : '';
+
+          // Validate Service
+          if (!service) {
+            document.getElementById('error-service').classList.add('visible');
+            isValid = false;
+          } else {
+            document.getElementById('error-service').classList.remove('visible');
+          }
+
+          // Validate Budget
+          if (!budget) {
+            document.getElementById('error-budget').classList.add('visible');
+            isValid = false;
+          } else {
+            document.getElementById('error-budget').classList.remove('visible');
+          }
+
+          // Validate Timeline
+          if (!timeline) {
+            document.getElementById('error-timeline').classList.add('visible');
+            isValid = false;
+          } else {
+            document.getElementById('error-timeline').classList.remove('visible');
+          }
+
+          // Validate Description
+          if (!desc) {
+            document.getElementById('error-desc').classList.add('visible');
+            descInput.classList.add('has-error');
+            isValid = false;
+          } else {
+            document.getElementById('error-desc').classList.remove('visible');
+            descInput.classList.remove('has-error');
+          }
+
+          // Validate Name
+          if (!name) {
+            document.getElementById('error-name').classList.add('visible');
+            nameInput.classList.add('has-error');
+            isValid = false;
+          } else {
+            document.getElementById('error-name').classList.remove('visible');
+            nameInput.classList.remove('has-error');
+          }
+
+          // Validate Email
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!email || !emailRegex.test(email)) {
+            document.getElementById('error-email').classList.add('visible');
+            emailInput.classList.add('has-error');
+            isValid = false;
+          } else {
+            document.getElementById('error-email').classList.remove('visible');
+            emailInput.classList.remove('has-error');
+          }
+
+          // Validate Phone
+          if (!phone || phone.length < 7) {
+            document.getElementById('error-phone').classList.add('visible');
+            phoneInput.classList.add('has-error');
+            isValid = false;
+          } else {
+            document.getElementById('error-phone').classList.remove('visible');
+            phoneInput.classList.remove('has-error');
+          }
+
+          if (!isValid) {
+            const firstErr = document.querySelector('.field-error-text.visible, .has-error');
+            if (firstErr) {
+              firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            return;
+          }
+
+          // Build Dynamic Pre-filled WhatsApp Message
+          const message = 
+`Hi, I just submitted a project inquiry through your website.
+
+Project Type: ${service}
+Estimated Budget: ${budget}
+Timeline: ${timeline}
+
+Name: ${name}
+Company: ${company || 'N/A'}
+Email: ${email}
+WhatsApp/Phone: ${phone}
+
+Project Details:
+${desc}
+
+I'm interested in discussing my project and getting a quote.`;
+
+          const whatsappUrl = `https://wa.me/916232480899?text=${encodeURIComponent(message)}`;
+
+          if (typeof gtag_report_conversion === 'function') {
+            gtag_report_conversion(whatsappUrl);
+          }
+
+          // Show confirmation box
+          form.style.display = 'none';
+          if (successBox) {
+            successBox.style.display = 'block';
+            successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          if (successWhatsAppBtn) {
+            successWhatsAppBtn.href = whatsappUrl;
+          }
+
+          // Open WhatsApp in new tab
+          window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        });
+      }
+
+      // Reset Button handler
+      if (resetBtn && form && successBox) {
+        resetBtn.addEventListener('click', () => {
+          form.reset();
+          selectedServiceInput.value = '';
+          selectedBudgetInput.value = '';
+          selectedTimelineInput.value = '';
+          serviceCards.forEach(c => c.classList.remove('selected'));
+          budgetBtns.forEach(b => b.classList.remove('selected'));
+          timelineBtns.forEach(t => t.classList.remove('selected'));
+          document.querySelectorAll('.field-error-text').forEach(e => e.classList.remove('visible'));
+          document.querySelectorAll('.has-error').forEach(e => e.classList.remove('has-error'));
+          successBox.style.display = 'none';
+          form.style.display = 'block';
+        });
+      }
     });
   </script>
+
+  <!-- 3D Grasshopper Mascot Scripts (Three.js + Procedural Mascot) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="grasshopper.js"></script>
 
   <!-- Floating WhatsApp Contact Button (Replaces Live Chat Widget) -->
   <a href="https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
