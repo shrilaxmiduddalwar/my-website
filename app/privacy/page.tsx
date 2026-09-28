@@ -107,7 +107,7 @@ export default function PrivacyPage() {
                   className="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1"
                 >
                   <i className="fas fa-location-dot text-rose-500"></i>
-                  Bhagirathpura, Indore, Madhya Pradesh, India
+                  Mahesh Nagar, Alkapuri, Ratlam, Madhya Pradesh 457001, India
                 </a>
               </p>
             </section>

@@ -14,7 +14,8 @@ export const metadata: Metadata = {
     "enterprise website",
     "IT services",
     "LPG distribution app",
-    "Indore",
+    "Ratlam",
+    "Madhya Pradesh",
     "software engineering",
   ],
   authors: [{ name: "Ignito Corporation" }],
@@ -72,8 +73,10 @@ export default function RootLayout({
           "Ignito Corporation delivers cutting-edge AI business automation, enterprise digital solutions, mobile apps, and cloud-ready systems to automate and scale businesses.",
         address: {
           "@type": "PostalAddress",
-          addressLocality: "Indore",
+          streetAddress: "Mahesh Nagar, Alkapuri",
+          addressLocality: "Ratlam",
           addressRegion: "Madhya Pradesh",
+          postalCode: "457001",
           addressCountry: "IN",
         },
         contactPoint: {

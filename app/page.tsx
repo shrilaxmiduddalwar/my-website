@@ -304,7 +304,7 @@ export default function HomePage() {
                 Built for <span className="marker-yellow">Enterprise Excellence</span>
               </h2>
               <p className="section-subtitle">
-                A registered <span className="doodle-circle">MSME</span> from Indore, Ignito Corporation delivers digital excellence for businesses that need polished products with enterprise appeal.
+                A registered <span className="doodle-circle">MSME</span> from Ratlam, Madhya Pradesh, Ignito Corporation delivers digital excellence for businesses that need polished products with enterprise appeal.
                 <br />
                 <span className="doodle-note" style={{ marginTop: "0.5rem" }}>
                   ✨ 100% Client Satisfaction &bull; Built with passion!
@@ -784,7 +784,7 @@ export default function HomePage() {
                     }}
                   >
                     <i className="fas fa-location-dot" style={{ color: "#ef4444", fontSize: "1.1rem" }}></i>
-                    <span>Bhagirathpura, Indore, Madhya Pradesh, India</span>
+                    <span>Mahesh Nagar, Alkapuri, Ratlam, Madhya Pradesh 457001, India</span>
                     <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)" }}></i>
                   </a>
                   <div>
@@ -895,8 +895,8 @@ export default function HomePage() {
               <div className="map-card glass-card fade-up delay-2" style={{ position: "relative" }}>
                 <iframe
                   loading="lazy"
-                  title="Ignito Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7359.055946004716!2d75.85446499183443!3d22.745779567474788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396302826b4d4fb9%3A0xd77fbc01a65120d3!2sBhagirathpura%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1749893351999!5m2!1sen!2sin"
+                  title="Ignito Location Map - Ratlam, Madhya Pradesh"
+                  src="https://maps.google.com/maps?q=IGNITO+CORPORATION,+Mahesh+Nagar,+Alkapuri,+Ratlam,+Madhya+Pradesh+457001&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 />
                 <a
                   href="https://maps.app.goo.gl/NfseV8JJjN7QofnH6?g_st=ac"
