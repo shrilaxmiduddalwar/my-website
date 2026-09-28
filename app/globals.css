@@ -48,6 +48,8 @@
 html {
   scroll-behavior: smooth;
   background-color: #1d4ed8;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -55,6 +57,7 @@ body {
   background-color: transparent;
   color: var(--text-main);
   line-height: 1.6;
+  max-width: 100%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -66,8 +69,8 @@ body {
 .fullpage-cloud-bg {
   position: fixed;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 0;
   pointer-events: none;
 }
@@ -409,138 +412,83 @@ nav.nav-links a.active {
   letter-spacing: -0.01em;
 }
 
-/* Marker Highlights */
-.marker-highlight {
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  padding: 0 0.25em;
-  white-space: nowrap;
-  color: #0f172a;
-}
-
-.marker-highlight::before {
-  content: '';
-  position: absolute;
-  inset: 12% -0.15em 8% -0.15em;
-  background-color: #fef08a;
-  z-index: -1;
-  transform: rotate(-1.5deg);
-  border-radius: 4px 10px 5px 12px;
-  box-shadow: 0 2px 10px rgba(254, 240, 138, 0.7);
-}
-
-.wavy-underline {
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
-  color: var(--primary);
-}
-
-.wavy-underline::after {
-  content: '';
-  position: absolute;
-  left: -2px;
-  right: -2px;
-  bottom: -10px;
-  height: 14px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10 Q 25 18, 50 10 T 100 10' fill='none' stroke='%232563eb' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center center / 100% 100%;
-}
-
+/* Bulletproof Marker Highlights that work on all screen sizes & multi-line wrapping */
+.marker-highlight,
 .marker-yellow {
   position: relative;
-  display: inline-block;
-  z-index: 1;
-  padding: 0 0.25em;
-  color: #0f172a;
-}
-.marker-yellow::before {
-  content: '';
-  position: absolute;
-  inset: 14% -0.1em 8% -0.1em;
+  display: inline;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
   background-color: #fef08a;
-  z-index: -1;
-  transform: rotate(-1.5deg);
-  border-radius: 4px 10px 5px 12px;
-  box-shadow: 0 2px 8px rgba(254, 240, 138, 0.6);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  color: #0f172a;
 }
 
 .marker-cyan {
   position: relative;
-  display: inline-block;
-  z-index: 1;
-  padding: 0 0.25em;
-  color: #0f172a;
-}
-.marker-cyan::before {
-  content: '';
-  position: absolute;
-  inset: 14% -0.1em 8% -0.1em;
+  display: inline;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
   background-color: #cff4fc;
-  z-index: -1;
-  transform: rotate(1deg);
-  border-radius: 6px 12px 4px 10px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  color: #0f172a;
 }
 
 .marker-pink {
   position: relative;
-  display: inline-block;
-  z-index: 1;
-  padding: 0 0.25em;
-  color: #0f172a;
-}
-.marker-pink::before {
-  content: '';
-  position: absolute;
-  inset: 14% -0.1em 8% -0.1em;
+  display: inline;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
   background-color: #fce7f3;
-  z-index: -1;
-  transform: rotate(-2deg);
-  border-radius: 8px 4px 10px 6px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  color: #0f172a;
 }
 
 .marker-teal {
   position: relative;
-  display: inline-block;
-  z-index: 1;
-  padding: 0 0.25em;
+  display: inline;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background-color: #ccfbf1;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
   color: #0f172a;
 }
-.marker-teal::before {
-  content: '';
-  position: absolute;
-  inset: 14% -0.1em 8% -0.1em;
-  background-color: #ccfbf1;
-  z-index: -1;
-  transform: rotate(1.2deg);
-  border-radius: 5px 12px 6px 8px;
+
+/* Wavy Underline that wraps perfectly on all browsers & screens */
+.wavy-underline {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  color: var(--primary);
+}
+
+/* Doodle underline in orange */
+.doodle-underline-orange {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #ea580c;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  color: #ea580c;
 }
 
 .doodle-circle {
   position: relative;
   display: inline-block;
+  white-space: nowrap;
 }
 .doodle-circle::after {
   content: '';
   position: absolute;
-  inset: -6px -12px;
+  inset: -4px -8px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60' preserveAspectRatio='none'%3E%3Cpath d='M5,30 C10,5 90,3 95,28 C98,52 15,58 8,32 C5,15 85,10 92,25' fill='none' stroke='%232563eb' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center center / 100% 100%;
   pointer-events: none;
-}
-
-.doodle-underline-orange {
-  position: relative;
-  display: inline-block;
-  color: #ea580c;
-}
-.doodle-underline-orange::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -6px;
-  height: 10px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M2 15 C 20 5, 40 18, 60 8 C 80 18, 95 10, 98 12' fill='none' stroke='%23ea580c' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center center / 100% 100%;
 }
 
 .doodle-note {
@@ -1114,6 +1062,7 @@ footer.site-footer {
 
   .mobile-menu-btn {
     display: block;
+    z-index: 51;
   }
 
   nav.nav-links {
@@ -1122,14 +1071,16 @@ footer.site-footer {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 1.25rem 1.5rem;
     border-bottom: 1px solid rgba(226, 232, 240, 0.8);
     box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
     align-items: stretch;
     gap: 0.4rem;
+    z-index: 50;
   }
 
   nav.nav-links.mobile-open {
@@ -1144,7 +1095,7 @@ footer.site-footer {
     width: 100%;
   }
 
-  .nav-cta {
+  nav.nav-links .nav-cta {
     justify-content: center;
     width: 100%;
     margin-top: 0.4rem;
@@ -1152,25 +1103,28 @@ footer.site-footer {
   }
 
   .hero {
-    padding: 2.5rem 1.25rem 3.5rem;
+    padding: 1.75rem 1rem 3rem;
   }
 
   .hero-title {
-    font-size: clamp(2rem, 7.5vw, 3rem);
-    line-height: 1.15;
+    font-size: clamp(1.65rem, 6.5vw, 2.4rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    word-break: break-word;
+    margin-bottom: 1rem;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1.8rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
   }
 
   .hero-actions-wrapper {
     flex-direction: column;
     align-items: stretch;
-    gap: 1.2rem;
-    margin-bottom: 2rem;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
   }
 
   .hero-actions {
@@ -1182,146 +1136,236 @@ footer.site-footer {
   .hero-actions .btn {
     width: 100%;
     justify-content: center;
+    padding: 0.85rem 1.4rem;
+    font-size: 0.95rem;
   }
 
   .hero-pricing-note {
     justify-content: center;
     width: 100%;
+    text-align: center;
   }
 
   .hero-card-panel {
-    padding: 1.5rem 1.25rem;
+    padding: 1.35rem 1.15rem;
   }
 
-  .marker-highlight,
-  .marker-yellow,
-  .marker-cyan,
-  .marker-pink,
-  .marker-teal,
-  .wavy-underline,
-  .doodle-circle,
-  .doodle-underline-orange {
-    white-space: normal !important;
-    display: inline !important;
+  .hero-card-header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-bottom: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-card-title {
+    font-size: 1.05rem;
+  }
+
+  .hero-card-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.3rem;
+  }
+
+  .hero-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .mini-stat-card {
+    padding: 0.85rem 0.75rem;
+  }
+
+  .mini-stat-num {
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .mini-stat-label {
+    font-size: 0.78rem;
+    line-height: 1.35;
   }
 
   .doodle-note {
     display: inline-block;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+    line-height: 1.35;
     text-align: center;
     max-width: 100%;
-    word-break: break-word;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   section.section-block {
-    padding: 3.5rem 1.25rem;
+    padding: 2.25rem 1rem;
   }
 
   .section-header {
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 5.5vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.65;
   }
 
   .cards-grid-3 {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .enterprise-card {
-    padding: 1.6rem 1.25rem;
-  }
-
-  .showcase-wrapper {
-    padding: 1.75rem 1.25rem;
-  }
-
-  .showcase-info h3 {
-    font-size: 1.45rem;
-  }
-
-  .showcase-info p {
-    font-size: 0.95rem;
-  }
-
-  .pill-features {
-    gap: 0.5rem;
-  }
-
-  .pill-badge {
-    padding: 0.5rem 0.85rem;
-    font-size: 0.85rem;
-  }
-
-  .highlight-item {
-    padding: 1.25rem 1rem;
-  }
-
-  .client-track {
-    grid-auto-columns: minmax(270px, 82vw);
     gap: 1rem;
   }
 
+  .enterprise-card {
+    padding: 1.4rem 1.15rem;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-text {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .showcase-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .showcase-info h3 {
+    font-size: 1.35rem;
+    line-height: 1.25;
+  }
+
+  .showcase-info p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 1.4rem;
+  }
+
+  .pill-features {
+    gap: 0.45rem;
+  }
+
+  .pill-badge {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .highlight-stack {
+    gap: 0.85rem;
+    margin-top: 1.2rem;
+  }
+
+  .highlight-item {
+    padding: 1.1rem 1rem;
+  }
+
+  .highlight-item h5 {
+    font-size: 0.95rem;
+  }
+
+  .highlight-item p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .client-track {
+    grid-auto-columns: minmax(260px, 82vw);
+    gap: 0.85rem;
+  }
+
   .client-card {
-    padding: 1.4rem 1.2rem;
+    padding: 1.25rem 1.1rem;
+  }
+
+  .client-quote {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
   }
 
   .contact-info-card {
-    padding: 1.75rem 1.25rem;
+    padding: 1.4rem 1.15rem;
   }
 
   .contact-info-card h3 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 
   .social-strip {
-    gap: 0.6rem;
+    gap: 0.5rem;
   }
 
   .social-btn {
-    width: 46px;
-    height: 46px;
-    font-size: 1.1rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.05rem;
     border-radius: 12px;
   }
 
   .map-card {
-    height: 280px;
-    min-height: 280px;
+    height: 260px;
+    min-height: 260px;
   }
 
   .map-card iframe {
-    height: 280px;
-    min-height: 280px;
+    height: 260px;
+    min-height: 260px;
   }
 
   footer.site-footer {
-    padding: 2.5rem 1.25rem 1.75rem;
+    padding: 2.25rem 1.15rem 5.5rem;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
-    gap: 0.85rem;
-    font-size: 0.88rem;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  /* Prevent auto-zoom on mobile inputs */
+  input, select, textarea {
+    font-size: 16px !important;
   }
 }
 
 @media (max-width: 480px) {
   .hero-stats-grid {
     grid-template-columns: 1fr;
-    gap: 0.85rem;
+    gap: 0.65rem;
+  }
+
+  .hero-title {
+    font-size: 1.65rem;
+    line-height: 1.22;
   }
 
   .handwritten-text {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .client-track {
-    grid-auto-columns: minmax(250px, 88vw);
+    grid-auto-columns: minmax(240px, 85vw);
   }
 
-  /* Prevent auto-zoom and normalize inputs on mobile devices */
-  input, select, textarea {
-    font-size: 16px !important;
+  .doodle-note {
+    font-size: 1.05rem;
   }
 }
 
@@ -1401,11 +1445,11 @@ footer.site-footer {
 @media (max-width: 600px) {
   .whatsapp-float-btn {
     bottom: 20px;
-    right: 20px;
-    padding: 14px;
+    right: 16px;
+    padding: 0;
     border-radius: 50%;
-    width: 56px;
-    height: 56px;
+    width: 52px;
+    height: 52px;
     justify-content: center;
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
   }
@@ -1413,7 +1457,7 @@ footer.site-footer {
     display: none;
   }
   .whatsapp-float-btn .wa-icon {
-    font-size: 1.65rem;
+    font-size: 1.55rem;
   }
   .whatsapp-pulse {
     border-radius: 50%;

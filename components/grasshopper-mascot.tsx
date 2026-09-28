@@ -933,7 +933,7 @@ export const GrasshopperMascot: React.FC<GrasshopperMascotProps> = ({ isRaining 
   return (
     <div
       ref={wrapperRef}
-      className="fixed bottom-24 right-4 sm:bottom-28 sm:right-6 md:bottom-24 md:right-8 z-30 pointer-events-none select-none transition-transform duration-500 ease-out"
+      className="fixed bottom-4 left-3 sm:bottom-28 sm:left-auto sm:right-6 md:bottom-24 md:right-8 z-30 pointer-events-none select-none transition-transform duration-500 ease-out"
       aria-label="Babyco 🦗✨ - 3D Interactive Mascot"
     >
       {/* Particle Burst Sparkles */}
@@ -954,7 +954,7 @@ export const GrasshopperMascot: React.FC<GrasshopperMascotProps> = ({ isRaining 
       {/* Sleeping Zzz Bubble */}
       {isSleeping && (
         <div
-          className="absolute -top-8 right-12 flex items-center gap-1 font-extrabold text-blue-600 bg-white/95 px-3 py-1 rounded-full border border-blue-200 shadow-lg text-xs animate-bounce"
+          className="absolute -top-7 left-2 sm:left-auto sm:right-12 flex items-center gap-1 font-extrabold text-blue-600 bg-white/95 px-2.5 py-1 rounded-full border border-blue-200 shadow-lg text-[10px] sm:text-xs animate-bounce whitespace-nowrap"
           style={{ animationDuration: "2s" }}
         >
           <span>💤</span>
@@ -964,7 +964,7 @@ export const GrasshopperMascot: React.FC<GrasshopperMascotProps> = ({ isRaining 
 
       {/* Pop-up Speech Bubble with Babyco Avatar */}
       <div
-        className={`absolute bottom-[145px] sm:bottom-[165px] right-2 sm:right-6 min-w-[210px] max-w-[265px] p-3 rounded-2xl bg-white/95 backdrop-blur-md border border-emerald-300 shadow-2xl text-xs font-bold text-slate-800 transition-all duration-300 transform pointer-events-auto ${
+        className={`absolute bottom-[92px] sm:bottom-[165px] left-0 sm:left-auto sm:right-6 min-w-[190px] max-w-[240px] sm:min-w-[210px] sm:max-w-[265px] p-2.5 sm:p-3 rounded-2xl bg-white/95 backdrop-blur-md border border-emerald-300 shadow-2xl text-[11px] sm:text-xs font-bold text-slate-800 transition-all duration-300 transform pointer-events-auto ${
           speechVisible && !isSleeping
             ? "opacity-100 scale-100 translate-y-0"
             : "opacity-0 scale-75 translate-y-3 pointer-events-none"
@@ -973,20 +973,20 @@ export const GrasshopperMascot: React.FC<GrasshopperMascotProps> = ({ isRaining 
           boxShadow: "0 14px 30px -4px rgba(34, 197, 94, 0.28), 0 4px 12px rgba(15, 23, 42, 0.12)",
         }}
       >
-        <div className="flex items-start gap-2">
-          <span className="text-base flex-shrink-0">🦗</span>
+        <div className="flex items-start gap-1.5 sm:gap-2">
+          <span className="text-sm sm:text-base flex-shrink-0">🦗</span>
           <div className="leading-snug">
-            <span className="block text-[10px] font-extrabold text-emerald-600 uppercase tracking-wider mb-0.5">Babyco says:</span>
+            <span className="block text-[9px] sm:text-[10px] font-extrabold text-emerald-600 uppercase tracking-wider mb-0.5">Babyco says:</span>
             <span>{speechText}</span>
           </div>
         </div>
-        <div className="absolute -bottom-2 right-10 w-4 h-4 bg-white border-r border-b border-emerald-300 transform rotate-45" />
+        <div className="absolute -bottom-2 left-6 sm:left-auto sm:right-10 w-4 h-4 bg-white border-r border-b border-emerald-300 transform rotate-45" />
       </div>
 
       {/* Babyco's 3D Canvas Trigger */}
       <div
         ref={containerRef}
-        className="w-[150px] h-[150px] sm:w-[175px] sm:h-[175px] md:w-[200px] md:h-[200px] pointer-events-auto cursor-pointer filter drop-shadow-[0_10px_20px_rgba(15,23,42,0.22)] transition-transform duration-300 hover:scale-105 active:scale-95"
+        className="w-[90px] h-[90px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] pointer-events-auto cursor-pointer filter drop-shadow-[0_8px_16px_rgba(15,23,42,0.2)] transition-transform duration-300 hover:scale-105 active:scale-95"
         title="Hi, I'm Babyco! Tap me for 3D corkscrew spins, umbrella twirls, and surfing! 🦗✨"
       />
     </div>

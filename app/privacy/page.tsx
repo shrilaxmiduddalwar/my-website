@@ -9,9 +9,9 @@ export default function PrivacyPage() {
   return (
     <>
       {/* Header Navigation */}
-      <header id="site-header">
+      <header id="site-header" className="sticky top-0 z-50">
         <div className="nav-container">
-          <Link href="/#about" className="brand">
+          <Link href="/#about" className="brand" onClick={() => setMobileMenuOpen(false)}>
             <img src="/ignito.png" alt="Ignito Corporation Logo" width={44} height={44} />
             <span className="brand-text">
               Ignito <span>Corporation</span>
@@ -22,10 +22,20 @@ export default function PrivacyPage() {
             className="mobile-menu-btn"
             id="mobile-toggle"
             aria-label="Toggle Navigation"
+            aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <i className={mobileMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
           </button>
+
+          {/* Mobile Overlay to dismiss menu on tap */}
+          {mobileMenuOpen && (
+            <div
+              className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-40 md:hidden"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-hidden="true"
+            />
+          )}
 
           <nav className={`nav-links ${mobileMenuOpen ? "mobile-open" : ""}`} id="nav-menu">
             <Link href="/#about" onClick={() => setMobileMenuOpen(false)}>
@@ -50,12 +60,12 @@ export default function PrivacyPage() {
         </div>
       </header>
 
-      <main className="section-container py-12 px-4 max-w-4xl mx-auto">
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-card border border-slate-200">
+      <main className="section-container py-8 sm:py-12 px-3 sm:px-4 max-w-4xl mx-auto">
+        <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 shadow-card border border-slate-200">
           <div className="section-tag mb-4">
             <i className="fas fa-shield-alt"></i> LEGAL & COMPLIANCE
           </div>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-2 leading-tight">
             Terms & Conditions & Privacy Policy
           </h1>
           <p className="text-sm text-slate-500 mb-8">Last Updated: June 2025 | Ignito Corporation</p>

@@ -64,17 +64,34 @@ export default function HomePage() {
     );
     sections.forEach((sec) => spyObserver.observe(sec));
 
-    // Auto-scroll client track
+    // Auto-scroll client track (pauses on touch or hover, syncs with user scroll)
     const clientTrack = clientTrackRef.current;
     let interval: NodeJS.Timeout | null = null;
+    let isUserInteracting = false;
+
+    let handlePointerDown: (() => void) | null = null;
+    let handlePointerUp: (() => void) | null = null;
+
     if (clientTrack) {
-      let scrollPos = 0;
+      handlePointerDown = () => {
+        isUserInteracting = true;
+      };
+      handlePointerUp = () => {
+        setTimeout(() => {
+          isUserInteracting = false;
+        }, 4000);
+      };
+
+      clientTrack.addEventListener("pointerdown", handlePointerDown, { passive: true });
+      window.addEventListener("pointerup", handlePointerUp, { passive: true });
+
       interval = setInterval(() => {
-        if (clientTrack.matches(":hover")) return;
+        if (isUserInteracting || clientTrack.matches(":hover")) return;
+        const cardWidth = 320;
         const maxScroll = clientTrack.scrollWidth - clientTrack.clientWidth;
-        scrollPos += 320;
-        if (scrollPos > maxScroll) scrollPos = 0;
-        clientTrack.scrollTo({ left: scrollPos, behavior: "smooth" });
+        const nextScroll = clientTrack.scrollLeft + cardWidth;
+        const targetScroll = nextScroll >= maxScroll - 10 ? 0 : nextScroll;
+        clientTrack.scrollTo({ left: targetScroll, behavior: "smooth" });
       }, 5000);
     }
 
@@ -98,6 +115,12 @@ export default function HomePage() {
       clearTimeout(timer);
       if (interval) clearInterval(interval);
       if (rainTimeout) clearTimeout(rainTimeout);
+      if (clientTrack && handlePointerDown) {
+        clientTrack.removeEventListener("pointerdown", handlePointerDown);
+      }
+      if (handlePointerUp) {
+        window.removeEventListener("pointerup", handlePointerUp);
+      }
     };
   }, []);
 
@@ -134,9 +157,9 @@ export default function HomePage() {
 
 
       {/* Header Navigation with Frosted Blur Glass */}
-      <header id="site-header" className={`relative z-20 ${isScrolled ? "scrolled" : ""}`}>
+      <header id="site-header" className={`sticky top-0 z-50 ${isScrolled ? "scrolled" : ""}`}>
         <div className="nav-container">
-          <a href="#about" className="brand">
+          <a href="#about" className="brand" onClick={() => setMobileMenuOpen(false)}>
             <img src="/ignito.png" alt="Ignito Corporation Logo" width={44} height={44} />
             <span className="brand-text">
               Ignito <span>Corporation</span>
@@ -147,10 +170,20 @@ export default function HomePage() {
             className="mobile-menu-btn"
             id="mobile-toggle"
             aria-label="Toggle Navigation"
+            aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <i className={mobileMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
           </button>
+
+          {/* Mobile Overlay to dismiss menu on tap */}
+          {mobileMenuOpen && (
+            <div
+              className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-40 md:hidden"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-hidden="true"
+            />
+          )}
 
           <nav className={`nav-links ${mobileMenuOpen ? "mobile-open" : ""}`} id="nav-menu">
             <a
@@ -205,7 +238,7 @@ export default function HomePage() {
 
       <main className="relative z-10">
         {/* HERO SECTION */}
-        <section className="relative pt-6 pb-20">
+        <section className="relative pt-4 sm:pt-6 pb-12 sm:pb-20">
           <div className="hero">
             <div className="hero-grid">
               <div className="hero-content fade-up">
@@ -230,23 +263,8 @@ export default function HomePage() {
                     </a>
                   </div>
                   <div className="hero-pricing-note">
-                    <svg
-                      className="handwritten-arrow"
-                      viewBox="0 0 50 40"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M6 8 C 16 28, 32 36, 43 20 M 34 18 L 44 20 L 41 29"
-                        stroke="currentColor"
-                        strokeWidth="2.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                    <span className="handwritten-text text-blue-900 font-bold drop-shadow-sm">
-                      Transparent pricing &bull; 0% hidden fees!
+                    <span className="handwritten-text text-blue-900 font-bold drop-shadow-sm text-sm sm:text-base">
+                      ✨ Transparent pricing &bull; 0% hidden fees!
                     </span>
                   </div>
                 </div>
@@ -476,7 +494,7 @@ export default function HomePage() {
                       href="https://play.google.com/store/apps/details?id=com.ignito.smartDistributorApp"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="nav-cta"
+                      className="btn btn-primary inline-flex items-center justify-center gap-2 text-xs sm:text-sm py-2.5 sm:py-3 px-5 w-full sm:w-auto shadow-md"
                     >
                       <i className="fab fa-google-play"></i> View Smart LPG App on Google Play
                     </a>
@@ -775,43 +793,35 @@ export default function HomePage() {
                     style={{
                       color: "var(--text-main)",
                       textDecoration: "none",
-                      display: "inline-flex",
-                      alignItems: "center",
+                      display: "flex",
+                      alignItems: "flex-start",
                       gap: "0.5rem",
                       fontWeight: 600,
                       lineHeight: 1.5,
                       marginBottom: "0.6rem",
                     }}
                   >
-                    <i className="fas fa-location-dot" style={{ color: "#ef4444", fontSize: "1.1rem" }}></i>
+                    <i className="fas fa-location-dot" style={{ color: "#ef4444", fontSize: "1.1rem", flexShrink: 0, marginTop: "4px" }}></i>
                     <span>Mahesh Nagar, Alkapuri, Ratlam, Madhya Pradesh 457001, India</span>
-                    <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)" }}></i>
+                    <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)", flexShrink: 0, marginTop: "6px" }}></i>
                   </a>
                   <div>
                     <a
                       href="https://maps.app.goo.gl/NfseV8JJjN7QofnH6?g_st=ac"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="nav-cta"
-                      style={{
-                        padding: "0.45rem 1.1rem",
-                        fontSize: "0.82rem",
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: "0.5rem",
-                        marginTop: "0.3rem",
-                      }}
+                      className="btn btn-primary inline-flex items-center gap-2 text-xs py-2 px-3.5 shadow-sm"
                     >
                       <i className="fas fa-map-location-dot"></i> View on Google Maps
                     </a>
                   </div>
                 </div>
 
-                <p style={{ marginTop: "1rem" }}>
+                <p style={{ marginTop: "1rem", lineHeight: 1.7 }}>
                   <strong>Official Email:</strong>{" "}
                   <a
                     href="mailto:support@ignitocorporation.live"
-                    style={{ color: "var(--primary)", textDecoration: "none", fontWeight: 600 }}
+                    style={{ color: "var(--primary)", textDecoration: "none", fontWeight: 600, wordBreak: "break-all" }}
                   >
                     support@ignitocorporation.live
                   </a>
@@ -904,28 +914,28 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   style={{
                     position: "absolute",
-                    bottom: "16px",
-                    right: "16px",
+                    bottom: "12px",
+                    right: "12px",
                     background: "rgba(255, 255, 255, 0.95)",
                     backdropFilter: "blur(8px)",
                     WebkitBackdropFilter: "blur(8px)",
                     color: "#0f172a",
-                    padding: "8px 16px",
+                    padding: "6px 12px",
                     borderRadius: "9999px",
-                    fontSize: "0.82rem",
+                    fontSize: "0.75rem",
                     fontWeight: 700,
                     textDecoration: "none",
-                    boxShadow: "0 6px 18px rgba(15, 23, 42, 0.18)",
+                    boxShadow: "0 4px 14px rgba(15, 23, 42, 0.18)",
                     display: "inline-flex",
                     alignItems: "center",
-                    gap: "8px",
+                    gap: "6px",
                     border: "1px solid rgba(226, 232, 240, 0.9)",
                     zIndex: 10,
                   }}
                 >
                   <i className="fas fa-location-dot" style={{ color: "#ef4444" }}></i>
-                  Open in Google Maps
-                  <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.72rem", opacity: 0.7 }}></i>
+                  <span>Open in Maps</span>
+                  <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.68rem", opacity: 0.7 }}></i>
                 </a>
               </div>
             </div>
@@ -934,7 +944,7 @@ export default function HomePage() {
       </main>
 
       {/* Footer with Frosted Blur Glass */}
-      <footer className="site-footer glass-section-alt relative z-10">
+      <footer className="site-footer glass-section-alt relative z-10 pb-28 sm:pb-12">
         <div className="footer-container">
           <div className="footer-bottom" style={{ borderTop: "none" }}>
             <div>

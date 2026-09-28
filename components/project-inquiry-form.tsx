@@ -153,17 +153,17 @@ I'm interested in discussing my project and getting a quote.`;
   };
 
   return (
-    <section id="inquiry" className="relative z-10 py-10 md:py-14 px-3 sm:px-6">
+    <section id="inquiry" className="relative z-10 py-8 sm:py-10 md:py-14 px-3 sm:px-6">
       <div className="max-w-4xl mx-auto">
         {/* Section Header - Clean compact gap */}
-        <div className="text-center mb-6 md:mb-8 fade-up">
+        <div className="text-center mb-5 sm:mb-8 fade-up">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-blue-600 bg-white/95 border border-blue-200 shadow-sm mb-2.5">
             <i className="fas fa-clipboard-check"></i> PROJECT QUALIFICATION
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
             Tell Us About <span className="marker-yellow">Your Project</span>
           </h2>
-          <p className="text-sm sm:text-base text-slate-700 font-medium max-w-xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-base text-slate-700 font-medium max-w-xl mx-auto leading-relaxed">
             Tell us a few details about your project and our team will get back to you shortly.
           </p>
         </div>
@@ -172,7 +172,7 @@ I'm interested in discussing my project and getting a quote.`;
         <div>
           {isSubmitted ? (
             /* Success State */
-            <div className="glass-card rounded-3xl p-6 sm:p-10 text-center fade-up shadow-2xl border border-white/80 bg-white/95">
+            <div className="glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-10 text-center fade-up shadow-2xl border border-white/80 bg-white/95">
               <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl shadow-inner">
                 <i className="fas fa-check"></i>
               </div>
@@ -211,10 +211,10 @@ I'm interested in discussing my project and getting a quote.`;
             <form
               onSubmit={handleSubmit}
               noValidate
-              className="glass-card rounded-3xl p-5 sm:p-8 md:p-10 shadow-2xl border border-white/85 backdrop-blur-xl bg-white/92 fade-up"
+              className="glass-card rounded-2xl sm:rounded-3xl p-3.5 sm:p-8 md:p-10 shadow-2xl border border-white/85 backdrop-blur-xl bg-white/92 fade-up"
             >
               {/* FIELD 1: WHAT ARE YOU LOOKING TO BUILD? */}
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8">
                 <label className="block font-heading text-base sm:text-lg font-bold text-slate-900 mb-1">
                   1. What are you looking to build? <span className="text-red-500">*</span>
                 </label>
@@ -522,16 +522,16 @@ I'm interested in discussing my project and getting a quote.`;
                   <i className="fas fa-arrow-right text-xs"></i>
                 </button>
 
-                <div className="mt-3.5 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[11px] sm:text-xs text-slate-600 font-medium text-center">
-                  <span className="flex items-center gap-1">
+                <div className="mt-3.5 flex flex-wrap items-center justify-center gap-x-3.5 gap-y-1.5 text-[11px] sm:text-xs text-slate-600 font-medium text-center">
+                  <span className="inline-flex items-center gap-1">
                     <i className="fas fa-lock text-emerald-600"></i> 100% Confidential
                   </span>
-                  <span>&bull;</span>
-                  <span className="flex items-center gap-1">
-                    <i className="fas fa-bolt text-amber-500"></i> Instant WhatsApp Pre-Filled Chat
+                  <span className="hidden sm:inline text-slate-400">&bull;</span>
+                  <span className="inline-flex items-center gap-1">
+                    <i className="fas fa-bolt text-amber-500"></i> Instant WhatsApp Chat
                   </span>
-                  <span>&bull;</span>
-                  <span className="flex items-center gap-1">
+                  <span className="hidden sm:inline text-slate-400">&bull;</span>
+                  <span className="inline-flex items-center gap-1">
                     <i className="fas fa-clock text-blue-600"></i> Reply &lt;2 Hours
                   </span>
                 </div>

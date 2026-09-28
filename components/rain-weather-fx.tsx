@@ -314,18 +314,19 @@ export const RainWeatherFX: React.FC<RainWeatherFXProps> = ({ isRaining, onToggl
       />
 
       {/* Interactive Weather Controller Pill Badge */}
-      <div className="fixed top-20 right-4 md:top-24 md:right-8 z-30 pointer-events-auto">
+      <div className="fixed top-16 sm:top-20 right-3 sm:right-6 md:top-24 md:right-8 z-30 pointer-events-auto">
         <button
           onClick={onToggleRain}
-          className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 border ${
+          className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 border ${
             isRaining
               ? "bg-slate-900/95 text-cyan-300 border-cyan-400 shadow-cyan-500/30 animate-pulse"
-              : "bg-white/85 text-slate-700 border-slate-200/80 hover:bg-white"
+              : "bg-white/90 text-slate-700 border-slate-200/80 hover:bg-white backdrop-blur-md"
           }`}
           title="Click to toggle rain and see dramatic lightning and Babyco's umbrella! ⚡🌧️☂️"
         >
-          <span>{isRaining ? "⚡ Rain & Thunder (On)" : "☀️ Sunny (Click for Thunder)"}</span>
-          <span className="text-sm">{isRaining ? "⚡🌧️" : "☀️"}</span>
+          <span className="inline sm:hidden">{isRaining ? "⚡ Rain" : "☀️ Weather"}</span>
+          <span className="hidden sm:inline">{isRaining ? "⚡ Rain & Thunder (On)" : "☀️ Sunny (Click for Thunder)"}</span>
+          <span className="text-xs sm:text-sm">{isRaining ? "🌧️" : "☀️"}</span>
         </button>
       </div>
     </>
