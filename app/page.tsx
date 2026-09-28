@@ -210,23 +210,23 @@ export default function HomePage() {
             <div className="hero-grid">
               <div className="hero-content fade-up">
                 <div className="hero-badge bg-white/90 backdrop-blur-md border border-blue-200 shadow-sm">
-                  <i className="fas fa-sparkles"></i> Enterprise Digital Solutions
+                  <i className="fas fa-wand-magic-sparkles text-blue-600"></i> AI & Business Automation Specialists
                 </div>
                 <h1 className="hero-title text-slate-900 drop-shadow-sm">
-                  All your enterprise digital solutions on{" "}
-                  <span className="marker-highlight">one platform</span>,{" "}
-                  <span className="wavy-underline">affordable!</span>
+                  Automate & Scale Your Business With Intelligent{" "}
+                  <span className="marker-highlight">AI Solutions</span> &{" "}
+                  <span className="wavy-underline">Smart Software</span>
                 </h1>
                 <p className="hero-subtitle text-slate-800 font-medium drop-shadow-sm">
-                  Ignito Corporation builds enterprise websites, mobile applications, data automation, and cloud-ready systems for distributors, partners, and modern businesses.
+                  Ignito Corporation engineers autonomous AI agents, intelligent business automation pipelines, custom web & mobile apps, and cloud systems to eliminate repetitive manual work, streamline operations, and accelerate business growth.
                 </p>
                 <div className="hero-actions-wrapper">
                   <div className="hero-actions">
-                    <a className="btn btn-primary shadow-lg" href="/PORTFOLIOO.pdf" download>
-                      <i className="fas fa-file-arrow-down"></i> Download Portfolio
+                    <a className="btn btn-primary shadow-lg" href="#inquiry">
+                      <i className="fas fa-robot"></i> Automate My Business
                     </a>
-                    <a className="btn btn-secondary bg-white/90 backdrop-blur-md" href="#services">
-                      <i className="fas fa-layer-group"></i> Explore Services
+                    <a className="btn btn-secondary bg-white/90 backdrop-blur-md" href="/PORTFOLIOO.pdf" download>
+                      <i className="fas fa-file-arrow-down"></i> Download Portfolio
                     </a>
                   </div>
                   <div className="hero-pricing-note">
@@ -252,12 +252,12 @@ export default function HomePage() {
                 </div>
                 <div className="hero-stats-grid">
                   <div className="mini-stat-card glass-card shadow-sm">
-                    <div className="mini-stat-num">8+ Years</div>
-                    <div className="mini-stat-label">Combined delivery experience across platforms</div>
+                    <div className="mini-stat-num">AI + Cloud</div>
+                    <div className="mini-stat-label">End-to-end intelligent business automation</div>
                   </div>
                   <div className="mini-stat-card glass-card shadow-sm">
-                    <div className="mini-stat-num">100%</div>
-                    <div className="mini-stat-label">Custom enterprise workflows & product launches</div>
+                    <div className="mini-stat-num">90%+</div>
+                    <div className="mini-stat-label">Reduction in manual tasks & operational friction</div>
                   </div>
                 </div>
               </div>
@@ -265,27 +265,27 @@ export default function HomePage() {
               <aside className="hero-card-panel fade-up delay-2 glass-card shadow-xl">
                 <div className="hero-card-header">
                   <div className="hero-card-title">
-                    <i className="fas fa-shield-halved" style={{ color: "var(--primary)" }}></i> Corporate Standard
+                    <i className="fas fa-robot" style={{ color: "var(--primary)" }}></i> AI Automation Leader
                   </div>
                   <div className="status-tag">
-                    <span className="status-dot"></span> Active Systems
+                    <span className="status-dot"></span> AI Engines Active
                   </div>
                 </div>
                 <p className="hero-card-desc">
-                  We design seamless digital systems that look polished, behave consistently, and build trust. Our technology review process and client communication are tailored for enterprise reliability.
+                  We engineer tailor-made AI agents, automated workflow pipelines, and intelligent business systems that eliminate repetitive overhead and scale your company with speed and precision.
                 </p>
                 <div className="hero-stats-grid">
                   <div className="mini-stat-card bg-slate-50/90 border border-slate-200">
                     <div style={{ color: "var(--primary)", fontWeight: 700, fontSize: "1.05rem", marginBottom: "0.3rem" }}>
-                      Brand-First UI
+                      AI Workflows
                     </div>
-                    <div className="mini-stat-label">Modern visual identity aligned to global SaaS standards.</div>
+                    <div className="mini-stat-label">Custom AI agents, LLM integrations & task automation.</div>
                   </div>
                   <div className="mini-stat-card bg-slate-50/90 border border-slate-200">
                     <div style={{ color: "var(--teal)", fontWeight: 700, fontSize: "1.05rem", marginBottom: "0.3rem" }}>
-                      Security Focus
+                      Enterprise Ready
                     </div>
-                    <div className="mini-stat-label">Secure deployment workflows and data-aware architecture.</div>
+                    <div className="mini-stat-label">Secure, compliant AI integrations tailored for business scale.</div>
                   </div>
                 </div>
               </aside>
@@ -399,11 +399,11 @@ export default function HomePage() {
 
               <article className="enterprise-card glass-card fade-up delay-1">
                 <div className="icon-box icon-amber">
-                  <i className="fas fa-chart-pie"></i>
+                  <i className="fas fa-robot"></i>
                 </div>
-                <h3 className="card-title">Automation & Analytics</h3>
+                <h3 className="card-title">AI & Business Automation</h3>
                 <p className="card-text">
-                  Data-driven dashboards, automated reporting pipelines, and operational intelligence to help teams decide faster.
+                  Autonomous AI agents, intelligent workflow pipelines, custom LLMs, and real-time operational automation to eliminate manual tasks and scale business output.
                 </p>
               </article>
 
@@ -764,9 +764,50 @@ export default function HomePage() {
             <div className="contact-grid">
               <div className="contact-info-card glass-card fade-up delay-1">
                 <h3>Ignito Corporation HQ</h3>
-                <p>
-                  Bhagirathpura, Indore, Madhya Pradesh, India
-                  <br />
+                <div style={{ marginBottom: "1.2rem" }}>
+                  <div style={{ fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--text-subtle)", fontWeight: 700, marginBottom: "0.4rem" }}>
+                    Office Location
+                  </div>
+                  <a
+                    href="https://maps.app.goo.gl/NfseV8JJjN7QofnH6?g_st=ac"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "var(--text-main)",
+                      textDecoration: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                      fontWeight: 600,
+                      lineHeight: 1.5,
+                      marginBottom: "0.6rem",
+                    }}
+                  >
+                    <i className="fas fa-location-dot" style={{ color: "#ef4444", fontSize: "1.1rem" }}></i>
+                    <span>Bhagirathpura, Indore, Madhya Pradesh, India</span>
+                    <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)" }}></i>
+                  </a>
+                  <div>
+                    <a
+                      href="https://maps.app.goo.gl/NfseV8JJjN7QofnH6?g_st=ac"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="nav-cta"
+                      style={{
+                        padding: "0.45rem 1.1rem",
+                        fontSize: "0.82rem",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "0.5rem",
+                        marginTop: "0.3rem",
+                      }}
+                    >
+                      <i className="fas fa-map-location-dot"></i> View on Google Maps
+                    </a>
+                  </div>
+                </div>
+
+                <p style={{ marginTop: "1rem" }}>
                   <strong>Official Email:</strong>{" "}
                   <a
                     href="mailto:support@ignitocorporation.live"
@@ -798,6 +839,16 @@ export default function HomePage() {
                     Direct Channels
                   </div>
                   <div className="social-strip">
+                    <a
+                      className="social-btn bg-white/90"
+                      href="https://maps.app.goo.gl/NfseV8JJjN7QofnH6?g_st=ac"
+                      aria-label="Google Maps Office Location"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Google Maps Office Location"
+                    >
+                      <i className="fas fa-map-location-dot" style={{ color: "#ef4444" }}></i>
+                    </a>
                     <a
                       className="social-btn bg-white/90"
                       href="https://wa.me/916232480899"
@@ -841,12 +892,41 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="map-card glass-card fade-up delay-2">
+              <div className="map-card glass-card fade-up delay-2" style={{ position: "relative" }}>
                 <iframe
                   loading="lazy"
                   title="Ignito Location Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7359.055946004716!2d75.85446499183443!3d22.745779567474788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396302826b4d4fb9%3A0xd77fbc01a65120d3!2sBhagirathpura%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1749893351999!5m2!1sen!2sin"
                 />
+                <a
+                  href="https://maps.app.goo.gl/NfseV8JJjN7QofnH6?g_st=ac"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    position: "absolute",
+                    bottom: "16px",
+                    right: "16px",
+                    background: "rgba(255, 255, 255, 0.95)",
+                    backdropFilter: "blur(8px)",
+                    WebkitBackdropFilter: "blur(8px)",
+                    color: "#0f172a",
+                    padding: "8px 16px",
+                    borderRadius: "9999px",
+                    fontSize: "0.82rem",
+                    fontWeight: 700,
+                    textDecoration: "none",
+                    boxShadow: "0 6px 18px rgba(15, 23, 42, 0.18)",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    border: "1px solid rgba(226, 232, 240, 0.9)",
+                    zIndex: 10,
+                  }}
+                >
+                  <i className="fas fa-location-dot" style={{ color: "#ef4444" }}></i>
+                  Open in Google Maps
+                  <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.72rem", opacity: 0.7 }}></i>
+                </a>
               </div>
             </div>
           </div>
@@ -862,6 +942,15 @@ export default function HomePage() {
               <Link href="/privacy" style={{ color: "var(--primary)", textDecoration: "none", fontWeight: 600 }}>
                 Privacy Policy & Terms
               </Link>
+              {" "}&bull;{" "}
+              <a
+                href="https://maps.app.goo.gl/NfseV8JJjN7QofnH6?g_st=ac"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--primary)", textDecoration: "none", fontWeight: 600 }}
+              >
+                <i className="fas fa-location-dot" style={{ color: "#ef4444", marginRight: "3px" }}></i> Office Location
+              </a>
             </div>
             <div>
               Official Enquiries:{" "}

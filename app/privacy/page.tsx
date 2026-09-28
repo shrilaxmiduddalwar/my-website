@@ -99,7 +99,16 @@ export default function PrivacyPage() {
                   support@ignitocorporation.live
                 </a>
                 <br />
-                <strong>Location:</strong> Bhagirathpura, Indore, Madhya Pradesh, India
+                <strong>Location:</strong>{" "}
+                <a
+                  href="https://maps.app.goo.gl/NfseV8JJjN7QofnH6?g_st=ac"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1"
+                >
+                  <i className="fas fa-location-dot text-rose-500"></i>
+                  Bhagirathpura, Indore, Madhya Pradesh, India
+                </a>
               </p>
             </section>
           </div>

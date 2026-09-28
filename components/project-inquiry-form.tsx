@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 
 const SERVICES = [
+  { id: "ai-automation", title: "AI & Business Automation", desc: "Autonomous AI Agents, Workflow Pipelines & LLM Integration", icon: "fa-robot" },
   { id: "mobile-app", title: "Mobile App Development", desc: "iOS, Android Native & Cross-Platform (React Native, Flutter)", icon: "fa-mobile-screen-button" },
   { id: "website", title: "Website Development", desc: "High-Converting Corporate & Landing Pages", icon: "fa-laptop-code" },
   { id: "custom-software", title: "Custom Software Development", desc: "Enterprise Workflows, ERP & Backend Systems", icon: "fa-server" },

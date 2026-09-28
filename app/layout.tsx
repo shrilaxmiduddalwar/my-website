@@ -3,10 +3,12 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ignito Corporation | Enterprise Digital Solutions & Software",
+  title: "Ignito Corporation | AI Automation, Enterprise Software & Digital Solutions",
   description:
-    "Ignito Corporation delivers enterprise-grade digital solutions for LPG distribution, mobile apps, websites, data analytics, and cloud automation.",
+    "Ignito Corporation delivers cutting-edge AI business automation, enterprise digital solutions, mobile apps, and cloud-ready systems to automate and scale businesses.",
   keywords: [
+    "AI business automation",
+    "AI solutions",
     "Ignito Corporation",
     "digital solutions",
     "enterprise website",
@@ -22,9 +24,9 @@ export const metadata: Metadata = {
     apple: "/ignito.png",
   },
   openGraph: {
-    title: "Ignito Corporation | Enterprise Digital Solutions & Software",
+    title: "Ignito Corporation | AI Automation, Enterprise Software & Digital Solutions",
     description:
-      "Ignito Corporation delivers enterprise-grade digital solutions for LPG distribution, mobile apps, websites, data analytics, and cloud automation.",
+      "Ignito Corporation delivers cutting-edge AI business automation, enterprise digital solutions, mobile apps, and cloud-ready systems to automate and scale businesses.",
     url: "https://ignitocorporation.com/",
     siteName: "Ignito Corporation",
     images: [
@@ -40,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ignito Corporation | Enterprise Digital Solutions & Software",
+    title: "Ignito Corporation | AI Automation, Enterprise Software & Digital Solutions",
     description:
-      "Enterprise digital solutions for LPG distribution, mobile apps, websites, data analytics, and cloud automation.",
+      "Cutting-edge AI business automation, enterprise digital solutions, mobile apps, and cloud-ready systems to automate and scale businesses.",
     images: ["https://ignitocorporation.com/ignito.png"],
   },
 };
@@ -67,7 +69,7 @@ export default function RootLayout({
         },
         image: "https://ignitocorporation.com/ignito.png",
         description:
-          "Ignito Corporation delivers enterprise-grade digital solutions for LPG distribution, mobile apps, websites, data analytics, and cloud automation.",
+          "Ignito Corporation delivers cutting-edge AI business automation, enterprise digital solutions, mobile apps, and cloud-ready systems to automate and scale businesses.",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Indore",
@@ -90,7 +92,7 @@ export default function RootLayout({
         "@id": "https://ignitocorporation.com/#website",
         url: "https://ignitocorporation.com/",
         name: "Ignito Corporation",
-        description: "Enterprise Digital Solutions & Software Engineering",
+        description: "AI Business Automation & Enterprise Digital Solutions",
         publisher: {
           "@id": "https://ignitocorporation.com/#organization",
         },
