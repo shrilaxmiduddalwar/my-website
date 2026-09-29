@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     "software engineering",
   ],
   authors: [{ name: "Ignito Corporation" }],
+  metadataBase: new URL("https://ignitocorporation.com"),
+  alternates: { canonical: "/" },
   icons: {
     icon: "/ignito.png",
     shortcut: "/ignito.png",
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
         alt: "Ignito Corporation Logo",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
