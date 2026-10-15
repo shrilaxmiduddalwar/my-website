@@ -244,8 +244,8 @@ export default function HomePage() {
                     </a>
                   </div>
                   <div className="hero-pricing-note">
-                    <span className="handwritten-text text-blue-900 font-bold drop-shadow-sm text-sm sm:text-base">
-                      ✨ Transparent pricing &bull; 0% hidden fees!
+                    <span className="handwritten-text">
+                      <i className="fas fa-circle-check"></i> Transparent pricing &bull; No hidden fees
                     </span>
                   </div>
                 </div>
@@ -306,7 +306,7 @@ export default function HomePage() {
                 A registered <span className="doodle-circle">MSME</span> from Ratlam, Madhya Pradesh, Ignito Corporation delivers digital excellence for businesses that need polished products with enterprise appeal.
                 <br />
                 <span className="doodle-note" style={{ marginTop: "0.5rem" }}>
-                  ✨ 100% Client Satisfaction &bull; Built with passion!
+                  <i className="fas fa-award"></i> 100% Client Satisfaction &bull; Built with care
                 </span>
               </p>
             </div>
@@ -354,13 +354,13 @@ export default function HomePage() {
               </div>
               <h2 className="section-title">
                 Everything to <span className="marker-teal">scale your business</span>{" "}
-                <span className="wavy-underline">fast!</span>
+                <span className="wavy-underline">fast</span>
               </h2>
               <p className="section-subtitle">
                 We deliver professional software products with modern aesthetics, streamlined processes, and enterprise-ready execution.
                 <br />
                 <span className="doodle-note" style={{ marginTop: "0.4rem" }}>
-                  🎨 Custom tailored for your specific industry!
+                  <i className="fas fa-sliders"></i> Custom-tailored for your industry
                 </span>
               </p>
             </div>
@@ -437,7 +437,7 @@ export default function HomePage() {
                 <i className="fas fa-fire-flame-curved"></i> FLAGSHIP PRODUCT
               </div>
               <h2 className="section-title">
-                Smart LPG Distribution <span className="marker-pink">in action!</span>
+                Smart LPG Distribution <span className="marker-pink">in action</span>
               </h2>
               <p className="section-subtitle">
                 A comprehensive software suite built to streamline gas distribution, real-time delivery tracking, inventory management, and logistics operations.
@@ -532,7 +532,10 @@ export default function HomePage() {
                 Here is what our enterprise partners, client stores, and businesses say about working with Ignito Corporation.
                 <br />
                 <span className="doodle-note" style={{ marginTop: "0.4rem" }}>
-                  ⭐⭐⭐⭐⭐ 5.0 Rating from client stores & enterprise partners
+                  <span className="rating-stars" aria-label="5 out of 5 stars">
+                    <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
+                  </span>{" "}
+                  5.0 rating from client stores & enterprise partners
                 </span>
               </p>
             </div>
@@ -867,13 +870,13 @@ export default function HomePage() {
                 <i className="fas fa-paper-plane"></i> GET IN TOUCH
               </div>
               <h2 className="section-title">
-                Let's <span className="marker-cyan">build something great</span> together!
+                Let's <span className="marker-cyan">build something great</span> together
               </h2>
               <p className="section-subtitle">
                 Connect with our team to discuss software development, enterprise integration, or digital product strategy.
                 <br />
                 <span className="doodle-note" style={{ marginTop: "0.4rem" }}>
-                  ⚡ Direct support &bull; Fast response in &lt;24 hours!
+                  <i className="fas fa-clock"></i> Direct support &bull; Response within 24 hours
                 </span>
               </p>
             </div>
@@ -1046,7 +1049,70 @@ export default function HomePage() {
       {/* Footer with Frosted Blur Glass */}
       <footer className="site-footer glass-section-alt relative z-10 pb-28 sm:pb-12">
         <div className="footer-container">
-          <div className="footer-bottom" style={{ borderTop: "none" }}>
+          <div className="footer-grid">
+            <div className="footer-brand">
+              <a href="#about" className="brand">
+                <img src="/ignito-logo.png" alt="Ignito Corporation Logo" width={44} height={44} loading="lazy" />
+                <span className="brand-text">
+                  Ignito <span>Corporation</span>
+                </span>
+              </a>
+              <p>
+                AI automation, custom software, mobile apps and websites for businesses that want to work faster and grow. A registered MSME from Ratlam, Madhya Pradesh.
+              </p>
+              <div className="footer-social">
+                <a href="https://www.linkedin.com/company/ignito-corporation/about/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://x.com/Ignito485001" target="_blank" rel="noopener noreferrer" aria-label="X Twitter">
+                  <i className="fab fa-x-twitter"></i>
+                </a>
+                <a
+                  href="https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  onClick={() => handleTrackConversion()}
+                >
+                  <i className="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="footer-col">
+              <h4>Company</h4>
+              <a href="#about">About Us</a>
+              <a href="#project">Flagship Product</a>
+              <a href="#clients">Clients</a>
+              <a href="/PORTFOLIOO.pdf" download>Portfolio</a>
+            </div>
+
+            <div className="footer-col">
+              <h4>Services</h4>
+              <a href="#services">AI & Business Automation</a>
+              <a href="#services">Mobile & Web Apps</a>
+              <a href="#services">Corporate Websites</a>
+              <a href="#services">Cloud & Deployment</a>
+            </div>
+
+            <div className="footer-col">
+              <h4>Contact</h4>
+              <a href="tel:+916232480899" onClick={() => handleTrackConversion()}>
+                <i className="fas fa-phone"></i> +91 6232480899
+              </a>
+              <a href="mailto:support@ignitocorporation.live" onClick={() => handleTrackConversion()}>
+                <i className="fas fa-envelope"></i> support@ignitocorporation.live
+              </a>
+              <span>
+                <i className="fas fa-location-dot"></i> Ratlam, Madhya Pradesh, India
+              </span>
+              <a href="#inquiry" className="footer-cta">
+                Start a Project <i className="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
             <div>
               © 2025-2026 <strong>Ignito Corporation</strong>. All rights reserved. &bull;{" "}
               <Link href="/privacy" style={{ color: "var(--primary)", textDecoration: "none", fontWeight: 600 }}>
