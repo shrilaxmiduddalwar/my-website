@@ -901,7 +901,7 @@ export default function HomePage() {
                     }}
                   >
                     <i className="fas fa-location-dot" style={{ color: "#ef4444", fontSize: "1.1rem", flexShrink: 0, marginTop: "4px" }}></i>
-                    <span>Mahesh Nagar, Alkapuri, Ratlam, Madhya Pradesh 457001, India</span>
+                    <span>Katju Nagar, Mahesh Nagar, Laxman Pura, Ratlam, Madhya Pradesh 457001, India</span>
                     <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)", flexShrink: 0, marginTop: "6px" }}></i>
                   </a>
                   <div>
@@ -1006,7 +1006,7 @@ export default function HomePage() {
                 <iframe
                   loading="lazy"
                   title="Ignito Location Map - Ratlam, Madhya Pradesh"
-                  src="https://maps.google.com/maps?q=IGNITO+CORPORATION,+Mahesh+Nagar,+Alkapuri,+Ratlam,+Madhya+Pradesh+457001&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Katju+Nagar,+Mahesh+Nagar,+Laxman+Pura,+Ratlam,+Madhya+Pradesh+457001&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 />
                 <a
                   href="https://maps.app.goo.gl/NfseV8JJjN7QofnH6?g_st=ac"

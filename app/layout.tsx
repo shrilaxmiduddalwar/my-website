@@ -120,7 +120,7 @@ export default function RootLayout({
           "Ignito Corporation delivers cutting-edge AI business automation, enterprise digital solutions, mobile apps, and cloud-ready systems to automate and scale businesses.",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "Mahesh Nagar, Alkapuri",
+          streetAddress: "Katju Nagar, Mahesh Nagar, Laxman Pura",
           addressLocality: "Ratlam",
           addressRegion: "Madhya Pradesh",
           postalCode: "457001",

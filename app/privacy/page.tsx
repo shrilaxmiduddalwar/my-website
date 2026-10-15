@@ -117,7 +117,7 @@ export default function PrivacyPage() {
                   className="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1"
                 >
                   <i className="fas fa-location-dot text-rose-500"></i>
-                  Mahesh Nagar, Alkapuri, Ratlam, Madhya Pradesh 457001, India
+                  Katju Nagar, Mahesh Nagar, Laxman Pura, Ratlam, Madhya Pradesh 457001, India
                 </a>
               </p>
             </section>
