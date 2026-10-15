@@ -124,9 +124,9 @@ I'm interested in discussing my project and getting a quote.`;
     setLastWhatsAppUrl(whatsappUrl);
     setIsSubmitted(true);
 
-    if (typeof window !== "undefined" && (window as any).gtag_report_conversion) {
+    if (typeof window !== "undefined" && (window as any).gtag_track_conversion) {
       try {
-        (window as any).gtag_report_conversion(whatsappUrl);
+        (window as any).gtag_track_conversion();
       } catch (err) {
         // ignore
       }

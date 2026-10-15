@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <header id="site-header" className="sticky top-0 z-50">
         <div className="nav-container">
           <Link href="/#about" className="brand" onClick={() => setMobileMenuOpen(false)}>
-            <img src="/ignito.png" alt="Ignito Corporation Logo" width={44} height={44} />
+            <img src="/ignito-logo.png" alt="Ignito Corporation Logo" width={44} height={44} />
             <span className="brand-text">
               Ignito <span>Corporation</span>
             </span>

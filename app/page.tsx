@@ -124,11 +124,11 @@ export default function HomePage() {
     };
   }, []);
 
-  const handleTrackConversion = (url: string) => {
-    if (typeof window !== "undefined" && (window as any).gtag_report_conversion) {
-      return (window as any).gtag_report_conversion(url);
+  // Records the lead conversion without opening the link a second time
+  const handleTrackConversion = () => {
+    if (typeof window !== "undefined" && (window as any).gtag_track_conversion) {
+      (window as any).gtag_track_conversion();
     }
-    return true;
   };
 
   return (
@@ -160,7 +160,7 @@ export default function HomePage() {
       <header id="site-header" className={`sticky top-0 z-50 ${isScrolled ? "scrolled" : ""}`}>
         <div className="nav-container">
           <a href="#about" className="brand" onClick={() => setMobileMenuOpen(false)}>
-            <img src="/ignito.png" alt="Ignito Corporation Logo" width={44} height={44} />
+            <img src="/ignito-logo.png" alt="Ignito Corporation Logo" width={44} height={44} />
             <span className="brand-text">
               Ignito <span>Corporation</span>
             </span>
@@ -574,7 +574,7 @@ export default function HomePage() {
                     <p className="client-quote">"Best and fast service for application development."</p>
                   </div>
                   <div className="client-profile">
-                    <img src="/filedoc.jpeg" alt="FileDoc Client Store" className="client-avatar" />
+                    <img src="/filedoc.jpeg" alt="FileDoc Client Store" className="client-avatar" loading="lazy" decoding="async" />
                     <div>
                       <div className="client-name">
                         FILEDOC <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)", marginLeft: "0.3rem" }}></i>
@@ -600,7 +600,7 @@ export default function HomePage() {
                     <p className="client-quote">"Exceptional work delivered application on time."</p>
                   </div>
                   <div className="client-profile">
-                    <img src="/fixkar.jpeg" alt="Fixkar Client Store" className="client-avatar" />
+                    <img src="/fixkar.jpeg" alt="Fixkar Client Store" className="client-avatar" loading="lazy" decoding="async" />
                     <div>
                       <div className="client-name">
                         FIXKAR <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)", marginLeft: "0.3rem" }}></i>
@@ -626,7 +626,7 @@ export default function HomePage() {
                     <p className="client-quote">"Fully automated our business with application, thanks to all Ignito team!"</p>
                   </div>
                   <div className="client-profile">
-                    <img src="/uaw auto.jpeg" alt="UAW Auto Client Store" className="client-avatar" />
+                    <img src="/uaw auto.jpeg" alt="UAW Auto Client Store" className="client-avatar" loading="lazy" decoding="async" />
                     <div>
                       <div className="client-name">
                         UAW AUTO <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)", marginLeft: "0.3rem" }}></i>
@@ -652,7 +652,7 @@ export default function HomePage() {
                     <p className="client-quote">"The e-commerce app built by Ignito transformed our shopping experience—super smooth checkout, fast catalog browsing, and reliable performance."</p>
                   </div>
                   <div className="client-profile">
-                    <img src="/bainada.jpeg" alt="Bainada Brothers Client Store" className="client-avatar" />
+                    <img src="/bainada.jpeg" alt="Bainada Brothers Client Store" className="client-avatar" loading="lazy" decoding="async" />
                     <div>
                       <div className="client-name">
                         BAINADA BROTHERS <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)", marginLeft: "0.3rem" }}></i>
@@ -678,12 +678,130 @@ export default function HomePage() {
                     <p className="client-quote">"Ignito crafted a stunning, cinematic digital web platform for our production house. The performance, visual depth, and client showcase experience are extraordinary!"</p>
                   </div>
                   <div className="client-profile">
-                    <img src="/vetal.jpg" alt="Vetal Production House" className="client-avatar" />
+                    <img src="/vetal.jpg" alt="Vetal Production House" className="client-avatar" loading="lazy" decoding="async" />
                     <div>
                       <div className="client-name">
                         VETAL PRODUCTION HOUSE <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)", marginLeft: "0.3rem" }}></i>
                       </div>
                       <div style={{ fontSize: "0.8rem", color: "var(--text-subtle)" }}>Film & Media Production</div>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.hungrykya.shop/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="client-card glass-card"
+                >
+                  <div>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.8rem" }}>
+                      <i className="fas fa-quote-left client-quote-icon" style={{ marginBottom: 0 }}></i>
+                      <span className="store-badge">
+                        <i className="fas fa-globe"></i> Live Website
+                      </span>
+                    </div>
+                    <p className="client-quote">"Ignito built our food ordering website exactly how we imagined it. Customers can browse the menu and order fresh food in just a few taps. Quick, reliable and very easy to manage!"</p>
+                  </div>
+                  <div className="client-profile">
+                    <img src="/hungrykya.png" alt="HungryKya" className="client-avatar" loading="lazy" decoding="async" />
+                    <div>
+                      <div className="client-name">
+                        HUNGRYKYA <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)", marginLeft: "0.3rem" }}></i>
+                      </div>
+                      <div style={{ fontSize: "0.8rem", color: "var(--text-subtle)" }}>Food Ordering Platform</div>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="https://kopalvani-cwo.web.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="client-card glass-card"
+                >
+                  <div>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.8rem" }}>
+                      <i className="fas fa-quote-left client-quote-icon" style={{ marginBottom: 0 }}></i>
+                      <span className="store-badge">
+                        <i className="fas fa-globe"></i> Live Website
+                      </span>
+                    </div>
+                    <p className="client-quote">"Ignito gave our organisation a clean, welcoming website to share our work with hearing and speech impaired children and help supporters connect with us easily."</p>
+                  </div>
+                  <div className="client-profile">
+                    <img src="/kopalvani.png" alt="Kopal Vani Child Welfare Organisation" className="client-avatar" loading="lazy" decoding="async" />
+                    <div>
+                      <div className="client-name">
+                        KOPAL VANI <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)", marginLeft: "0.3rem" }}></i>
+                      </div>
+                      <div style={{ fontSize: "0.8rem", color: "var(--text-subtle)" }}>NGO &bull; Child Welfare Organisation</div>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.televisia.co.in/lander"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="client-card glass-card"
+                >
+                  <div>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.8rem" }}>
+                      <i className="fas fa-quote-left client-quote-icon" style={{ marginBottom: 0 }}></i>
+                      <span className="store-badge">
+                        <i className="fas fa-globe"></i> Live Website
+                      </span>
+                    </div>
+                    <p className="client-quote">"Ignito built a bold, modern website that brings our news agency, production house and digital services together under one brand. Smooth delivery from start to finish."</p>
+                  </div>
+                  <div className="client-profile">
+                    <img src="/televisia.png" alt="Televisia Media Services" className="client-avatar" loading="lazy" decoding="async" />
+                    <div>
+                      <div className="client-name">
+                        TELEVISIA MEDIA <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)", marginLeft: "0.3rem" }}></i>
+                      </div>
+                      <div style={{ fontSize: "0.8rem", color: "var(--text-subtle)" }}>News, Production & Digital Media</div>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.ultraivioilette.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="client-card glass-card"
+                >
+                  <div>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.8rem" }}>
+                      <i className="fas fa-quote-left client-quote-icon" style={{ marginBottom: 0 }}></i>
+                      <span className="store-badge">
+                        <i className="fas fa-globe"></i> Live Website
+                      </span>
+                    </div>
+                    <p className="client-quote">"Our customers can now explore every electric model, compare variants and prices, and book online. Ignito delivered a fast, premium showroom website."</p>
+                  </div>
+                  <div className="client-profile">
+                    <div
+                      className="client-avatar"
+                      aria-hidden="true"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexShrink: 0,
+                        background: "linear-gradient(135deg, #5B2EFF, #B14BFF)",
+                        color: "#ffffff",
+                        fontSize: "1.25rem",
+                      }}
+                    >
+                      <i className="fas fa-bolt"></i>
+                    </div>
+                    <div>
+                      <div className="client-name">
+                        ULTRAVIOLETTE DEALER <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)", marginLeft: "0.3rem" }}></i>
+                      </div>
+                      <div style={{ fontSize: "0.8rem", color: "var(--text-subtle)" }}>Authorised EV Showroom</div>
                     </div>
                   </div>
                 </a>
@@ -694,7 +812,7 @@ export default function HomePage() {
                     <p className="client-quote">"User-friendly system and exceptionally fast execution. Highly satisfied with the results."</p>
                   </div>
                   <div className="client-profile">
-                    <img src="/matru.jpeg" alt="Matruchaya Corporation" className="client-avatar" />
+                    <img src="/matru.jpeg" alt="Matruchaya Corporation" className="client-avatar" loading="lazy" decoding="async" />
                     <div>
                       <div className="client-name">MATRUCHAYA CORPORATION</div>
                       <div style={{ fontSize: "0.8rem", color: "var(--text-subtle)" }}>LPG Distributor</div>
@@ -708,7 +826,7 @@ export default function HomePage() {
                     <p className="client-quote">"Streamlined distribution and significantly better reporting transparency across our operational teams."</p>
                   </div>
                   <div className="client-profile">
-                    <img src="/salasar.jpeg" alt="Salasar Logistics" className="client-avatar" />
+                    <img src="/salasar.jpeg" alt="Salasar Logistics" className="client-avatar" loading="lazy" decoding="async" />
                     <div>
                       <div className="client-name">SALASAR LOGISTICS</div>
                       <div style={{ fontSize: "0.8rem", color: "var(--text-subtle)" }}>Logistics & Supply</div>
@@ -732,7 +850,7 @@ export default function HomePage() {
                     <p className="client-quote">"Delivery tracking became reliable overnight, and operational reports are available instantly."</p>
                   </div>
                   <div className="client-profile">
-                    <img src="/lpg.jpeg" alt="Smart LPG Distribution App" className="client-avatar" />
+                    <img src="/lpg.jpeg" alt="Smart LPG Distribution App" className="client-avatar" loading="lazy" decoding="async" />
                     <div>
                       <div className="client-name">
                         SMART LPG DISTRIBUTION <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: "0.75rem", color: "var(--primary)", marginLeft: "0.3rem" }}></i>
@@ -748,7 +866,7 @@ export default function HomePage() {
                     <p className="client-quote">"Ignito helped us go digital in less than a month with a clean, stable, and intuitive mobile application."</p>
                   </div>
                   <div className="client-profile">
-                    <img src="/mahaveer.jpeg" alt="Mahaveer Oils" className="client-avatar" />
+                    <img src="/mahaveer.jpeg" alt="Mahaveer Oils" className="client-avatar" loading="lazy" decoding="async" />
                     <div>
                       <div className="client-name">MAHAVEER OILS</div>
                       <div style={{ fontSize: "0.8rem", color: "var(--text-subtle)" }}>Industrial Client</div>
@@ -821,6 +939,7 @@ export default function HomePage() {
                   <strong>Official Email:</strong>{" "}
                   <a
                     href="mailto:support@ignitocorporation.live"
+                    onClick={() => handleTrackConversion()}
                     style={{ color: "var(--primary)", textDecoration: "none", fontWeight: 600, wordBreak: "break-all" }}
                   >
                     support@ignitocorporation.live
@@ -829,7 +948,7 @@ export default function HomePage() {
                   <strong>Call Support:</strong>{" "}
                   <a
                     href="tel:+916232480899"
-                    onClick={() => handleTrackConversion("tel:+916232480899")}
+                    onClick={() => handleTrackConversion()}
                     style={{ color: "var(--primary)", textDecoration: "none", fontWeight: 600 }}
                   >
                     +91 6232480899
@@ -861,11 +980,11 @@ export default function HomePage() {
                     </a>
                     <a
                       className="social-btn bg-white/90"
-                      href="https://wa.me/916232480899"
+                      href="https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20would%20like%20to%20inquire%20about%20your%20services."
                       aria-label="WhatsApp"
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={() => handleTrackConversion("https://wa.me/916232480899")}
+                      onClick={() => handleTrackConversion()}
                     >
                       <i className="fab fa-whatsapp"></i>
                     </a>
@@ -873,11 +992,11 @@ export default function HomePage() {
                       className="social-btn bg-white/90"
                       href="tel:+916232480899"
                       aria-label="Call Directly"
-                      onClick={() => handleTrackConversion("tel:+916232480899")}
+                      onClick={() => handleTrackConversion()}
                     >
                       <i className="fas fa-phone-alt"></i>
                     </a>
-                    <a className="social-btn bg-white/90" href="mailto:support@ignitocorporation.live" aria-label="Email">
+                    <a className="social-btn bg-white/90" href="mailto:support@ignitocorporation.live" aria-label="Email" onClick={() => handleTrackConversion()}>
                       <i className="fas fa-envelope"></i>
                     </a>
                     <a
@@ -979,9 +1098,7 @@ export default function HomePage() {
         aria-label="Chat with us on WhatsApp"
         id="whatsapp-chat-button"
         onClick={() =>
-          handleTrackConversion(
-            "https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20would%20like%20to%20inquire%20about%20your%20services."
-          )
+          handleTrackConversion()
         }
       >
         <span className="whatsapp-pulse" aria-hidden="true"></span>

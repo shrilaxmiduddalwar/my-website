@@ -23,14 +23,21 @@ export const metadata: Metadata = {
     "Ratlam",
     "Madhya Pradesh",
     "software engineering",
+    "app development company in Ratlam",
+    "website development Ratlam",
+    "software company in Madhya Pradesh",
+    "mobile app development company India",
+    "AI automation agency India",
+    "custom software development India",
+    "WhatsApp automation for business",
   ],
   authors: [{ name: "Ignito Corporation" }],
   metadataBase: new URL("https://ignitocorporation.com"),
   alternates: { canonical: "/" },
   icons: {
-    icon: "/ignito.png",
-    shortcut: "/ignito.png",
-    apple: "/ignito.png",
+    icon: "/ignito-icon.png",
+    shortcut: "/ignito-icon.png",
+    apple: "/ignito-icon.png",
   },
   openGraph: {
     title: "Ignito Corporation | AI Automation, Enterprise Software & Digital Solutions",
@@ -50,7 +57,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Ignito Corporation | AI Automation, Enterprise Software & Digital Solutions",
     description:
       "Cutting-edge AI business automation, enterprise digital solutions, mobile apps, and cloud-ready systems to automate and scale businesses.",
@@ -67,7 +74,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": ["Organization", "ProfessionalService"],
         "@id": "https://ignitocorporation.com/#organization",
         name: "Ignito Corporation",
         url: "https://ignitocorporation.com/",
@@ -77,6 +84,38 @@ export default function RootLayout({
           caption: "Ignito Corporation Logo",
         },
         image: "https://ignitocorporation.com/ignito.png",
+        telephone: "+91-6232480899",
+        email: "support@ignitocorporation.live",
+        priceRange: "$$",
+        hasMap: "https://maps.app.goo.gl/NfseV8JJjN7QofnH6",
+        areaServed: [
+          { "@type": "City", name: "Ratlam" },
+          { "@type": "State", name: "Madhya Pradesh" },
+          { "@type": "Country", name: "India" },
+          "Worldwide",
+        ],
+        knowsAbout: [
+          "AI business automation",
+          "Mobile app development",
+          "Website development",
+          "Custom software development",
+          "Cloud deployment",
+        ],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Software & Automation Services",
+          itemListElement: [
+            "AI & Business Automation",
+            "Mobile & Web App Development",
+            "Corporate Website Development",
+            "API & Backend Systems",
+            "Cloud & Deployment",
+            "Support & Maintenance",
+          ].map((service) => ({
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: service },
+          })),
+        },
         description:
           "Ignito Corporation delivers cutting-edge AI business automation, enterprise digital solutions, mobile apps, and cloud-ready systems to automate and scale businesses.",
         address: {
@@ -89,7 +128,8 @@ export default function RootLayout({
         },
         contactPoint: {
           "@type": "ContactPoint",
-          contactType: "customer support",
+          contactType: "sales",
+          telephone: "+91-6232480899",
           email: "support@ignitocorporation.live",
           availableLanguage: ["English", "Hindi"],
         },
@@ -178,6 +218,18 @@ export default function RootLayout({
                 callback();
               }
               return false;
+            };
+
+            // Records the conversion only; the link itself handles navigation
+            window.gtag_track_conversion = function() {
+              try {
+                if (typeof gtag === 'function') {
+                  gtag('event', 'conversion', {
+                    'send_to': 'AW-17300844145/e5HbCMW4heMcEPHc17lA',
+                    'transport_type': 'beacon'
+                  });
+                }
+              } catch (err) {}
             };
           `}
         </Script>

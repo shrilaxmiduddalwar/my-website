@@ -1886,3 +1886,40 @@ footer.site-footer {
     stroke-dashoffset: -1110;
   }
 }
+
+/* =========================================================
+   POLISH: ANCHOR OFFSETS, FOCUS, SELECTION, REDUCED MOTION
+   ========================================================= */
+/* Keep section headings clear of the sticky header on nav clicks */
+main section[id] {
+  scroll-margin-top: 80px;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+  color: var(--text-main);
+}
+
+/* Visible focus ring for keyboard users only */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
