@@ -6,13 +6,11 @@ import { CloudShader } from "@/components/ui/cloud-shader";
 import { PaperPlanesWind } from "@/components/paper-planes-wind";
 import { ProjectInquiryForm } from "@/components/project-inquiry-form";
 import { GrasshopperMascot } from "@/components/grasshopper-mascot";
-import { RainWeatherFX } from "@/components/rain-weather-fx";
 
 export default function HomePage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
-  const [isRaining, setIsRaining] = useState(false);
   const clientTrackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -95,26 +93,12 @@ export default function HomePage() {
       }, 5000);
     }
 
-    // Spontaneous sudden rain cycle
-    let rainTimeout: NodeJS.Timeout | null = null;
-    const scheduleSpontaneousRain = () => {
-      rainTimeout = setTimeout(() => {
-        setIsRaining(true);
-        setTimeout(() => {
-          setIsRaining(false);
-          scheduleSpontaneousRain();
-        }, 20000); // 20s rain shower
-      }, 35000); // every 35s
-    };
-    scheduleSpontaneousRain();
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
       scrollObserver.disconnect();
       spyObserver.disconnect();
       clearTimeout(timer);
       if (interval) clearInterval(interval);
-      if (rainTimeout) clearTimeout(rainTimeout);
       if (clientTrack && handlePointerDown) {
         clientTrack.removeEventListener("pointerdown", handlePointerDown);
       }
@@ -133,26 +117,23 @@ export default function HomePage() {
 
   return (
     <>
-      {/* 1. FIXED FULLPAGE CLOUD SHADER (TRANSITIONS INTO MOODY STORM CLOUDS DURING RAIN) */}
+      {/* 1. FIXED FULLPAGE CLOUD SHADER */}
       <div className="fullpage-cloud-bg" aria-hidden="true">
         <CloudShader
-          className="h-full w-full opacity-90 pointer-events-none transition-colors duration-1000"
-          speed={isRaining ? 1.2 : 0.7}
-          count={isRaining ? 8 : 6}
-          cloudColor={isRaining ? "#94a3b8" : "#ffffff"}
-          skyTopColor={isRaining ? "#0f172a" : "#1d4ed8"}
-          skyBottomColor={isRaining ? "#334155" : "#dbeafe"}
+          className="h-full w-full opacity-90 pointer-events-none"
+          speed={0.7}
+          count={6}
+          cloudColor="#ffffff"
+          skyTopColor="#1d4ed8"
+          skyBottomColor="#dbeafe"
         />
       </div>
 
-      {/* 2. DYNAMIC RAIN WEATHER FX (RAINDROPS, SPLASHES & LIGHTNING) */}
-      <RainWeatherFX isRaining={isRaining} onToggleRain={() => setIsRaining((prev) => !prev)} />
-
-      {/* 3. ANIMATED WIND BREEZE & FLOATING PAPER PLANES */}
+      {/* 2. ANIMATED WIND BREEZE & FLOATING PAPER PLANES */}
       <PaperPlanesWind />
 
-      {/* 4. INTERACTIVE 3D BABYCO MASCOT (WITH POP-UP 3D UMBRELLA IN RAIN) */}
-      <GrasshopperMascot isRaining={isRaining} />
+      {/* 3. INTERACTIVE 3D BABYCO MASCOT */}
+      <GrasshopperMascot />
 
 
 
