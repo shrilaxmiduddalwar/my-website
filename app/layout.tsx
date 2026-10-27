@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     "AI automation agency India",
     "custom software development India",
     "WhatsApp automation for business",
+    "algo trading bot development India",
+    "custom trading bot developer",
+    "Tachyon trading terminal",
+    "Bloom Street",
   ],
   authors: [{ name: "Ignito Corporation" }],
   metadataBase: new URL("https://ignitocorporation.com"),
@@ -111,6 +115,7 @@ export default function RootLayout({
             "API & Backend Systems",
             "Cloud & Deployment",
             "Support & Maintenance",
+            "Custom Algo Trading Bot Development",
           ].map((service) => ({
             "@type": "Offer",
             itemOffered: { "@type": "Service", name: service },
@@ -132,6 +137,12 @@ export default function RootLayout({
           telephone: "+91-6232480899",
           email: "support@ignitocorporation.live",
           availableLanguage: ["English", "Hindi"],
+        },
+        subOrganization: {
+          "@type": "Organization",
+          name: "Bloom Street",
+          description: "Bloom Street, a subsidiary of Ignito Corporation, builds and owns Tachyon, an in-house trading terminal.",
+          logo: "https://ignitocorporation.com/bloomstreet-logo.png",
         },
         sameAs: [
           "https://x.com/Ignito485001",

@@ -2001,3 +2001,307 @@ textarea:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* =========================================================
+   TACHYON TERMINAL (BLOOM STREET) - COMING SOON
+   ========================================================= */
+.tachyon-card {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 85% 0%, rgba(250, 204, 21, 0.14), transparent 45%),
+    radial-gradient(circle at 0% 100%, rgba(37, 99, 235, 0.25), transparent 50%),
+    linear-gradient(160deg, #0b1220 0%, #111c33 100%);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  box-shadow: 0 30px 60px -20px rgba(15, 23, 42, 0.55);
+  color: #cbd5e1;
+}
+
+.tachyon-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.tachyon-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.tachyon-brand img {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.tachyon-brand-name {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #f8fafc;
+}
+
+.tachyon-brand-sub {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.tachyon-info h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 0.9rem;
+}
+
+.tachyon-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  background: rgba(250, 204, 21, 0.12);
+  border: 1px solid rgba(250, 204, 21, 0.4);
+  color: #fde047;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tachyon-soon-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #facc15;
+  box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.6);
+  animation: tachyon-pulse 1.8s ease-out infinite;
+}
+
+@keyframes tachyon-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.6); }
+  100% { box-shadow: 0 0 0 10px rgba(250, 204, 21, 0); }
+}
+
+.tachyon-info p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+
+.tachyon-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 1.8rem;
+}
+
+.tachyon-features span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.tachyon-features i {
+  color: #facc15;
+}
+
+.tachyon-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tachyon-btn-outline {
+  background: transparent;
+  color: #f8fafc;
+  border: 1px solid rgba(226, 232, 240, 0.35);
+}
+
+.tachyon-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(226, 232, 240, 0.6);
+  color: #ffffff;
+}
+
+.tachyon-launch-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.tachyon-launch-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.95rem 1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.tachyon-launch-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(37, 99, 235, 0.18);
+  color: #93c5fd;
+}
+
+.tachyon-launch-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #f8fafc;
+}
+
+.tachyon-launch-desc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.45;
+}
+
+.tachyon-status {
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(250, 204, 21, 0.12);
+  color: #fde047;
+  font-size: 0.7rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tachyon-status-live {
+  background: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+}
+
+.tachyon-terminal {
+  border-radius: var(--radius-sm);
+  background: #050a14;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  overflow: hidden;
+}
+
+.tachyon-terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.55rem 0.85rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.tachyon-terminal-bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ef4444;
+}
+
+.tachyon-terminal-bar span:nth-child(2) { background: #f59e0b; }
+.tachyon-terminal-bar span:nth-child(3) { background: #10b981; }
+
+.tachyon-terminal-bar em {
+  margin-left: 0.5rem;
+  font-style: normal;
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.tachyon-terminal pre {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: #86efac;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.tachyon-disclaimer {
+  display: flex;
+  gap: 0.85rem;
+  margin-top: 2rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  background: rgba(250, 204, 21, 0.06);
+  border: 1px solid rgba(250, 204, 21, 0.25);
+}
+
+.tachyon-disclaimer i {
+  color: #facc15;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.tachyon-disclaimer p {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.tachyon-disclaimer strong {
+  color: #fde047;
+}
+
+.footer-disclaimer {
+  margin-top: 1.25rem;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--text-subtle);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .tachyon-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tachyon-card {
+    padding: 1.4rem 1.1rem;
+  }
+
+  .tachyon-actions .btn {
+    width: 100%;
+  }
+
+  .tachyon-launch-item {
+    grid-template-columns: auto 1fr;
+  }
+
+  .tachyon-status {
+    grid-column: 2;
+    justify-self: start;
+  }
+}

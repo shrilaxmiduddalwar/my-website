@@ -189,6 +189,13 @@ export default function HomePage() {
               Project
             </a>
             <a
+              href="#tachyon"
+              className={activeSection === "tachyon" ? "active" : ""}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Tachyon
+            </a>
+            <a
               href="#inquiry"
               className={activeSection === "inquiry" ? "active" : ""}
               onClick={() => setMobileMenuOpen(false)}
@@ -510,6 +517,119 @@ export default function HomePage() {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tachyon Trading Terminal (Bloom Street) - Coming Soon */}
+        <section id="tachyon" className="section-block glass-section-alt">
+          <div className="section-container">
+            <div className="section-header fade-up">
+              <div className="section-tag bg-white/90 shadow-sm border border-blue-200">
+                <i className="fas fa-rocket"></i> COMING SOON &bull; BLOOM STREET
+              </div>
+              <h2 className="section-title">
+                Tachyon, our in-house <span className="marker-teal">trading terminal</span>
+              </h2>
+              <p className="section-subtitle">
+                We build algorithmic trading bots tailored to each client&apos;s own strategy and rules. Tachyon, the terminal behind that work, is launching soon as a subscription-based web terminal and mobile app.
+              </p>
+            </div>
+
+            <div className="tachyon-card fade-up delay-1">
+              <div className="tachyon-grid">
+                <div className="tachyon-info">
+                  <div className="tachyon-brand">
+                    <img src="/bloomstreet-logo.png" alt="Bloom Street - Terminal for Trading" width={56} height={56} loading="lazy" />
+                    <div>
+                      <div className="tachyon-brand-name">Bloom Street</div>
+                      <div className="tachyon-brand-sub">A subsidiary of Ignito Corporation</div>
+                    </div>
+                  </div>
+
+                  <h3>
+                    Tachyon Terminal{" "}
+                    <span className="tachyon-soon">
+                      <span className="tachyon-soon-dot"></span> Launching Soon
+                    </span>
+                  </h3>
+                  <p>
+                    Tachyon is the in-house trading terminal built and owned by Bloom Street, a subsidiary of Ignito Corporation. It powers the custom algo trading bots we develop for clients, and will soon be open to everyone on a subscription plan.
+                  </p>
+
+                  <div className="tachyon-features">
+                    <span><i className="fas fa-diagram-project"></i> Strategy automation</span>
+                    <span><i className="fas fa-flask"></i> Backtesting &amp; paper trading</span>
+                    <span><i className="fas fa-shield-halved"></i> Built-in risk controls</span>
+                    <span><i className="fas fa-power-off"></i> One-tap kill switch</span>
+                    <span><i className="fas fa-display"></i> Live dashboard</span>
+                    <span><i className="fas fa-building-columns"></i> NSE &amp; BSE markets</span>
+                  </div>
+
+                  <div className="tachyon-actions">
+                    <a
+                      className="btn btn-primary"
+                      href="https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20would%20like%20early%20access%20to%20the%20Tachyon%20trading%20terminal."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => handleTrackConversion()}
+                    >
+                      <i className="fas fa-bell"></i> Get Early Access
+                    </a>
+                    <a className="btn tachyon-btn-outline" href="#inquiry">
+                      <i className="fas fa-robot"></i> Build My Trading Bot
+                    </a>
+                  </div>
+                </div>
+
+                <div className="tachyon-side">
+                  <div className="tachyon-launch-list">
+                    <div className="tachyon-launch-item">
+                      <div className="tachyon-launch-icon"><i className="fas fa-globe"></i></div>
+                      <div>
+                        <div className="tachyon-launch-title">Web Terminal</div>
+                        <div className="tachyon-launch-desc">Full terminal in your browser, on subscription</div>
+                      </div>
+                      <span className="tachyon-status">Coming soon</span>
+                    </div>
+                    <div className="tachyon-launch-item">
+                      <div className="tachyon-launch-icon"><i className="fas fa-mobile-screen-button"></i></div>
+                      <div>
+                        <div className="tachyon-launch-title">Mobile App</div>
+                        <div className="tachyon-launch-desc">Monitor and control your bots on the go</div>
+                      </div>
+                      <span className="tachyon-status">Coming soon</span>
+                    </div>
+                    <div className="tachyon-launch-item">
+                      <div className="tachyon-launch-icon"><i className="fas fa-robot"></i></div>
+                      <div>
+                        <div className="tachyon-launch-title">Custom Algo Trading Bots</div>
+                        <div className="tachyon-launch-desc">Built to your strategy and requirements</div>
+                      </div>
+                      <span className="tachyon-status tachyon-status-live">Available now</span>
+                    </div>
+                  </div>
+
+                  <div className="tachyon-terminal" aria-hidden="true">
+                    <div className="tachyon-terminal-bar">
+                      <span></span><span></span><span></span>
+                      <em>tachyon — bloom street</em>
+                    </div>
+                    <pre>{`$ tachyon status
+› web terminal ..... launching soon
+› mobile app ....... in development
+› custom bots ...... available now
+› risk controls .... on by default`}</pre>
+                  </div>
+                </div>
+              </div>
+
+              <div className="tachyon-disclaimer" role="note">
+                <i className="fas fa-circle-info"></i>
+                <p>
+                  <strong>Disclaimer:</strong> Ignito Corporation and Bloom Street are technology companies, not financial advisors. We are not registered with SEBI as investment advisers or research analysts, and we do not provide investment advice, stock tips, recommendations or portfolio management. We only design and build algorithmic trading software based on each client&apos;s own strategy and requirements. Trading in securities and derivatives involves substantial risk of loss; backtests and past performance do not guarantee future results. All trading decisions and their outcomes remain solely the client&apos;s responsibility.
+                </p>
               </div>
             </div>
           </div>
@@ -1083,6 +1203,7 @@ export default function HomePage() {
               <h4>Company</h4>
               <a href="#about">About Us</a>
               <a href="#project">Flagship Product</a>
+              <a href="#tachyon">Tachyon (Coming Soon)</a>
               <a href="#clients">Clients</a>
               <a href="/PORTFOLIOO.pdf" download>Portfolio</a>
             </div>
@@ -1092,7 +1213,7 @@ export default function HomePage() {
               <a href="#services">AI & Business Automation</a>
               <a href="#services">Mobile & Web Apps</a>
               <a href="#services">Corporate Websites</a>
-              <a href="#services">Cloud & Deployment</a>
+              <a href="#tachyon">Algo Trading Bots</a>
             </div>
 
             <div className="footer-col">
@@ -1133,6 +1254,9 @@ export default function HomePage() {
               <a href="mailto:support@ignitocorporation.live">support@ignitocorporation.live</a>
             </div>
           </div>
+          <p className="footer-disclaimer">
+            Ignito Corporation and its subsidiary Bloom Street are technology companies, not financial advisors or SEBI-registered investment advisers. We build trading software to each client&apos;s own requirements and do not give investment advice. Trading involves risk of loss.
+          </p>
         </div>
       </footer>
 

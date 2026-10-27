@@ -9,6 +9,7 @@ const SERVICES = [
   { id: "custom-software", title: "Custom Software Development", desc: "Enterprise Workflows, ERP & Backend Systems", icon: "fa-server" },
   { id: "web-app-saas", title: "Web Application / SaaS", desc: "Full-Stack Platforms, Cloud Portals & Dashboards", icon: "fa-layer-group" },
   { id: "app-web-software", title: "App + Website + Software", desc: "Complete End-to-End Digital Ecosystem", icon: "fa-cubes-stacked" },
+  { id: "algo-trading-bot", title: "Algo Trading Bot", desc: "Custom Trading Bots Built to Your Own Strategy & Rules", icon: "fa-chart-line" },
   { id: "consultation", title: "Not Sure — Need Consultation", desc: "Strategy, Scope Definition & Architecture Guidance", icon: "fa-lightbulb" },
 ];
 
