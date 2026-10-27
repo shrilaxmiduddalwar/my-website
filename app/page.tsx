@@ -526,11 +526,11 @@ export default function HomePage() {
         <section id="tachyon" className="section-block glass-section-alt">
           <div className="section-container">
             <div className="section-header fade-up">
-              <div className="section-tag bg-white/90 shadow-sm border border-blue-200">
-                <i className="fas fa-rocket"></i> COMING SOON &bull; BLOOM STREET
+              <div className="section-tag tachyon-section-tag shadow-sm border">
+                <i className="fas fa-sun"></i> COMING SOON &bull; BLOOM STREET
               </div>
               <h2 className="section-title">
-                Tachyon, our in-house <span className="marker-teal">trading terminal</span>
+                Tachyon, our in-house <span className="marker-bloom">trading terminal</span>
               </h2>
               <p className="section-subtitle">
                 We build algorithmic trading bots tailored to each client&apos;s own strategy and rules. Tachyon, the terminal behind that work, is launching soon as a subscription-based web terminal and mobile app.
@@ -541,10 +541,10 @@ export default function HomePage() {
               <div className="tachyon-grid">
                 <div className="tachyon-info">
                   <div className="tachyon-brand">
-                    <img src="/bloomstreet-logo.png" alt="Bloom Street - Terminal for Trading" width={56} height={56} loading="lazy" />
+                    <img src="/bloomstreet-logo.png" alt="" width={64} height={64} loading="lazy" aria-hidden="true" />
                     <div>
                       <div className="tachyon-brand-name">Bloom Street</div>
-                      <div className="tachyon-brand-sub">A subsidiary of Ignito Corporation</div>
+                      <div className="tachyon-brand-tagline">Terminal for Trading</div>
                     </div>
                   </div>
 
@@ -555,7 +555,7 @@ export default function HomePage() {
                     </span>
                   </h3>
                   <p>
-                    Tachyon is the in-house trading terminal built and owned by Bloom Street, a subsidiary of Ignito Corporation. It powers the custom algo trading bots we develop for clients, and will soon be open to everyone on a subscription plan.
+                    Tachyon is the in-house trading terminal built and owned by <strong>Bloom Street</strong>, a subsidiary of <strong>Ignito Corporation</strong>. It powers the custom algo trading bots we develop for clients, and will soon be open to everyone on a subscription plan.
                   </p>
 
                   <div className="tachyon-features">
@@ -569,7 +569,7 @@ export default function HomePage() {
 
                   <div className="tachyon-actions">
                     <a
-                      className="btn btn-primary"
+                      className="btn tachyon-btn-sun"
                       href="https://wa.me/916232480899?text=Hello%20Ignito%20Corporation,%20I%20would%20like%20early%20access%20to%20the%20Tachyon%20trading%20terminal."
                       target="_blank"
                       rel="noopener noreferrer"
@@ -584,6 +584,10 @@ export default function HomePage() {
                 </div>
 
                 <div className="tachyon-side">
+                  <div className="tachyon-logo-wrap">
+                    <img src="/bloomstreet-logo.png" alt="Bloom Street - Terminal for Trading" width={240} height={240} loading="lazy" />
+                    <div className="tachyon-logo-caption">A subsidiary of Ignito Corporation</div>
+                  </div>
                   <div className="tachyon-launch-list">
                     <div className="tachyon-launch-item">
                       <div className="tachyon-launch-icon"><i className="fas fa-globe"></i></div>
@@ -614,7 +618,7 @@ export default function HomePage() {
                   <div className="tachyon-terminal" aria-hidden="true">
                     <div className="tachyon-terminal-bar">
                       <span></span><span></span><span></span>
-                      <em>tachyon — bloom street</em>
+                      <em>bloom street ~ tachyon</em>
                     </div>
                     <pre>{`$ tachyon status
 › web terminal ..... launching soon

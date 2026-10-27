@@ -2004,19 +2004,45 @@ textarea:focus-visible {
 
 /* =========================================================
    TACHYON TERMINAL (BLOOM STREET) - COMING SOON
+   Colours sampled from the Bloom Street logo
    ========================================================= */
 .tachyon-card {
+  --bs-sky: #8bbbc9;
+  --bs-sky-deep: #79aebe;
+  --bs-cream: #e6eee5;
+  --bs-sun: #ffd040;
+  --bs-sun-light: #ffe15a;
+  --bs-sun-deep: #f3bf0f;
+  --bs-brown: #3e2600;
+  --bs-brown-mid: #744a08;
+  --bs-text: #2a1c05;
+
   max-width: 1180px;
   margin: 0 auto;
   padding: 2.5rem;
   border-radius: var(--radius-lg);
-  background:
-    radial-gradient(circle at 85% 0%, rgba(250, 204, 21, 0.14), transparent 45%),
-    radial-gradient(circle at 0% 100%, rgba(37, 99, 235, 0.25), transparent 50%),
-    linear-gradient(160deg, #0b1220 0%, #111c33 100%);
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  box-shadow: 0 30px 60px -20px rgba(15, 23, 42, 0.55);
-  color: #cbd5e1;
+  /* Flat logo sky-blue so the logo artwork blends in without a visible edge */
+  background: var(--bs-sky);
+  border: 1px solid rgba(230, 238, 229, 0.7);
+  box-shadow: 0 30px 60px -24px rgba(62, 38, 0, 0.45);
+  color: var(--bs-text);
+}
+
+/* Section heading accents in Bloom Street colours */
+.tachyon-section-tag {
+  background: #ffd040 !important;
+  border-color: #f3bf0f !important;
+  color: #3e2600 !important;
+}
+
+.marker-bloom {
+  display: inline;
+  background-image: linear-gradient(120deg, #3e2600 0%, #9a6400 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #744a08;
+  text-shadow: none;
 }
 
 .tachyon-grid {
@@ -2026,31 +2052,38 @@ textarea:focus-visible {
   align-items: start;
 }
 
+/* Wordmark row, styled after the logo lettering */
 .tachyon-brand {
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
 }
 
 .tachyon-brand img {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
+  display: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
   object-fit: cover;
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .tachyon-brand-name {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.1rem;
-  color: #f8fafc;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  color: var(--bs-brown);
+  line-height: 1.1;
 }
 
-.tachyon-brand-sub {
-  font-size: 0.82rem;
-  color: #94a3b8;
+.tachyon-brand-tagline {
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--bs-brown-mid);
 }
 
 .tachyon-info h3 {
@@ -2059,10 +2092,10 @@ textarea:focus-visible {
   align-items: center;
   gap: 0.75rem;
   font-family: var(--font-heading);
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: var(--bs-brown);
   margin-bottom: 0.9rem;
 }
 
@@ -2070,37 +2103,41 @@ textarea:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.3rem 0.8rem;
+  padding: 0.32rem 0.85rem;
   border-radius: var(--radius-full);
-  background: rgba(250, 204, 21, 0.12);
-  border: 1px solid rgba(250, 204, 21, 0.4);
-  color: #fde047;
+  background: var(--bs-sun);
+  border: 1px solid var(--bs-sun-deep);
+  color: var(--bs-brown);
   font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  box-shadow: 0 4px 12px -4px rgba(243, 191, 15, 0.7);
 }
 
 .tachyon-soon-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #facc15;
-  box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.6);
+  background: var(--bs-brown);
   animation: tachyon-pulse 1.8s ease-out infinite;
 }
 
 @keyframes tachyon-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.6); }
-  100% { box-shadow: 0 0 0 10px rgba(250, 204, 21, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(62, 38, 0, 0.5); }
+  100% { box-shadow: 0 0 0 8px rgba(62, 38, 0, 0); }
 }
 
 .tachyon-info p {
   font-size: 1rem;
   line-height: 1.75;
-  color: #cbd5e1;
+  color: var(--bs-text);
   margin-bottom: 1.5rem;
+}
+
+.tachyon-info p strong {
+  color: var(--bs-brown);
 }
 
 .tachyon-features {
@@ -2116,15 +2153,15 @@ textarea:focus-visible {
   gap: 0.45rem;
   padding: 0.45rem 0.85rem;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(230, 238, 229, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   font-size: 0.82rem;
   font-weight: 600;
-  color: #e2e8f0;
+  color: var(--bs-brown);
 }
 
 .tachyon-features i {
-  color: #facc15;
+  color: var(--bs-brown-mid);
 }
 
 .tachyon-actions {
@@ -2133,22 +2170,55 @@ textarea:focus-visible {
   gap: 0.8rem;
 }
 
+.tachyon-btn-sun {
+  background: var(--bs-sun);
+  color: var(--bs-brown);
+  border: 1px solid var(--bs-sun-deep);
+  box-shadow: 0 10px 22px -10px rgba(243, 191, 15, 0.9);
+}
+
+.tachyon-btn-sun:hover {
+  background: var(--bs-sun-light);
+  color: var(--bs-brown);
+  transform: translateY(-2px);
+}
+
 .tachyon-btn-outline {
-  background: transparent;
-  color: #f8fafc;
-  border: 1px solid rgba(226, 232, 240, 0.35);
+  background: rgba(230, 238, 229, 0.35);
+  color: var(--bs-brown);
+  border: 1.5px solid var(--bs-brown);
 }
 
 .tachyon-btn-outline:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(226, 232, 240, 0.6);
-  color: #ffffff;
+  background: var(--bs-brown);
+  color: var(--bs-cream);
+}
+
+/* Large logo blends into the card: same sky-blue background */
+.tachyon-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.tachyon-logo-wrap img {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+}
+
+.tachyon-logo-caption {
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--bs-brown-mid);
 }
 
 .tachyon-launch-list {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.7rem;
   margin-bottom: 1rem;
 }
 
@@ -2157,10 +2227,10 @@ textarea:focus-visible {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.9rem;
-  padding: 0.95rem 1rem;
+  padding: 0.9rem 1rem;
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(230, 238, 229, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.85);
 }
 
 .tachyon-launch-icon {
@@ -2170,43 +2240,44 @@ textarea:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(37, 99, 235, 0.18);
-  color: #93c5fd;
+  background: var(--bs-brown);
+  color: var(--bs-sun);
 }
 
 .tachyon-launch-title {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 0.95rem;
-  color: #f8fafc;
+  color: var(--bs-brown);
 }
 
 .tachyon-launch-desc {
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: #5b4626;
   line-height: 1.45;
 }
 
 .tachyon-status {
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full);
-  background: rgba(250, 204, 21, 0.12);
-  color: #fde047;
+  background: var(--bs-sun);
+  color: var(--bs-brown);
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 800;
   white-space: nowrap;
 }
 
 .tachyon-status-live {
-  background: rgba(16, 185, 129, 0.15);
-  color: #6ee7b7;
+  background: var(--bs-brown);
+  color: var(--bs-sun-light);
 }
 
 .tachyon-terminal {
   border-radius: var(--radius-sm);
-  background: #050a14;
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: var(--bs-brown);
+  border: 1px solid rgba(116, 74, 8, 0.6);
   overflow: hidden;
+  box-shadow: 0 14px 28px -16px rgba(62, 38, 0, 0.8);
 }
 
 .tachyon-terminal-bar {
@@ -2214,25 +2285,25 @@ textarea:focus-visible {
   align-items: center;
   gap: 6px;
   padding: 0.55rem 0.85rem;
-  background: rgba(255, 255, 255, 0.04);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  background: rgba(0, 0, 0, 0.18);
+  border-bottom: 1px solid rgba(255, 208, 64, 0.15);
 }
 
 .tachyon-terminal-bar span {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #ef4444;
+  background: var(--bs-sun-deep);
 }
 
-.tachyon-terminal-bar span:nth-child(2) { background: #f59e0b; }
-.tachyon-terminal-bar span:nth-child(3) { background: #10b981; }
+.tachyon-terminal-bar span:nth-child(2) { background: var(--bs-sun-light); }
+.tachyon-terminal-bar span:nth-child(3) { background: var(--bs-sky); }
 
 .tachyon-terminal-bar em {
   margin-left: 0.5rem;
   font-style: normal;
   font-size: 0.72rem;
-  color: #64748b;
+  color: rgba(230, 238, 229, 0.6);
 }
 
 .tachyon-terminal pre {
@@ -2241,7 +2312,7 @@ textarea:focus-visible {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.8rem;
   line-height: 1.8;
-  color: #86efac;
+  color: var(--bs-sun-light);
   white-space: pre;
   overflow-x: auto;
 }
@@ -2252,12 +2323,13 @@ textarea:focus-visible {
   margin-top: 2rem;
   padding: 1.1rem 1.25rem;
   border-radius: var(--radius-sm);
-  background: rgba(250, 204, 21, 0.06);
-  border: 1px solid rgba(250, 204, 21, 0.25);
+  background: rgba(230, 238, 229, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-left: 4px solid var(--bs-sun-deep);
 }
 
 .tachyon-disclaimer i {
-  color: #facc15;
+  color: var(--bs-brown-mid);
   margin-top: 0.2rem;
   flex-shrink: 0;
 }
@@ -2265,25 +2337,25 @@ textarea:focus-visible {
 .tachyon-disclaimer p {
   font-size: 0.82rem;
   line-height: 1.7;
-  color: #cbd5e1;
+  color: #3d2e14;
 }
 
 .tachyon-disclaimer strong {
-  color: #fde047;
-}
-
-.footer-disclaimer {
-  margin-top: 1.25rem;
-  font-size: 0.78rem;
-  line-height: 1.6;
-  color: var(--text-subtle);
-  text-align: center;
+  color: var(--bs-brown);
 }
 
 @media (max-width: 900px) {
   .tachyon-grid {
     grid-template-columns: 1fr;
     gap: 1.75rem;
+  }
+
+  .tachyon-brand img {
+    display: block;
+  }
+
+  .tachyon-logo-wrap {
+    display: none;
   }
 }
 
@@ -2305,3 +2377,12 @@ textarea:focus-visible {
     justify-self: start;
   }
 }
+
+.footer-disclaimer {
+  margin-top: 1.25rem;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--text-subtle);
+  text-align: center;
+}
+
